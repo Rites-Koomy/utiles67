@@ -43,14 +43,14 @@ export default function Rejoindre() {
               <Check size={40} className="text-primary" />
             </div>
             <h1 className="font-display font-bold text-2xl text-foreground mb-3">
-              Bienvenue dans le mouvement !
+              Bienvenue parmi nous !
             </h1>
             <p className="text-muted-foreground mb-8 max-w-sm mx-auto">
-              Merci de nous rejoindre. Ensemble, nous pouvons construire une
-              ville plus juste et plus durable.
+              Merci de nous rejoindre. Ensemble, construisons une ville plus juste, 
+              plus verte et plus solidaire.
             </p>
             <p className="text-sm text-muted-foreground">
-              Un email de confirmation vous sera envoyé à{" "}
+              Un email de bienvenue arrive bientôt à{" "}
               <span className="font-medium text-foreground">{formData.email}</span>
             </p>
           </div>
@@ -70,8 +70,10 @@ export default function Rejoindre() {
             Rejoindre le mouvement
           </h1>
           <p className="text-muted-foreground leading-relaxed">
-            Vous partagez notre vision d'une ville plus humaine ? Rejoignez-nous
-            pour construire ensemble le Strasbourg de demain.
+            Vous partagez notre vision d'une ville plus humaine ? 
+            <span className="block mt-1 font-medium text-foreground/80">
+              Venez comme vous êtes.
+            </span>
           </p>
         </section>
 
@@ -81,7 +83,7 @@ export default function Rejoindre() {
               htmlFor="nom"
               className="block text-sm font-medium text-foreground mb-2"
             >
-              Votre nom
+              Votre prénom
             </label>
             <div className="relative">
               <User
@@ -95,7 +97,7 @@ export default function Rejoindre() {
                 value={formData.nom}
                 onChange={handleChange}
                 required
-                placeholder="Marie Dupont"
+                placeholder="Marie"
                 className="w-full pl-11 pr-4 py-3 bg-card border border-input rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                 data-testid="input-nom"
               />
@@ -185,8 +187,7 @@ export default function Rejoindre() {
           </button>
 
           <p className="text-xs text-center text-muted-foreground">
-            En vous inscrivant, vous acceptez de recevoir des informations sur
-            nos actions. Vous pouvez vous désinscrire à tout moment.
+            On ne spamme pas. Promis.
           </p>
         </form>
       </div>

@@ -11,7 +11,7 @@ export default function Videos() {
             Nos vidéos
           </h1>
           <p className="text-muted-foreground animate-fade-up stagger-1">
-            Découvrez notre programme en images
+            Découvrez notre programme en images. Pas de discours, des actes.
           </p>
         </section>
 

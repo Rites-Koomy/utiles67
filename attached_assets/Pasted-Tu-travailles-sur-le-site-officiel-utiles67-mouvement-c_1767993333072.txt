@@ -1,0 +1,113 @@
+Tu travailles sur le site officiel "utiles67" (mouvement citoyen municipal à Strasbourg).
+La V1 est fonctionnelle, mobile-first et lisible.
+Objectif V1.3 : rendre le site plus vivant, plus chaleureux, plus incarné,
+sans perdre la sobriété, la crédibilité et la performance.
+
+IMPORTANT
+Nous ne te demandons PAS de générer des images.
+Nous te demandons d’intégrer des emplacements d’illustrations (images) et une logique d’affichage,
+et nous fournirons nous-mêmes les illustrations (photos ou visuels) ensuite.
+
+---
+
+## 1) ILLUSTRATIONS (À INTÉGRER DANS LE DESIGN)
+
+### Rôle
+Les illustrations doivent :
+- rythmer le scroll
+- donner de la chaleur
+- aider à se projeter
+- rendre les mesures plus mémorables
+
+### Règles d’intégration
+- Ne pas mettre une image sur chaque carte
+- Intégrer les images de façon parcimonieuse et structurée
+- Garder une esthétique sobre et cohérente avec l’identité UTILES
+
+### Où intégrer les illustrations
+A) Home / page Mesures (feed)
+- insérer un “bloc illustration” toutes les 5–6 cartes maximum
+- format large (cover), avec titre court optionnel
+- ne pas casser la lisibilité du feed
+
+B) Page Priorité (thématique)
+- 1 illustration d’ouverture (“vision”) en haut de page
+- puis liste des mesures
+- option : une seconde illustration au milieu si la page est longue
+
+C) Fiche Mesure
+- option : 1 illustration maximum par mesure
+- position : haut de page OU entre “Constat” et “Proposition”
+- jamais entre deux lignes de texte clés
+
+### Données (JSON)
+Ajouter un champ optionnel dans les JSON :
+- measures.json : "image" (url) + "imageAlt" (texte alternatif)
+- priorities.json : "heroImage" (url) + "heroAlt"
+- Option fallback : si image absente, afficher un placeholder neutre élégant
+
+---
+
+## 2) SECTION “LES VISAGES D’UTILES” (INCARNATION HUMAINE)
+
+Ajouter une section visible sur la home (et/ou une page dédiée) :
+Titre : "Les visages d’UTILES"
+Sous-titre : "Des habitants engagés, proches de vous"
+
+Format :
+- grille de cartes profils (mobile-first)
+- chaque carte :
+  - photo (ou placeholder)
+  - prénom
+  - quartier
+  - phrase courte (1 ligne) : motivation / sujet
+  - bouton optionnel : "Découvrir"
+
+Données (JSON)
+Créer team.json ou candidates.json :
+- name, district/quartier, role (optionnel), quote, photo (optionnel)
+
+---
+
+## 3) ÉCOUTE DU TERRAIN (PRISE DE TEMPÉRATURE)
+
+Ajouter une section “Parlez-nous de votre quotidien” :
+- texte d’intro chaleureux
+- champ texte court : “Ce que vous vivez / ce que vous voulez améliorer”
+- sélection quartier (dropdown)
+- bouton envoyer
+
+Objectif :
+- permettre aux habitants de témoigner et de remonter les priorités terrain
+
+Tech :
+- pour le prototype : stockage local (localStorage) ou envoi vers une URL configurable
+- prévoir une variable de config pour brancher un endpoint plus tard
+
+---
+
+## 4) MICRO-COPY (SOURIRE DISCRET)
+
+Sans changer le ton sérieux, ajouter de la chaleur :
+- sous-titres plus humains
+- formulations plus vivantes
+Exemples attendus (sans excès) :
+- “Des idées simples, pour la vie réelle.”
+- “Venez comme vous êtes.”
+- “On écoute avant de décider.”
+
+---
+
+## 5) CONTRAINTES TECHNIQUES ET QUALITÉ
+
+- Mobile-first strict
+- Performances : images optimisées / lazy-loading
+- Accessibilité : alt text, contrastes, tailles lisibles
+- Code propre, maintenable, bien structuré
+- Pas d’effets gadget
+
+Livrable attendu
+- Prototype V1.3 avec intégration des emplacements images
+- Section “Visages d’UTILES”
+- Section “Parlez-nous de votre quotidien”
+- JSON mis à jour + README expliquant où mettre les images et les données

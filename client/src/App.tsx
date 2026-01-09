@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import MeasureDetail from "@/pages/MeasureDetail";
+import Priority from "@/pages/Priority";
 import Videos from "@/pages/Videos";
 import Agenda from "@/pages/Agenda";
 import Rejoindre from "@/pages/Rejoindre";
@@ -15,6 +16,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/mesure/:id" component={MeasureDetail} />
+      <Route path="/priorite/:id" component={Priority} />
       <Route path="/videos" component={Videos} />
       <Route path="/agenda" component={Agenda} />
       <Route path="/rejoindre" component={Rejoindre} />

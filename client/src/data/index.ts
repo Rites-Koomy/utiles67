@@ -5,6 +5,8 @@ export interface Priority {
   icon: string;
   color: string;
   videoId?: string;
+  heroImage?: string;
+  heroAlt?: string;
 }
 
 export interface Measure {
@@ -18,6 +20,8 @@ export interface Measure {
   miseEnOeuvre: string;
   indicateur: string;
   videoId?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface Video {
@@ -38,6 +42,15 @@ export interface Event {
   address: string;
 }
 
+export interface TeamMember {
+  id: string;
+  name: string;
+  quartier: string;
+  role?: string;
+  quote: string;
+  photo?: string;
+}
+
 export const priorities: Priority[] = [
   {
     id: "mobilite",
@@ -45,7 +58,9 @@ export const priorities: Priority[] = [
     description: "Repenser les déplacements pour une ville plus respirable et accessible à tous.",
     icon: "Bike",
     color: "teal",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "dQw4w9WgXcQ",
+    heroImage: "",
+    heroAlt: "Cyclistes sur une piste protégée à Strasbourg"
   },
   {
     id: "logement",
@@ -53,7 +68,9 @@ export const priorities: Priority[] = [
     description: "Permettre à chacun de se loger dignement dans notre ville.",
     icon: "Home",
     color: "amber",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "dQw4w9WgXcQ",
+    heroImage: "",
+    heroAlt: "Quartier résidentiel accueillant"
   },
   {
     id: "ecologie",
@@ -61,7 +78,9 @@ export const priorities: Priority[] = [
     description: "Agir concrètement pour le climat et la biodiversité locale.",
     icon: "Leaf",
     color: "emerald",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "dQw4w9WgXcQ",
+    heroImage: "",
+    heroAlt: "Nature et verdure en ville"
   },
   {
     id: "solidarite",
@@ -69,7 +88,9 @@ export const priorities: Priority[] = [
     description: "Renforcer le lien social et soutenir les plus fragiles.",
     icon: "Heart",
     color: "rose",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "dQw4w9WgXcQ",
+    heroImage: "",
+    heroAlt: "Habitants partageant un moment convivial"
   },
   {
     id: "democratie",
@@ -77,7 +98,9 @@ export const priorities: Priority[] = [
     description: "Donner la parole aux habitants et co-construire les décisions.",
     icon: "Users",
     color: "violet",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "dQw4w9WgXcQ",
+    heroImage: "",
+    heroAlt: "Réunion citoyenne participative"
   }
 ];
 
@@ -92,7 +115,9 @@ export const measures: Measure[] = [
     proposition: "Créer un réseau continu de pistes cyclables protégées reliant tous les quartiers au centre-ville et aux zones d'activité.",
     miseEnOeuvre: "Phase 1 : audit des axes prioritaires. Phase 2 : travaux sur 25km/an. Budget : 8M€/an.",
     indicateur: "Nombre de déplacements vélo quotidiens (+50% visé)",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "dQw4w9WgXcQ",
+    image: "",
+    imageAlt: "Piste cyclable protégée moderne"
   },
   {
     id: "velo-2",
@@ -125,7 +150,9 @@ export const measures: Measure[] = [
     constat: "Les loyers ont augmenté de 25% en 5 ans, excluant les classes moyennes du centre.",
     proposition: "Appliquer l'encadrement des loyers prévu par la loi et renforcer les contrôles.",
     miseEnOeuvre: "Création d'un observatoire local des loyers. Équipe dédiée aux contrôles. Amendes dissuasives.",
-    indicateur: "Évolution des loyers médians par quartier"
+    indicateur: "Évolution des loyers médians par quartier",
+    image: "",
+    imageAlt: "Façade d'immeuble résidentiel"
   },
   {
     id: "logement-2",
@@ -147,7 +174,9 @@ export const measures: Measure[] = [
     constat: "Certains quartiers manquent cruellement de végétation et subissent des îlots de chaleur.",
     proposition: "Planter massivement des arbres dans les rues, cours d'école et places publiques.",
     miseEnOeuvre: "Plan de plantation sur 4 ans. Espèces adaptées au changement climatique. Participation citoyenne.",
-    indicateur: "Surface végétalisée par habitant"
+    indicateur: "Surface végétalisée par habitant",
+    image: "",
+    imageAlt: "Allée arborée en ville"
   },
   {
     id: "ecologie-2",
@@ -169,7 +198,9 @@ export const measures: Measure[] = [
     constat: "L'aide alimentaire classique est stigmatisante et ne permet pas de choisir.",
     proposition: "Créer des épiceries solidaires où chacun peut acheter à prix réduit des produits de qualité.",
     miseEnOeuvre: "Partenariat avec associations. Locaux municipaux mis à disposition. Produits invendus récupérés.",
-    indicateur: "Nombre de bénéficiaires et diversité des produits"
+    indicateur: "Nombre de bénéficiaires et diversité des produits",
+    image: "",
+    imageAlt: "Épicerie solidaire accueillante"
   },
   {
     id: "solidarite-2",
@@ -191,7 +222,9 @@ export const measures: Measure[] = [
     constat: "Les citoyens se sentent exclus des décisions qui les concernent.",
     proposition: "Permettre aux habitants de proposer et voter pour des projets financés par la ville.",
     miseEnOeuvre: "Plateforme en ligne et réunions de quartier. Vote ouvert à tous dès 16 ans. Suivi transparent.",
-    indicateur: "Taux de participation et projets réalisés"
+    indicateur: "Taux de participation et projets réalisés",
+    image: "",
+    imageAlt: "Citoyens votant lors d'une assemblée"
   },
   {
     id: "democratie-2",
@@ -294,6 +327,57 @@ export const events: Event[] = [
     time: "18:30",
     location: "Centre socio-culturel",
     address: "1 Place André Maurois, Strasbourg"
+  }
+];
+
+export const team: TeamMember[] = [
+  {
+    id: "member-1",
+    name: "Sophie",
+    quartier: "Neudorf",
+    role: "Enseignante",
+    quote: "Je veux une école où chaque enfant mange sainement.",
+    photo: ""
+  },
+  {
+    id: "member-2",
+    name: "Karim",
+    quartier: "Hautepierre",
+    role: "Éducateur sportif",
+    quote: "Le sport crée du lien, il faut des équipements pour tous.",
+    photo: ""
+  },
+  {
+    id: "member-3",
+    name: "Marie-Claire",
+    quartier: "Krutenau",
+    role: "Retraitée",
+    quote: "Je marche beaucoup, je veux des trottoirs accessibles.",
+    photo: ""
+  },
+  {
+    id: "member-4",
+    name: "Thomas",
+    quartier: "Robertsau",
+    role: "Ingénieur",
+    quote: "Le vélo au quotidien, c'est possible si c'est sécurisé.",
+    photo: ""
+  },
+  {
+    id: "member-5",
+    name: "Fatou",
+    quartier: "Meinau",
+    role: "Aide-soignante",
+    quote: "L'accès aux soins ne doit pas dépendre de son quartier.",
+    photo: ""
+  },
+  {
+    id: "member-6",
+    name: "Jean-Pierre",
+    quartier: "Centre-ville",
+    role: "Commerçant",
+    quote: "Un centre-ville vivant, c'est un centre-ville pour tous.",
+    photo: ""
   }
 ];
 

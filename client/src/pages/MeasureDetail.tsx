@@ -1,5 +1,6 @@
 import { useParams, Link } from "wouter";
 import { Layout } from "@/components/layout/Layout";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { getMeasureById, getPriorityById } from "@/data";
 import { ArrowLeft, Play, MessageCircle, UserPlus, CheckCircle2, Target, Wrench, BarChart3 } from "lucide-react";
 
@@ -36,6 +37,8 @@ export default function MeasureDetail() {
     { icon: BarChart3, title: "Indicateur de réussite", content: measure.indicateur },
   ];
 
+  const hasImage = measure.image && measure.image.trim() !== "";
+
   return (
     <Layout>
       <div className="max-w-lg mx-auto px-4 py-6">
@@ -49,7 +52,17 @@ export default function MeasureDetail() {
           </span>
         </Link>
 
-        <header className="mb-8 animate-fade-up">
+        {(hasImage || measure.image === "") && (
+          <div className="mb-6 animate-fade-up">
+            <ImagePlaceholder
+              src={measure.image}
+              alt={measure.imageAlt || measure.title}
+              aspectRatio="video"
+            />
+          </div>
+        )}
+
+        <header className="mb-8 animate-fade-up stagger-1">
           <div className="flex items-center gap-3 mb-4">
             <span
               className={`inline-flex px-3 py-1 text-xs font-medium rounded-full border ${
@@ -78,7 +91,7 @@ export default function MeasureDetail() {
           {sections.map((section, index) => (
             <section
               key={section.title}
-              className={`bg-card rounded-2xl border border-card-border p-5 opacity-0 animate-fade-up stagger-${index + 1}`}
+              className={`bg-card rounded-2xl border border-card-border p-5 opacity-0 animate-fade-up stagger-${index + 2}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -95,7 +108,7 @@ export default function MeasureDetail() {
           ))}
         </div>
 
-        <div className="space-y-3 opacity-0 animate-fade-up stagger-5">
+        <div className="space-y-3 opacity-0 animate-fade-up stagger-6">
           {measure.videoId && (
             <a
               href={`https://www.youtube.com/watch?v=${measure.videoId}`}
@@ -105,7 +118,7 @@ export default function MeasureDetail() {
               data-testid="button-video"
             >
               <Play size={18} />
-              Voir la vidéo
+              Voir la vidéo explicative
             </a>
           )}
 
@@ -114,7 +127,7 @@ export default function MeasureDetail() {
             data-testid="button-question"
           >
             <MessageCircle size={18} />
-            Poser une question
+            Une question ? Écrivez-nous
           </button>
 
           <Link href="/rejoindre">

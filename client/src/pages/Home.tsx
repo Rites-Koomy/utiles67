@@ -2,7 +2,15 @@ import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { MeasureCard } from "@/components/MeasureCard";
 import { PriorityPill } from "@/components/PriorityPill";
+import { IllustrationBlock } from "@/components/IllustrationBlock";
+import { TeamSection } from "@/components/TeamSection";
+import { FeedbackSection } from "@/components/FeedbackSection";
 import { priorities, measures, getMeasuresByPriority } from "@/data";
+
+const illustrationBreakpoints = [
+  { position: 3, title: "Une ville qui respire", image: "", alt: "Strasbourg verdoyant" },
+  { position: 8, title: "Ensemble, au quotidien", image: "", alt: "Habitants partageant un moment" },
+];
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
@@ -11,15 +19,44 @@ export default function Home() {
     ? getMeasuresByPriority(activeFilter)
     : measures;
 
+  const renderFeedWithIllustrations = () => {
+    const elements: React.ReactNode[] = [];
+    let measureIndex = 0;
+
+    filteredMeasures.forEach((measure, idx) => {
+      const breakpoint = !activeFilter && illustrationBreakpoints.find(b => b.position === idx);
+      
+      if (breakpoint) {
+        elements.push(
+          <IllustrationBlock
+            key={`illustration-${idx}`}
+            title={breakpoint.title}
+            image={breakpoint.image}
+            alt={breakpoint.alt}
+            index={measureIndex}
+          />
+        );
+        measureIndex++;
+      }
+
+      elements.push(
+        <MeasureCard key={measure.id} measure={measure} index={measureIndex} />
+      );
+      measureIndex++;
+    });
+
+    return elements;
+  };
+
   return (
     <Layout>
       <div className="max-w-lg mx-auto px-4">
         <section className="py-6">
           <h1 className="font-display font-bold text-2xl sm:text-3xl text-foreground mb-2 animate-fade-up">
-            Des mesures concrètes
+            Des idées simples, pour la vie réelle
           </h1>
           <p className="text-muted-foreground animate-fade-up stagger-1">
-            Pour améliorer le quotidien à Strasbourg
+            Des mesures concrètes pour améliorer le quotidien à Strasbourg.
           </p>
         </section>
 
@@ -53,9 +90,7 @@ export default function Home() {
 
         <section className="py-6">
           <div className="grid gap-4">
-            {filteredMeasures.map((measure, index) => (
-              <MeasureCard key={measure.id} measure={measure} index={index} />
-            ))}
+            {renderFeedWithIllustrations()}
           </div>
 
           {filteredMeasures.length === 0 && (
@@ -63,6 +98,16 @@ export default function Home() {
               Aucune mesure trouvée
             </div>
           )}
+        </section>
+
+        <TeamSection />
+
+        <FeedbackSection />
+
+        <section className="py-8 text-center opacity-0 animate-fade-up">
+          <p className="text-sm text-muted-foreground">
+            Venez comme vous êtes. Ensemble, construisons demain.
+          </p>
         </section>
       </div>
     </Layout>
