@@ -367,7 +367,7 @@ export const team: TeamMember[] = [
     bio: "Karim travaille avec les jeunes du quartier depuis 8 ans. Il milite pour des équipements sportifs accessibles.",
     photo: "",
     tags: ["Solidarité", "Jeunesse"],
-    videoUrl: ""
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "member-3",
