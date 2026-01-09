@@ -41,6 +41,11 @@ export function TeamCard({ member, index = 0, onClick }: TeamCardProps) {
                 {member.quartier}
                 {member.role && <span className="text-muted-foreground/60"> · {member.role}</span>}
               </p>
+              {member.utilesRole && (
+                <p className="text-xs text-primary font-medium mt-0.5">
+                  UTILES – {member.utilesRole}
+                </p>
+              )}
             </div>
             <ChevronRight 
               size={18} 

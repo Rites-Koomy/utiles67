@@ -57,6 +57,7 @@ export interface TeamMember {
   name: string;
   quartier: string;
   role?: string;
+  utilesRole?: string;
   quote: string;
   bio?: string;
   photo?: string;
@@ -349,6 +350,7 @@ export const team: TeamMember[] = [
     name: "Sophie",
     quartier: "Neudorf",
     role: "Enseignante",
+    utilesRole: "Référente Éducation",
     quote: "Je veux une école où chaque enfant mange sainement.",
     bio: "Sophie enseigne depuis 15 ans à Neudorf. Elle s'engage pour une alimentation saine et locale dans les cantines scolaires.",
     photo: "",
@@ -360,6 +362,7 @@ export const team: TeamMember[] = [
     name: "Karim",
     quartier: "Hautepierre",
     role: "Éducateur sportif",
+    utilesRole: "Coordinateur Quartier",
     quote: "Le sport crée du lien, il faut des équipements pour tous.",
     bio: "Karim travaille avec les jeunes du quartier depuis 8 ans. Il milite pour des équipements sportifs accessibles.",
     photo: "",
@@ -371,6 +374,7 @@ export const team: TeamMember[] = [
     name: "Marie-Claire",
     quartier: "Krutenau",
     role: "Retraitée",
+    utilesRole: "Bénévole",
     quote: "Je marche beaucoup, je veux des trottoirs accessibles.",
     bio: "Marie-Claire parcourt la ville à pied tous les jours. Elle se bat pour une ville accessible à tous les âges.",
     photo: "",
@@ -381,6 +385,7 @@ export const team: TeamMember[] = [
     name: "Thomas",
     quartier: "Robertsau",
     role: "Ingénieur",
+    utilesRole: "Référent Mobilité",
     quote: "Le vélo au quotidien, c'est possible si c'est sécurisé.",
     bio: "Thomas fait 12 km de vélo par jour pour aller au travail. Il veut des pistes vraiment protégées.",
     photo: "",
@@ -391,6 +396,7 @@ export const team: TeamMember[] = [
     name: "Fatou",
     quartier: "Meinau",
     role: "Aide-soignante",
+    utilesRole: "Référente Santé",
     quote: "L'accès aux soins ne doit pas dépendre de son quartier.",
     bio: "Fatou voit chaque jour les inégalités d'accès à la santé. Elle veut des maisons de santé partout.",
     photo: "",
@@ -401,6 +407,7 @@ export const team: TeamMember[] = [
     name: "Jean-Pierre",
     quartier: "Centre-ville",
     role: "Commerçant",
+    utilesRole: "Porte-parole",
     quote: "Un centre-ville vivant, c'est un centre-ville pour tous.",
     bio: "Jean-Pierre tient une librairie depuis 20 ans. Il défend un commerce de proximité accessible.",
     photo: "",
