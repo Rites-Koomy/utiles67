@@ -1,3 +1,13 @@
+import heroImage from "@assets/generated_images/strasbourg_green_peaceful_cityscape.png";
+import cyclePath from "@assets/stock_images/bicycle_path_in_euro_29b3f3ae.jpg";
+import apartment from "@assets/stock_images/modern_residential_a_2814c14f.jpg";
+import urbanPark from "@assets/stock_images/urban_park_with_tree_d4acad64.jpg";
+import community from "@assets/stock_images/community_gathering__3ece0604.jpg";
+import democracy from "@assets/stock_images/citizens_voting_demo_81baa662.jpg";
+import youth from "@assets/stock_images/young_people_student_2cf858dd.jpg";
+
+export { heroImage, youth };
+
 export interface Priority {
   id: string;
   title: string;
@@ -20,8 +30,8 @@ export interface Measure {
   miseEnOeuvre: string;
   indicateur: string;
   videoId?: string;
-  image?: string;
-  imageAlt?: string;
+  coverImage?: string;
+  coverAlt?: string;
 }
 
 export interface Video {
@@ -48,7 +58,10 @@ export interface TeamMember {
   quartier: string;
   role?: string;
   quote: string;
+  bio?: string;
   photo?: string;
+  tags?: string[];
+  videoUrl?: string;
 }
 
 export const priorities: Priority[] = [
@@ -59,8 +72,8 @@ export const priorities: Priority[] = [
     icon: "Bike",
     color: "teal",
     videoId: "dQw4w9WgXcQ",
-    heroImage: "",
-    heroAlt: "Cyclistes sur une piste protégée à Strasbourg"
+    heroImage: cyclePath,
+    heroAlt: "Piste cyclable sécurisée"
   },
   {
     id: "logement",
@@ -69,8 +82,8 @@ export const priorities: Priority[] = [
     icon: "Home",
     color: "amber",
     videoId: "dQw4w9WgXcQ",
-    heroImage: "",
-    heroAlt: "Quartier résidentiel accueillant"
+    heroImage: apartment,
+    heroAlt: "Immeuble résidentiel moderne"
   },
   {
     id: "ecologie",
@@ -79,8 +92,8 @@ export const priorities: Priority[] = [
     icon: "Leaf",
     color: "emerald",
     videoId: "dQw4w9WgXcQ",
-    heroImage: "",
-    heroAlt: "Nature et verdure en ville"
+    heroImage: urbanPark,
+    heroAlt: "Parc urbain verdoyant"
   },
   {
     id: "solidarite",
@@ -89,7 +102,7 @@ export const priorities: Priority[] = [
     icon: "Heart",
     color: "rose",
     videoId: "dQw4w9WgXcQ",
-    heroImage: "",
+    heroImage: community,
     heroAlt: "Habitants partageant un moment convivial"
   },
   {
@@ -99,8 +112,8 @@ export const priorities: Priority[] = [
     icon: "Users",
     color: "violet",
     videoId: "dQw4w9WgXcQ",
-    heroImage: "",
-    heroAlt: "Réunion citoyenne participative"
+    heroImage: democracy,
+    heroAlt: "Réunion citoyenne"
   }
 ];
 
@@ -116,8 +129,8 @@ export const measures: Measure[] = [
     miseEnOeuvre: "Phase 1 : audit des axes prioritaires. Phase 2 : travaux sur 25km/an. Budget : 8M€/an.",
     indicateur: "Nombre de déplacements vélo quotidiens (+50% visé)",
     videoId: "dQw4w9WgXcQ",
-    image: "",
-    imageAlt: "Piste cyclable protégée moderne"
+    coverImage: cyclePath,
+    coverAlt: "Piste cyclable protégée moderne"
   },
   {
     id: "velo-2",
@@ -151,8 +164,8 @@ export const measures: Measure[] = [
     proposition: "Appliquer l'encadrement des loyers prévu par la loi et renforcer les contrôles.",
     miseEnOeuvre: "Création d'un observatoire local des loyers. Équipe dédiée aux contrôles. Amendes dissuasives.",
     indicateur: "Évolution des loyers médians par quartier",
-    image: "",
-    imageAlt: "Façade d'immeuble résidentiel"
+    coverImage: apartment,
+    coverAlt: "Façade d'immeuble résidentiel"
   },
   {
     id: "logement-2",
@@ -175,8 +188,8 @@ export const measures: Measure[] = [
     proposition: "Planter massivement des arbres dans les rues, cours d'école et places publiques.",
     miseEnOeuvre: "Plan de plantation sur 4 ans. Espèces adaptées au changement climatique. Participation citoyenne.",
     indicateur: "Surface végétalisée par habitant",
-    image: "",
-    imageAlt: "Allée arborée en ville"
+    coverImage: urbanPark,
+    coverAlt: "Allée arborée en ville"
   },
   {
     id: "ecologie-2",
@@ -199,8 +212,8 @@ export const measures: Measure[] = [
     proposition: "Créer des épiceries solidaires où chacun peut acheter à prix réduit des produits de qualité.",
     miseEnOeuvre: "Partenariat avec associations. Locaux municipaux mis à disposition. Produits invendus récupérés.",
     indicateur: "Nombre de bénéficiaires et diversité des produits",
-    image: "",
-    imageAlt: "Épicerie solidaire accueillante"
+    coverImage: community,
+    coverAlt: "Épicerie solidaire accueillante"
   },
   {
     id: "solidarite-2",
@@ -223,8 +236,8 @@ export const measures: Measure[] = [
     proposition: "Permettre aux habitants de proposer et voter pour des projets financés par la ville.",
     miseEnOeuvre: "Plateforme en ligne et réunions de quartier. Vote ouvert à tous dès 16 ans. Suivi transparent.",
     indicateur: "Taux de participation et projets réalisés",
-    image: "",
-    imageAlt: "Citoyens votant lors d'une assemblée"
+    coverImage: democracy,
+    coverAlt: "Citoyens votant lors d'une assemblée"
   },
   {
     id: "democratie-2",
@@ -337,7 +350,10 @@ export const team: TeamMember[] = [
     quartier: "Neudorf",
     role: "Enseignante",
     quote: "Je veux une école où chaque enfant mange sainement.",
-    photo: ""
+    bio: "Sophie enseigne depuis 15 ans à Neudorf. Elle s'engage pour une alimentation saine et locale dans les cantines scolaires.",
+    photo: "",
+    tags: ["Écologie", "Éducation"],
+    videoUrl: ""
   },
   {
     id: "member-2",
@@ -345,7 +361,10 @@ export const team: TeamMember[] = [
     quartier: "Hautepierre",
     role: "Éducateur sportif",
     quote: "Le sport crée du lien, il faut des équipements pour tous.",
-    photo: ""
+    bio: "Karim travaille avec les jeunes du quartier depuis 8 ans. Il milite pour des équipements sportifs accessibles.",
+    photo: "",
+    tags: ["Solidarité", "Jeunesse"],
+    videoUrl: ""
   },
   {
     id: "member-3",
@@ -353,7 +372,9 @@ export const team: TeamMember[] = [
     quartier: "Krutenau",
     role: "Retraitée",
     quote: "Je marche beaucoup, je veux des trottoirs accessibles.",
-    photo: ""
+    bio: "Marie-Claire parcourt la ville à pied tous les jours. Elle se bat pour une ville accessible à tous les âges.",
+    photo: "",
+    tags: ["Mobilité", "Accessibilité"]
   },
   {
     id: "member-4",
@@ -361,7 +382,9 @@ export const team: TeamMember[] = [
     quartier: "Robertsau",
     role: "Ingénieur",
     quote: "Le vélo au quotidien, c'est possible si c'est sécurisé.",
-    photo: ""
+    bio: "Thomas fait 12 km de vélo par jour pour aller au travail. Il veut des pistes vraiment protégées.",
+    photo: "",
+    tags: ["Mobilité", "Écologie"]
   },
   {
     id: "member-5",
@@ -369,7 +392,9 @@ export const team: TeamMember[] = [
     quartier: "Meinau",
     role: "Aide-soignante",
     quote: "L'accès aux soins ne doit pas dépendre de son quartier.",
-    photo: ""
+    bio: "Fatou voit chaque jour les inégalités d'accès à la santé. Elle veut des maisons de santé partout.",
+    photo: "",
+    tags: ["Solidarité", "Santé"]
   },
   {
     id: "member-6",
@@ -377,7 +402,9 @@ export const team: TeamMember[] = [
     quartier: "Centre-ville",
     role: "Commerçant",
     quote: "Un centre-ville vivant, c'est un centre-ville pour tous.",
-    photo: ""
+    bio: "Jean-Pierre tient une librairie depuis 20 ans. Il défend un commerce de proximité accessible.",
+    photo: "",
+    tags: ["Démocratie", "Commerce"]
   }
 ];
 

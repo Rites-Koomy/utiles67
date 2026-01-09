@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { QuestionsModal } from "@/components/QuestionsModal";
 import { getMeasureById, getPriorityById } from "@/data";
 import { ArrowLeft, Play, MessageCircle, UserPlus, CheckCircle2, Target, Wrench, BarChart3 } from "lucide-react";
 
@@ -8,6 +9,7 @@ export default function MeasureDetail() {
   const { id } = useParams<{ id: string }>();
   const measure = getMeasureById(id || "");
   const priority = measure ? getPriorityById(measure.priorityId) : null;
+  const [showQuestions, setShowQuestions] = useState(false);
 
   if (!measure) {
     return (
@@ -37,7 +39,7 @@ export default function MeasureDetail() {
     { icon: BarChart3, title: "Indicateur de réussite", content: measure.indicateur },
   ];
 
-  const hasImage = measure.image && measure.image.trim() !== "";
+  const hasCover = measure.coverImage && measure.coverImage.trim() !== "";
 
   return (
     <Layout>
@@ -52,12 +54,13 @@ export default function MeasureDetail() {
           </span>
         </Link>
 
-        {(hasImage || measure.image === "") && (
-          <div className="mb-6 animate-fade-up">
-            <ImagePlaceholder
-              src={measure.image}
-              alt={measure.imageAlt || measure.title}
-              aspectRatio="video"
+        {hasCover && (
+          <div className="mb-6 -mx-4 sm:mx-0 sm:rounded-2xl overflow-hidden animate-fade-up">
+            <img
+              src={measure.coverImage}
+              alt={measure.coverAlt || measure.title}
+              className="w-full h-48 sm:h-56 object-cover"
+              loading="eager"
             />
           </div>
         )}
@@ -123,6 +126,7 @@ export default function MeasureDetail() {
           )}
 
           <button
+            onClick={() => setShowQuestions(true)}
             className="flex items-center justify-center gap-2 w-full px-5 py-3.5 border border-border hover:border-primary/30 hover:bg-muted rounded-xl font-medium transition-colors"
             data-testid="button-question"
           >
@@ -141,6 +145,8 @@ export default function MeasureDetail() {
           </Link>
         </div>
       </div>
+
+      <QuestionsModal isOpen={showQuestions} onClose={() => setShowQuestions(false)} />
     </Layout>
   );
 }

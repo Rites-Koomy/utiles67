@@ -46,7 +46,7 @@ export function FeedbackSection() {
   };
 
   return (
-    <section className="py-10 opacity-0 animate-fade-up">
+    <section id="feedback-section" className="py-10 opacity-0 animate-fade-up">
       <div className="bg-gradient-to-br from-primary/5 via-primary/3 to-transparent rounded-3xl p-6 border border-primary/10">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">

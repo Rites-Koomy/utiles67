@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { Heart, Check, Mail, User, MapPin } from "lucide-react";
+import { Heart, Check, Mail, User, MapPin, Phone } from "lucide-react";
+import { config } from "@/config";
 
 export default function Rejoindre() {
   const [submitted, setSubmitted] = useState(false);
@@ -77,7 +78,28 @@ export default function Rejoindre() {
           </p>
         </section>
 
-        <form onSubmit={handleSubmit} className="space-y-5 animate-fade-up stagger-1">
+        <div className="bg-card rounded-2xl border border-card-border p-5 mb-6 animate-fade-up stagger-1">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Phone size={18} className="text-primary" />
+            </div>
+            <div>
+              <h3 className="font-display font-semibold text-foreground">
+                Contact direct
+              </h3>
+              <p className="text-xs text-muted-foreground">{config.phoneHours}</p>
+            </div>
+          </div>
+          <a
+            href={`tel:${config.phoneNumber.replace(/\s/g, "")}`}
+            className="inline-flex items-center gap-2 mt-2 text-lg font-medium text-primary hover:text-primary/80 transition-colors"
+            data-testid="link-phone-rejoindre"
+          >
+            📞 {config.phoneNumber}
+          </a>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-5 animate-fade-up stagger-2">
           <div>
             <label
               htmlFor="nom"

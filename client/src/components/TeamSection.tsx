@@ -1,8 +1,12 @@
-import { team } from "@/data";
+import { useState } from "react";
+import { team, TeamMember } from "@/data";
 import { TeamCard } from "./TeamCard";
+import { TeamProfileModal } from "./TeamProfileModal";
 import { Users } from "lucide-react";
 
 export function TeamSection() {
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+
   return (
     <section className="py-10 opacity-0 animate-fade-up">
       <div className="flex items-center gap-3 mb-2">
@@ -21,9 +25,20 @@ export function TeamSection() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         {team.map((member, index) => (
-          <TeamCard key={member.id} member={member} index={index} />
+          <TeamCard 
+            key={member.id} 
+            member={member} 
+            index={index}
+            onClick={() => setSelectedMember(member)}
+          />
         ))}
       </div>
+
+      <TeamProfileModal
+        member={selectedMember}
+        isOpen={!!selectedMember}
+        onClose={() => setSelectedMember(null)}
+      />
     </section>
   );
 }
