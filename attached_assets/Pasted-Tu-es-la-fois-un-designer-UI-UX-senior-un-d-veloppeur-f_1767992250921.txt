@@ -1,0 +1,115 @@
+Tu es à la fois :
+- un designer UI/UX senior
+- un développeur frontend expérimenté
+- et tu travailles pour une campagne municipale réelle.
+
+Objectif
+Créer un prototype fonctionnel du site "utiles67", mobile-first, rapide, lisible,
+qui transforme un programme politique en expérience fluide, digeste et engageante.
+
+Le site doit ressembler à un "feed" à la TikTok / Instagram Explore,
+mais pour des mesures politiques concrètes.
+
+⚠️ PRIORITÉS ABSOLUES
+- Compréhension en moins de 3 secondes par carte
+- Navigation naturelle au scroll
+- CTA toujours visible (Rejoindre / Agenda / Discuter)
+- Code simple, lisible, maintenable
+- Aucune usine à gaz
+
+---
+
+## CONTEXTE
+- Mouvement citoyen municipal (Strasbourg)
+- Ton: calme, humain, concret, non agressif
+- Pas de culte de la personnalité
+- Le programme est structuré par priorités et mesures terrain
+
+---
+
+## STACK TECH (OBLIGATOIRE)
+- HTML / CSS / JavaScript uniquement
+- Pas de framework lourd
+- Données chargées depuis des fichiers JSON
+- CSS clair (variables, composants réutilisables)
+- Mobile-first (desktop ensuite)
+
+---
+
+## STRUCTURE DU SITE (MVP)
+
+### 1. Accueil / Feed
+- Grille de cartes ("mesures")
+- Scroll vertical fluide
+- Chaque carte contient :
+  - Titre court
+  - Phrase d’impact (1 ligne max)
+  - Tag thématique
+- Clic sur carte → ouverture fiche détaillée (page ou modale)
+
+### 2. Page Priorité
+- Titre + résumé
+- Liste des mesures associées
+- Vidéo YouTube intégrée (iframe)
+- Mini FAQ (statique pour le prototype)
+
+### 3. Fiche Mesure
+- Constat (problème réel)
+- Mesure proposée
+- Mise en œuvre
+- Indicateur de réussite
+- Boutons :
+  - Voir la vidéo
+  - Poser une question
+  - Rejoindre le mouvement
+
+### 4. Vidéos
+- Grille simple de vidéos YouTube
+- Optimisé mobile
+
+### 5. Agenda
+- Liste d’événements
+- Date / lieu / description
+- Bouton "Ajouter à mon agenda"
+
+### 6. Rejoindre
+- Formulaire simple (nom, email, quartier)
+- Message de bienvenue
+
+---
+
+## DONNÉES (SIMULÉES POUR LE PROTOTYPE)
+Créer des fichiers JSON :
+- priorities.json
+- measures.json
+- videos.json
+- events.json
+
+Avec des contenus factices mais réalistes.
+
+---
+
+## DESIGN SYSTEM (À RESPECTER)
+- Grille claire, aérée
+- Beaucoup d’espace blanc
+- Typo lisible (sans-serif moderne)
+- 1 couleur principale + 1 accent maximum
+- Boutons sobres, humains, jamais agressifs
+- Icônes simples si nécessaire
+
+---
+
+## INTERACTIONS
+- Hover / tap subtil
+- Transitions légères
+- Aucun effet gadget inutile
+
+---
+
+## LIVRABLE ATTENDU
+- Un prototype fonctionnel navigable
+- Un code structuré par dossiers
+- Commentaires clairs dans le code
+- README expliquant la structure
+
+Le résultat doit donner envie de lire, comprendre et rejoindre.
