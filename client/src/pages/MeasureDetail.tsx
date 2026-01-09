@@ -2,6 +2,7 @@ import { useParams, Link } from "wouter";
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { QuestionsModal } from "@/components/QuestionsModal";
+import { EngagementBlock } from "@/components/EngagementBlock";
 import { getMeasureById, getPriorityById } from "@/data";
 import { ArrowLeft, Play, MessageCircle, UserPlus, CheckCircle2, Target, Wrench, BarChart3 } from "lucide-react";
 
@@ -90,7 +91,7 @@ export default function MeasureDetail() {
           </p>
         </header>
 
-        <div className="space-y-6 mb-10">
+        <div className="space-y-6 mb-6">
           {sections.map((section, index) => (
             <section
               key={section.title}
@@ -111,7 +112,14 @@ export default function MeasureDetail() {
           ))}
         </div>
 
-        <div className="space-y-3 opacity-0 animate-fade-up stagger-6">
+        <EngagementBlock
+          measureId={measure.id}
+          measureTitle={measure.title}
+          baseSupportCount={measure.baseSupportCount}
+          baseReactionCount={measure.baseReactionCount}
+        />
+
+        <div className="space-y-3 mt-10 opacity-0 animate-fade-up stagger-6">
           {measure.videoId && (
             <a
               href={`https://www.youtube.com/watch?v=${measure.videoId}`}

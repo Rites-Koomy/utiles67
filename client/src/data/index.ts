@@ -32,6 +32,9 @@ export interface Measure {
   videoId?: string;
   coverImage?: string;
   coverAlt?: string;
+  baseSupportCount?: number;
+  baseReactionCount?: number;
+  isKeyMeasure?: boolean;
 }
 
 export interface Video {
@@ -131,7 +134,10 @@ export const measures: Measure[] = [
     indicateur: "Nombre de déplacements vélo quotidiens (+50% visé)",
     videoId: "dQw4w9WgXcQ",
     coverImage: cyclePath,
-    coverAlt: "Piste cyclable protégée moderne"
+    coverAlt: "Piste cyclable protégée moderne",
+    baseSupportCount: 1247,
+    baseReactionCount: 48,
+    isKeyMeasure: true
   },
   {
     id: "velo-2",
@@ -190,7 +196,10 @@ export const measures: Measure[] = [
     miseEnOeuvre: "Plan de plantation sur 4 ans. Espèces adaptées au changement climatique. Participation citoyenne.",
     indicateur: "Surface végétalisée par habitant",
     coverImage: urbanPark,
-    coverAlt: "Allée arborée en ville"
+    coverAlt: "Allée arborée en ville",
+    baseSupportCount: 1832,
+    baseReactionCount: 67,
+    isKeyMeasure: true
   },
   {
     id: "ecologie-2",
@@ -238,7 +247,10 @@ export const measures: Measure[] = [
     miseEnOeuvre: "Plateforme en ligne et réunions de quartier. Vote ouvert à tous dès 16 ans. Suivi transparent.",
     indicateur: "Taux de participation et projets réalisés",
     coverImage: democracy,
-    coverAlt: "Citoyens votant lors d'une assemblée"
+    coverAlt: "Citoyens votant lors d'une assemblée",
+    baseSupportCount: 1456,
+    baseReactionCount: 52,
+    isKeyMeasure: true
   },
   {
     id: "democratie-2",

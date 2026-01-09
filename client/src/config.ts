@@ -4,4 +4,6 @@ export const config = {
   feedbackEndpoint: "",
   aspirationsEndpoint: "",
   contactEndpoint: "",
+  contribEndpoint: "",
+  adminCode: "utiles2026",
 };

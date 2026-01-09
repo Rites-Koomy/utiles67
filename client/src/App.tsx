@@ -9,6 +9,7 @@ import Priority from "@/pages/Priority";
 import Videos from "@/pages/Videos";
 import Agenda from "@/pages/Agenda";
 import Rejoindre from "@/pages/Rejoindre";
+import AdminLocal from "@/pages/AdminLocal";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/videos" component={Videos} />
       <Route path="/agenda" component={Agenda} />
       <Route path="/rejoindre" component={Rejoindre} />
+      <Route path="/admin-local" component={AdminLocal} />
       <Route component={NotFound} />
     </Switch>
   );
