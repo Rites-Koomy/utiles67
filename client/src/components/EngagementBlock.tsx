@@ -8,6 +8,7 @@ import {
   getBaseCountForMeasure,
   getLocalIncrements,
 } from "@/lib/contributions";
+import { isHoneypotFilled } from "@/lib/forms";
 
 interface EngagementBlockProps {
   measureId: string;
@@ -33,7 +34,8 @@ export function EngagementBlock({
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [comment, setComment] = useState("");
-  const [helpForm, setHelpForm] = useState({ name: "", email: "", quartier: "" });
+  const [helpForm, setHelpForm] = useState({ name: "", email: "", quartier: "", website: "" });
+  const [canSubmitHelp, setCanSubmitHelp] = useState(false);
   
   const baseSupport = baseSupportCount ?? getBaseCountForMeasure(measureId, "support");
   const baseReaction = baseReactionCount ?? getBaseCountForMeasure(measureId, "reaction");
@@ -41,7 +43,7 @@ export function EngagementBlock({
   const [displaySupports, setDisplaySupports] = useState(baseSupport);
   const [displayReactions, setDisplayReactions] = useState(baseReaction);
   
-  const tickRef = useRef<NodeJS.Timeout | null>(null);
+  const tickRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setHasSupported(hasUserVoted(measureId, "support"));
@@ -51,6 +53,14 @@ export function EngagementBlock({
     setDisplaySupports(baseSupport + increments.supports);
     setDisplayReactions(baseReaction + increments.reactions);
   }, [measureId, baseSupport, baseReaction]);
+
+  useEffect(() => {
+    if (showHelpModal) {
+      setCanSubmitHelp(false);
+      const timer = setTimeout(() => setCanSubmitHelp(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showHelpModal]);
 
   useEffect(() => {
     const tick = () => {
@@ -93,6 +103,14 @@ export function EngagementBlock({
 
   const handleHelpSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (isHoneypotFilled(helpForm.website)) {
+      markUserVoted(measureId, "help");
+      setHasHelped(true);
+      setShowHelpModal(false);
+      showFeedback("Merci ! On vous recontacte bientôt.");
+      return;
+    }
     
     await saveContribution({
       type: "help",
@@ -148,6 +166,7 @@ export function EngagementBlock({
                 ? "bg-primary/10 text-primary cursor-default"
                 : "bg-primary hover:bg-primary/90 text-primary-foreground"
             }`}
+            aria-label={hasSupported ? "Vous soutenez cette mesure" : "Soutenir cette mesure"}
             data-testid="button-support"
           >
             <Heart size={18} className={hasSupported ? "fill-current" : ""} />
@@ -162,6 +181,7 @@ export function EngagementBlock({
                 ? "bg-muted text-muted-foreground border-border cursor-default"
                 : "bg-card hover:bg-muted text-foreground border-border hover:border-primary/30"
             }`}
+            aria-label={hasHelped ? "Inscription reçue" : "Je veux aider à porter cette mesure"}
             data-testid="button-help"
           >
             <HandHelping size={18} />
@@ -186,12 +206,14 @@ export function EngagementBlock({
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             placeholder="Un mot, une idée, un ressenti ?"
+            aria-label="Ajouter un commentaire"
             className="flex-1 px-4 py-2.5 bg-muted border border-input rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-sm"
             data-testid="input-comment"
           />
           <button
             type="submit"
             disabled={!comment.trim()}
+            aria-label="Envoyer le commentaire"
             className="px-4 py-2.5 bg-secondary hover:bg-secondary/80 text-secondary-foreground rounded-xl font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             data-testid="button-send-comment"
           >
@@ -216,11 +238,14 @@ export function EngagementBlock({
               exit={{ opacity: 0, y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="fixed inset-x-0 bottom-0 z-50 bg-card rounded-t-3xl shadow-2xl max-h-[85vh] overflow-y-auto"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="help-modal-title"
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <h3 className="font-display font-bold text-lg text-foreground">
+                    <h3 id="help-modal-title" className="font-display font-bold text-lg text-foreground">
                       Aider à porter cette mesure
                     </h3>
                     <p className="text-sm text-muted-foreground mt-1">
@@ -230,6 +255,7 @@ export function EngagementBlock({
                   <button
                     onClick={() => setShowHelpModal(false)}
                     className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="Fermer"
                   >
                     <X size={18} />
                   </button>
@@ -237,11 +263,12 @@ export function EngagementBlock({
 
                 <form onSubmit={handleHelpSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                    <label htmlFor="help-name" className="block text-sm font-medium text-foreground mb-1.5">
                       Prénom <span className="text-muted-foreground">(optionnel)</span>
                     </label>
                     <input
                       type="text"
+                      id="help-name"
                       value={helpForm.name}
                       onChange={(e) => setHelpForm({ ...helpForm, name: e.target.value })}
                       placeholder="Votre prénom"
@@ -250,11 +277,12 @@ export function EngagementBlock({
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                    <label htmlFor="help-email" className="block text-sm font-medium text-foreground mb-1.5">
                       Email <span className="text-muted-foreground">(recommandé)</span>
                     </label>
                     <input
                       type="email"
+                      id="help-email"
                       value={helpForm.email}
                       onChange={(e) => setHelpForm({ ...helpForm, email: e.target.value })}
                       placeholder="votre@email.fr"
@@ -263,12 +291,13 @@ export function EngagementBlock({
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                    <label htmlFor="help-quartier" className="block text-sm font-medium text-foreground mb-1.5">
                       Quartier <span className="text-muted-foreground">(optionnel)</span>
                     </label>
                     <div className="relative">
                       <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
                       <select
+                        id="help-quartier"
                         value={helpForm.quartier}
                         onChange={(e) => setHelpForm({ ...helpForm, quartier: e.target.value })}
                         className="w-full pl-9 pr-4 py-2.5 bg-muted border border-input rounded-xl text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors appearance-none cursor-pointer"
@@ -281,12 +310,24 @@ export function EngagementBlock({
                     </div>
                   </div>
 
+                  <input
+                    type="text"
+                    name="website"
+                    value={helpForm.website}
+                    onChange={(e) => setHelpForm({ ...helpForm, website: e.target.value })}
+                    autoComplete="off"
+                    tabIndex={-1}
+                    aria-hidden="true"
+                    className="absolute -left-[9999px] opacity-0 h-0 w-0"
+                  />
+
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-medium transition-colors"
+                    disabled={!canSubmitHelp}
+                    className="w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Check size={18} />
-                    Valider
+                    {canSubmitHelp ? "Valider" : "Chargement..."}
                   </button>
                 </form>
               </div>

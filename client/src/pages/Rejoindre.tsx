@@ -1,18 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Heart, Check, Mail, User, MapPin, Phone } from "lucide-react";
 import { config } from "@/config";
+import { submitJoinForm, isHoneypotFilled } from "@/lib/forms";
 
 export default function Rejoindre() {
   const [submitted, setSubmitted] = useState(false);
+  const [canSubmit, setCanSubmit] = useState(false);
   const [formData, setFormData] = useState({
     nom: "",
     email: "",
     quartier: "",
+    website: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    const timer = setTimeout(() => setCanSubmit(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (isHoneypotFilled(formData.website)) {
+      setSubmitted(true);
+      return;
+    }
+
+    await submitJoinForm({
+      nom: formData.nom,
+      email: formData.email,
+      quartier: formData.quartier,
+    });
+
     setSubmitted(true);
   };
 
@@ -200,12 +220,24 @@ export default function Rejoindre() {
             </div>
           </div>
 
+          <input
+            type="text"
+            name="website"
+            value={formData.website}
+            onChange={handleChange}
+            autoComplete="off"
+            tabIndex={-1}
+            aria-hidden="true"
+            className="absolute -left-[9999px] opacity-0 h-0 w-0"
+          />
+
           <button
             type="submit"
-            className="w-full px-5 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold text-lg transition-colors shadow-sm"
+            disabled={!canSubmit}
+            className="w-full px-5 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold text-lg transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
             data-testid="button-submit"
           >
-            Rejoindre utiles67
+            {canSubmit ? "Rejoindre utiles67" : "Chargement..."}
           </button>
 
           <p className="text-xs text-center text-muted-foreground">

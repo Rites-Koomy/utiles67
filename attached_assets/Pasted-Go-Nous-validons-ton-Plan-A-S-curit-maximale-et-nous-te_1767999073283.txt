@@ -1,0 +1,91 @@
+Go. Nous validons ton Plan A ("Sécurité maximale") et nous te demandons de passer à l’exécution.
+
+Décisions validées
+- Données: build-time (import dans /src/data) avec guardrail build
+- Formulaires: Tally (gratuit EU) + fallback localStorage si URL non configurée
+- Images: versioning via query string ?v=X dans les champs cover/hero/photo
+- Anti-spam: honeypot + délai JS 2 secondes (sans captcha)
+- Déploiement: Cloudflare Pages via Git (Vite build -> dist)
+
+IMPORTANT
+Nous voulons un site statique production-ready, sans backend obligatoire, compatible Cloudflare Pages.
+
+---
+
+1) Données & structure (à faire en premier)
+- Mettre en place la structure recommandée (src/components, src/pages, src/lib, src/data, public/assets/*).
+- Migrer les contenus actuels vers une source unique /src/data (format simple et maintenable).
+  Contraintes:
+  - éviter les types complexes
+  - contenu éditable facilement (style “JSON-like”)
+  - IDs stables (measureId, teamId, etc.)
+- Vérifier que toutes les pages lisent ces données (feed, priorités, mesures, team, events, videos).
+
+2) Config production
+- Ajouter config.ts unique :
+  phoneNumber + phoneHours
+  formJoinUrl
+  formQuestionUrl
+  formEngagementUrl
+  (adminCode optionnel si besoin)
+- Si URL vide: fallback localStorage + toast “merci”
+- Si URL présente: POST JSON
+
+3) Formulaires humains (pas de chatbot)
+- “Posez votre question” (home + endroit stratégique) -> Tally via formQuestionUrl
+- “Rejoindre le mouvement” (page dédiée) + afficher le numéro -> Tally via formJoinUrl
+- “Engagement mesure” (soutiens / aider / commentaire) -> Tally via formEngagementUrl
+- Ajouter honeypot (champ caché) + délai 2s avant activation du submit sur tous les formulaires
+
+4) Engagement mesures (campagne)
+- Conserver le bloc en bas de chaque fiche mesure :
+  "Je soutiens" / "Je veux aider" / commentaire
+- Compteurs:
+  - baseSupportCount / baseReactionCount
+  - isKeyMeasure pour mesures structurantes
+- Appliquer le comportement like (localStorage pour éviter multi-like immédiat)
+
+5) Profils “Visages UTILES”
+- Sur la carte: afficher rôle UTILES si disponible
+- Dans la modale:
+  - image plus grande
+  - utilesRole visible
+  - videoUrl optionnel en bas (embed responsive)
+  - modale scrollable mobile
+  - lazy-load vidéo
+
+6) Images réelles (prod-ready)
+- Mettre en place /public/assets/brand|hero|measures|team|placeholders
+- Intégrer images temporaires propres
+- Utiliser ?v=1 dans les chemins d’images utilisés par les données
+- Placeholder élégant si image manquante
+
+7) SEO & qualité
+- title + meta description
+- OG/Twitter cards (image par défaut)
+- favicon + logo
+- accessibilité modales (focus, aria)
+
+8) Build & Cloudflare Pages
+- Vite build OK (npm run build)
+- dist prêt
+- README final:
+  - comment modifier contenu
+  - comment ajouter une mesure / un profil
+  - comment remplacer une image + incrémenter ?v=
+  - où configurer les URLs Tally + téléphone
+  - paramètres Cloudflare Pages (build command, output dir)
+
+---
+
+Livrables attendus
+- Le projet final production-ready
+- Build Vite sans erreur
+- README clair pour l’équipe
+- Aucune dépendance Replit (pas de liens absolus)
+
+Avant de terminer, fais un mini “smoke test”:
+- Home charge
+- 1 fiche mesure s’ouvre + engagement fonctionne (localStorage si URLs vides)
+- 1 profil s’ouvre + rôle + vidéo si présent
+- Page rejoindre + numéro visible
