@@ -1,0 +1,81 @@
+Objectif
+Passer le site utiles67 du mode prototype au mode réel en production sur Cloudflare Pages (via GitHub).
+Le site reste statique (React + Vite), avec formulaires humains via Tally.
+Aucune réécriture en vanilla JS. Aucun chatbot.
+
+Contexte
+- Le Plan A est déjà implémenté (config.ts, forms.ts, contributions.ts, anti-spam, SEO, build OK).
+- Le build Vite fonctionne et génère /dist.
+- Le repo est sur GitHub (même organisation que Koomy).
+- Nous voulons maintenant effectuer le “GO LIVE” proprement.
+
+IMPORTANT
+À ce stade, tu dois fournir :
+1) Les modifications finales nécessaires dans le repo (si quelque chose manque)
+2) Les instructions exactes Cloudflare Pages + GitHub (pas d’approximation)
+3) Un checklist final de vérification avant mise en ligne
+Tu peux faire de petits ajustements de code si nécessaire, mais garde ça minimal.
+
+---
+
+1) Finaliser la configuration runtime
+- Vérifier que config.ts est bien le seul point de configuration.
+- Mettre des placeholders clairs si les URLs Tally ne sont pas renseignées (fallback localStorage + toast).
+- Prévoir dans README les 3 valeurs à remplir :
+  - formJoinUrl
+  - formQuestionUrl
+  - formEngagementUrl
+  - phoneNumber + phoneHours
+
+2) Brancher les formulaires Tally (prêt prod)
+- Le code doit envoyer les POST vers les URLs Tally configurées.
+- Les payloads doivent inclure :
+  - type (support/help/comment/question/join)
+  - measureId (si engagement)
+  - timestamp
+  - pageUrl
+  - email (si fourni)
+  - message/comment (si fourni)
+- Anti-spam déjà présent : honeypot + délai 2s (garder).
+
+3) Vérifier chemins relatifs & assets
+- Vérifier que l’OpenGraph image est servie en relatif (ex: /opengraph.jpg) depuis /public
+- Vérifier favicon/logo.
+- Vérifier que toutes les images (hero, covers, team) pointent vers /public/assets/* en chemins relatifs.
+- Confirmer support du versioning cache via ?v=1 dans les chemins d’images des données.
+
+4) Préparer Cloudflare Pages (instructions exactes)
+Fournir une procédure step-by-step :
+- Connexion GitHub -> Cloudflare Pages
+- Sélection du repo
+- Paramètres build :
+  - Build command: npm run build
+  - Output directory: dist
+  - Root directory: /
+- Déploiement preview URL pages.dev
+- Ajout domaine custom (si demandé) + DNS via Cloudflare
+
+5) Checklist smoke-test GO LIVE (obligatoire)
+Fournir un checklist testable sur mobile (iPhone/Android) :
+- Home charge
+- Hero s’affiche
+- Feed mesures ok
+- Une fiche mesure s’ouvre
+- Je soutiens + compteur ok
+- Je veux aider ouvre la modale / formulaire ok
+- Commentaire envoie ok
+- Posez votre question envoie ok
+- Rejoindre le mouvement envoie ok + téléphone visible
+- Profil équipe modale ok + rôle + vidéo si présent
+- Aucun warning console bloquant
+- Build production OK
+
+6) GitHub / release
+- Créer un commit final propre "GO LIVE - Cloudflare Pages ready"
+- Push sur main
+- Confirmer que le projet est prêt à être relié à Cloudflare Pages sans autre manipulation.
+
+Livrable final attendu
+- Repo propre et déployable sur Cloudflare Pages
+- README clair “comment déployer” + “comment mettre à jour contenu/images”
+- Checklist GO LIVE fournie

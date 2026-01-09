@@ -52,9 +52,9 @@ export async function saveContribution(contribution: Contribution): Promise<void
   existing.push(contribution);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
 
-  if (config.contribEndpoint) {
+  if (config.formEngagementUrl) {
     try {
-      await fetch(config.contribEndpoint, {
+      await fetch(config.formEngagementUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contribution),
