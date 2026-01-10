@@ -50,15 +50,18 @@ export default function Home() {
 
   useEffect(() => {
     if (!hasAnimated && scrollRef.current) {
+      const el = scrollRef.current;
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      
       const timer = setTimeout(() => {
         if (scrollRef.current) {
-          scrollRef.current.scrollTo({ left: 60, behavior: "smooth" });
+          scrollRef.current.scrollTo({ left: maxScroll, behavior: "smooth" });
           setTimeout(() => {
             scrollRef.current?.scrollTo({ left: 0, behavior: "smooth" });
             setHasAnimated(true);
-          }, 400);
+          }, 1200);
         }
-      }, 1500);
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, [hasAnimated]);
