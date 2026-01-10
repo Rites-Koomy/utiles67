@@ -52,17 +52,66 @@ export default function Home() {
     if (!hasAnimated && scrollRef.current) {
       const el = scrollRef.current;
       const maxScroll = el.scrollWidth - el.clientWidth;
-      
-      const timer = setTimeout(() => {
-        if (scrollRef.current) {
-          scrollRef.current.scrollTo({ left: maxScroll, behavior: "smooth" });
+      const duration = 4000;
+      const steps = 60;
+      const stepTime = duration / steps;
+      let currentStep = 0;
+      let animationId: ReturnType<typeof setTimeout>;
+      let cancelled = false;
+
+      const handleInteraction = () => {
+        cancelled = true;
+        setHasAnimated(true);
+      };
+
+      el.addEventListener("touchstart", handleInteraction, { passive: true });
+      el.addEventListener("mousedown", handleInteraction);
+
+      const animateScroll = () => {
+        if (cancelled || !scrollRef.current) return;
+        
+        currentStep++;
+        const progress = currentStep / steps;
+        const eased = progress < 0.5 
+          ? 2 * progress * progress 
+          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+        
+        scrollRef.current.scrollLeft = eased * maxScroll;
+        
+        if (currentStep < steps) {
+          animationId = setTimeout(animateScroll, stepTime);
+        } else {
           setTimeout(() => {
-            scrollRef.current?.scrollTo({ left: 0, behavior: "smooth" });
-            setHasAnimated(true);
-          }, 1200);
+            if (!cancelled && scrollRef.current) {
+              let returnStep = 0;
+              const animateReturn = () => {
+                if (cancelled || !scrollRef.current) return;
+                returnStep++;
+                const p = returnStep / steps;
+                const e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+                scrollRef.current.scrollLeft = maxScroll * (1 - e);
+                if (returnStep < steps) {
+                  setTimeout(animateReturn, stepTime);
+                } else {
+                  setHasAnimated(true);
+                }
+              };
+              animateReturn();
+            }
+          }, 800);
         }
+      };
+
+      const startTimer = setTimeout(() => {
+        if (!cancelled) animateScroll();
       }, 1000);
-      return () => clearTimeout(timer);
+
+      return () => {
+        clearTimeout(startTimer);
+        clearTimeout(animationId);
+        el.removeEventListener("touchstart", handleInteraction);
+        el.removeEventListener("mousedown", handleInteraction);
+      };
     }
   }, [hasAnimated]);
 
