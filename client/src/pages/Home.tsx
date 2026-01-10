@@ -68,21 +68,21 @@ export default function Home() {
       <div className="max-w-lg mx-auto px-4">
         <HeroSection />
 
-        <div className="sticky top-14 z-30 -mx-4 px-4 py-3 bg-background/90 backdrop-blur-md border-b border-border">
-          <div className="relative">
-            {showLeftArrow && (
-              <button
-                onClick={() => scroll("left")}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-background/95 shadow-md rounded-full border border-border text-muted-foreground hover:text-foreground transition-all"
-                aria-label="Défiler vers la gauche"
-              >
-                <ChevronLeft size={18} />
-              </button>
-            )}
+        <div className="sticky top-14 z-30 -mx-4 py-3 bg-background/90 backdrop-blur-md border-b border-border">
+          <div className="flex items-center gap-1">
+            <button
+              onClick={() => scroll("left")}
+              className={`flex-shrink-0 w-7 h-7 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all ${
+                showLeftArrow ? "opacity-100" : "opacity-30 pointer-events-none"
+              }`}
+              aria-label="Défiler vers la gauche"
+            >
+              <ChevronLeft size={20} />
+            </button>
             
             <div
               ref={scrollRef}
-              className="flex gap-2 overflow-x-auto hide-scrollbar px-1 pb-1"
+              className="flex gap-2 overflow-x-auto hide-scrollbar flex-1"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               <button
@@ -110,15 +110,15 @@ export default function Home() {
               ))}
             </div>
 
-            {showRightArrow && (
-              <button
-                onClick={() => scroll("right")}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-background/95 shadow-md rounded-full border border-border text-muted-foreground hover:text-foreground transition-all"
-                aria-label="Défiler vers la droite"
-              >
-                <ChevronRight size={18} />
-              </button>
-            )}
+            <button
+              onClick={() => scroll("right")}
+              className={`flex-shrink-0 w-7 h-7 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all ${
+                showRightArrow ? "opacity-100" : "opacity-30 pointer-events-none"
+              }`}
+              aria-label="Défiler vers la droite"
+            >
+              <ChevronRight size={20} />
+            </button>
           </div>
         </div>
 
