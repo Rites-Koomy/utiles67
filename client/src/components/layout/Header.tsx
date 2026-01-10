@@ -18,9 +18,11 @@ export function Header() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="max-w-lg mx-auto px-4 h-14 flex items-center justify-between">
           <Link href="/" data-testid="link-home">
-            <span className="font-display font-bold text-xl tracking-tight text-primary">
-              utiles67
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="utiles67" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           <nav className="hidden sm:flex items-center gap-1">
