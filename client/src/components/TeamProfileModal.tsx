@@ -50,7 +50,7 @@ export function TeamProfileModal({ member, isOpen, onClose }: TeamProfileModalPr
                 <img
                   src={member.photo}
                   alt={`Photo de ${member.name}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
               ) : (

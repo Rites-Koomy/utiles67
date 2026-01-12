@@ -23,7 +23,7 @@ export function TeamCard({ member, index = 0, onClick }: TeamCardProps) {
             <img
               src={member.photo}
               alt={member.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
               loading="lazy"
             />
           ) : (
