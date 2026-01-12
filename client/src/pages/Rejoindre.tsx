@@ -44,13 +44,10 @@ export default function Rejoindre() {
 
         <div className="animate-fade-up stagger-2 bg-card rounded-2xl border border-card-border overflow-hidden">
           <iframe
-            data-tally-src={`${config.tally.rejoindreUrl}?transparentBackground=1`}
-            loading="lazy"
+            src={`${config.tally.rejoindreUrl}?transparentBackground=1&alignLeft=1`}
             width="100%"
-            height="400"
+            height="500"
             frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
             title="Formulaire Rejoindre"
             className="w-full"
             data-testid="iframe-tally-rejoindre"

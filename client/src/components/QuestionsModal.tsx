@@ -55,13 +55,10 @@ export function QuestionsModal({ isOpen, onClose }: QuestionsModalProps) {
 
             <div className="overflow-y-auto" style={{ maxHeight: "calc(85vh - 120px)" }}>
               <iframe
-                data-tally-src={`${config.tally.questionsUrl}?transparentBackground=1`}
-                loading="lazy"
+                src={`${config.tally.questionsUrl}?transparentBackground=1&alignLeft=1`}
                 width="100%"
-                height="350"
+                height="400"
                 frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
                 title="Formulaire Questions"
                 className="w-full"
                 data-testid="iframe-tally-questions"
