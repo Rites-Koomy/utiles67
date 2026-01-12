@@ -436,7 +436,7 @@ export const team: TeamMember[] = [
     utilesRole: "Présidente UTILES Bas Rhin",
     quote: "Je m’engage avec Utiles67 parce que je crois en une action citoyenne utile, concrète et proche des habitants. Ce mouvement porte des valeurs de solidarité, de justice et de respect qui correspondent à ma vision d’une société plus humaine et plus équitable à Strasbourg et dans le Bas-Rhin.",
     bio: "citoyen engagé pour la paix, la justice et le vivre-ensemble à Strasbourg. Je crois en une ville plus humaine, fondée sur l’égalité, le respect et la solidarité. Mon engagement est guidé par l’écoute des citoyens, la défense de la dignité de chacun et la volonté d’agir concrètement pour une société plus juste et apaisée.",
-    photo: "https://replit.com/t/koomy-app/repls/Design-Dev-AI#client/public/Team/Mohamed-sylla-strasbourg-utiles67.jpg",
+    photo: "/Team/Mohamed-sylla-strasbourg-utiles67.jpg",
     tags: ["Logement", "Familles"]
   },
   {
