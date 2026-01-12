@@ -152,6 +152,8 @@ export const measures: Measure[] = [
     proposition: "Renforcer les moyens des commissions d'urbanisme pour agir sur la salubrité. Créer un droit d'alerte officiel envers les propriétaires. Coopération renforcée entre Ville, CCAS et associations.",
     miseEnOeuvre: "Extension du permis de louer. Lutte contre les marchands de sommeil. Priorité à la rénovation énergétique. Reconversion des friches.",
     indicateur: "Nombre de logements contrôlés, procédures engagées contre les propriétaires défaillants",
+    coverImage: "/measures/logement-habitat.jpg",
+    coverAlt: "Contrôle de l'habitat",
     baseSupportCount: 1234,
     baseReactionCount: 45
   },
@@ -164,7 +166,9 @@ export const measures: Measure[] = [
     constat: "De nombreux appartements quittent le marché locatif classique pour devenir des locations touristiques, aggravant la pénurie de logements pour les Strasbourgeois.",
     proposition: "Encadrement strict des locations touristiques type Airbnb, avec contrôles renforcés et sanctions dissuasives.",
     miseEnOeuvre: "Plateforme de déclaration obligatoire. Équipe de contrôle dédiée. Limitation du nombre de nuits autorisées. Amendes en cas de fraude.",
-    indicateur: "Nombre de logements remis sur le marché locatif classique"
+    indicateur: "Nombre de logements remis sur le marché locatif classique",
+    coverImage: "/measures/logement-locations.jpg",
+    coverAlt: "Location touristique"
   },
   {
     id: "services-bus-mairie",
@@ -191,7 +195,9 @@ export const measures: Measure[] = [
     constat: "« Tout est en ligne, mais quand on ne maîtrise pas Internet, on fait comment ? » Cette distance crée une solitude administrative, particulièrement chez les seniors et les familles précaires.",
     proposition: "Présence visible et conviviale de la Ville sur les marchés de quartier : information, écoute, démarches rapides et orientation immédiate, sans rendez-vous.",
     miseEnOeuvre: "Stand léger installé chaque jour de marché. Agents municipaux ou bénévoles formés. Documentation simplifiée disponible.",
-    indicateur: "Nombre de personnes orientées, taux de résolution au premier contact"
+    indicateur: "Nombre de personnes orientées, taux de résolution au premier contact",
+    coverImage: "/measures/services-marches.jpg",
+    coverAlt: "Stand sur un marché"
   },
   {
     id: "services-voisins-relais",
@@ -202,7 +208,9 @@ export const measures: Measure[] = [
     constat: "« J'ai raté des aides parce que je n'avais pas les bons papiers au bon moment. Personne ne m'a expliqué. » Beaucoup abandonnent leurs droits par découragement.",
     proposition: "Habitants volontaires, formés par la Ville, en lien avec les CSC et associations, pour accompagner les démarches et orienter vers les bons services.",
     miseEnOeuvre: "Appel à candidatures. Formation initiale et continue. Coordination avec les centres socioculturels. Reconnaissance officielle du statut.",
-    indicateur: "Nombre de Voisins-Relais actifs, nombre de personnes accompagnées"
+    indicateur: "Nombre de Voisins-Relais actifs, nombre de personnes accompagnées",
+    coverImage: "/measures/services-voisins-relais.jpg",
+    coverAlt: "Voisins qui s'entraident"
   },
   {
     id: "services-numerique",
@@ -213,7 +221,9 @@ export const measures: Measure[] = [
     constat: "« Il suffirait parfois d'une personne pour expliquer calmement. Pas d'un site Internet de plus. » Le numérique exclut ceux qui n'y ont pas accès.",
     proposition: "Ateliers gratuits, pratiques et réguliers pour apprendre à utiliser les outils numériques essentiels (CAF, santé, transports, école).",
     miseEnOeuvre: "Partenariat avec bibliothèques et maisons de quartier. Bénévoles et agents formés. Horaires adaptés (soirs et week-ends).",
-    indicateur: "Nombre de participants, progression mesurée, autonomie acquise"
+    indicateur: "Nombre de participants, progression mesurée, autonomie acquise",
+    coverImage: "/measures/services-numerique.jpg",
+    coverAlt: "Atelier numérique"
   },
   {
     id: "services-referent",
@@ -224,7 +234,9 @@ export const measures: Measure[] = [
     constat: "Les situations complexes se perdent entre les services. Personne ne suit le dossier de bout en bout.",
     proposition: "Un agent identifié par quartier, chargé de suivre les situations complexes et d'éviter le renvoi d'un service à l'autre.",
     miseEnOeuvre: "Désignation dans chaque secteur. Formation au suivi transversal. Lien direct avec les services municipaux et partenaires.",
-    indicateur: "Nombre de dossiers suivis, délai de résolution, satisfaction des usagers"
+    indicateur: "Nombre de dossiers suivis, délai de résolution, satisfaction des usagers",
+    coverImage: "/measures/services-referent.jpg",
+    coverAlt: "Référent administratif"
   },
   {
     id: "emploi-strasimpact",
@@ -251,7 +263,9 @@ export const measures: Measure[] = [
     constat: "« On parle beaucoup d'emploi, mais rarement de ceux qui veulent créer ici. » Les petits projets utiles sont souvent abandonnés faute d'un coup de pouce.",
     proposition: "Accompagnement spécifique pour les couturières, réparateurs de vélos, artisans alimentaires et initiatives associatives locales.",
     miseEnOeuvre: "Guichet unique d'orientation. Mise à disposition de locaux municipaux. Partenariat avec les chambres consulaires.",
-    indicateur: "Nombre d'artisans accompagnés, taux de survie à 3 ans"
+    indicateur: "Nombre d'artisans accompagnés, taux de survie à 3 ans",
+    coverImage: "/measures/emploi-artisans.jpg",
+    coverAlt: "Artisan local"
   },
   {
     id: "ecologie-capteurs",
@@ -278,7 +292,9 @@ export const measures: Measure[] = [
     constat: "« Les espaces verts ne devraient pas être un luxe réservé à certains quartiers. » Certains enfants grandissent loin de tout espace naturel.",
     proposition: "Déploiement massif de jardins partagés et fermes urbaines dans tous les quartiers, avec ateliers pédagogiques, compost collectif et circuits courts.",
     miseEnOeuvre: "Identification des terrains disponibles. Appel à projets citoyens. Partenariat avec écoles et commerces locaux.",
-    indicateur: "Nombre de jardins créés, surface végétalisée par habitant, participation citoyenne"
+    indicateur: "Nombre de jardins créés, surface végétalisée par habitant, participation citoyenne",
+    coverImage: "/measures/ecologie-jardins.jpg",
+    coverAlt: "Jardin partagé urbain"
   },
   {
     id: "ecologie-renovation",
@@ -289,7 +305,9 @@ export const measures: Measure[] = [
     constat: "Trop de bâtiments publics et de logements sociaux sont des passoires thermiques, augmentant les factures et dégradant la santé des occupants.",
     proposition: "Plan prioritaire de rénovation pour les écoles, crèches et logements sociaux : isolation, panneaux solaires, systèmes de chauffage écologiques.",
     miseEnOeuvre: "Audit énergétique systématique. Programmation pluriannuelle des travaux. Partenariat avec les bailleurs sociaux.",
-    indicateur: "Nombre de bâtiments rénovés, économies d'énergie réalisées, confort des usagers"
+    indicateur: "Nombre de bâtiments rénovés, économies d'énergie réalisées, confort des usagers",
+    coverImage: "/measures/ecologie-renovation.jpg",
+    coverAlt: "Rénovation énergétique"
   },
   {
     id: "mobilite-securite",
@@ -332,7 +350,9 @@ export const measures: Measure[] = [
     constat: "Les citoyens se sentent exclus des décisions qui les concernent. Le budget participatif actuel reste limité.",
     proposition: "Augmenter la part du budget décidée par les habitants. Simplifier le processus de proposition et de vote. Ouvrir le vote dès 16 ans.",
     miseEnOeuvre: "Plateforme de proposition en ligne. Réunions de quartier pour accompagner. Suivi transparent des projets votés.",
-    indicateur: "Taux de participation, diversité des proposants, projets réalisés"
+    indicateur: "Taux de participation, diversité des proposants, projets réalisés",
+    coverImage: "/measures/democratie-budget.jpg",
+    coverAlt: "Budget participatif"
   }
 ];
 
