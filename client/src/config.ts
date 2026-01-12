@@ -1,5 +1,5 @@
 export const config = {
-  phoneNumber: "03 88 00 00 00",
+  phoneNumber: "06 52 81 71 34",
   phoneHours: "Lun-Ven 9h-18h",
   
   formJoinUrl: "",
