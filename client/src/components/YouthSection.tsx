@@ -69,7 +69,7 @@ export function YouthSection() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
           <button
             onClick={scrollToFeedback}
             className="group bg-card rounded-2xl border border-card-border p-5 text-left hover:border-primary/20 hover:shadow-md transition-all"
@@ -169,7 +169,7 @@ export function YouthSection() {
                       data-testid="textarea-aspirations"
                     />
 
-                    <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-1.5">
                           Votre situation
