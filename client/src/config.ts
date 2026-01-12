@@ -11,4 +11,9 @@ export const config = {
   siteName: "utiles67",
   siteDescription: "Mouvement citoyen pour Strasbourg",
   siteUrl: "https://utiles67.fr",
+  tally: {
+    rejoindreUrl: "https://tally.so/r/WORRZJ",
+    questionsUrl: "https://tally.so/r/YYYYY",
+    engagementUrl: "https://tally.so/r/ZZZZZ",
+  }
 };
