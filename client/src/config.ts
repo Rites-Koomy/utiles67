@@ -13,7 +13,7 @@ export const config = {
   siteUrl: "https://utiles67.fr",
   tally: {
     rejoindreUrl: "https://tally.so/r/WORRZJ",
-    questionsUrl: "https://tally.so/r/YYYYY",
+    questionsUrl: "https://tally.so/r/eqrroq",
     engagementUrl: "https://tally.so/r/ZZZZZ",
   }
 };
