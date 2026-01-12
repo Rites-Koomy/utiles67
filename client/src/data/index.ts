@@ -433,7 +433,7 @@ export const team: TeamMember[] = [
     name: "Mohamed",
     quartier: "Hautepierre",
     role: "Juriste, Syndicalist",
-    utilesRole: "Présidente UTILES Bas Rhin",
+    utilesRole: "Présidente Bas Rhin",
     quote: "Je m’engage avec Utiles67 parce que je crois en une action citoyenne utile, concrète et proche des habitants. Ce mouvement porte des valeurs de solidarité, de justice et de respect qui correspondent à ma vision d’une société plus humaine et plus équitable à Strasbourg et dans le Bas-Rhin.",
     bio: "citoyen engagé pour la paix, la justice et le vivre-ensemble à Strasbourg. Je crois en une ville plus humaine, fondée sur l’égalité, le respect et la solidarité. Mon engagement est guidé par l’écoute des citoyens, la défense de la dignité de chacun et la volonté d’agir concrètement pour une société plus juste et apaisée.",
     photo: "/Team/Mohamed-sylla-strasbourg-utiles67.jpg",
