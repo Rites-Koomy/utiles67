@@ -430,13 +430,13 @@ export const events: Event[] = [
 export const team: TeamMember[] = [
   {
     id: "member-1",
-    name: "Nadia",
+    name: "Mohamed",
     quartier: "Hautepierre",
-    role: "Mère de famille",
-    utilesRole: "Référente Logement",
-    quote: "Nous respectons nos obligations, mais personne ne respecte les siennes envers nous.",
-    bio: "Nadia attend un logement adapté depuis 4 ans. Elle connaît les difficultés du parc social et porte la voix des familles.",
-    photo: "",
+    role: "Juriste, Syndicalist",
+    utilesRole: "Présidente UTILES Bas Rhin",
+    quote: "Je m’engage avec Utiles67 parce que je crois en une action citoyenne utile, concrète et proche des habitants. Ce mouvement porte des valeurs de solidarité, de justice et de respect qui correspondent à ma vision d’une société plus humaine et plus équitable à Strasbourg et dans le Bas-Rhin.",
+    bio: "citoyen engagé pour la paix, la justice et le vivre-ensemble à Strasbourg. Je crois en une ville plus humaine, fondée sur l’égalité, le respect et la solidarité. Mon engagement est guidé par l’écoute des citoyens, la défense de la dignité de chacun et la volonté d’agir concrètement pour une société plus juste et apaisée.",
+    photo: "https://photos.app.goo.gl/FdgEoiruG8cYAq3f6",
     tags: ["Logement", "Familles"]
   },
   {
@@ -448,7 +448,8 @@ export const team: TeamMember[] = [
     quote: "Il suffirait parfois d'une personne pour expliquer calmement. Pas d'un site Internet de plus.",
     bio: "Michel accompagne ses voisins dans leurs démarches administratives. Il croit au lien humain.",
     photo: "",
-    tags: ["Services publics", "Seniors"]
+    tags: ["Services publics", "Seniors"],
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "member-3",
@@ -459,7 +460,8 @@ export const team: TeamMember[] = [
     quote: "Tout est en ligne, mais quand on ne maîtrise pas Internet, on fait comment ?",
     bio: "Amina voit chaque jour des personnes isolées par le numérique. Elle milite pour des services accessibles à tous.",
     photo: "",
-    tags: ["Services publics", "Numérique"]
+    tags: ["Services publics", "Numérique"],
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "member-4",
@@ -482,7 +484,8 @@ export const team: TeamMember[] = [
     quote: "On parle d'air pur, mais chez nous, les enfants respirent les pots d'échappement.",
     bio: "Claire enseigne près d'un axe très fréquenté. Elle veut une écologie concrète qui protège la santé des enfants.",
     photo: "",
-    tags: ["Écologie", "Éducation"]
+    tags: ["Écologie", "Éducation"],
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "member-6",
@@ -493,7 +496,8 @@ export const team: TeamMember[] = [
     quote: "On parle beaucoup d'emploi, mais rarement de ceux qui veulent créer ici.",
     bio: "Jean-Marc tient un atelier de menuiserie depuis 15 ans. Il défend les artisans et commerces de proximité.",
     photo: "",
-    tags: ["Emploi", "Artisanat"]
+    tags: ["Emploi", "Artisanat"],
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   }
 ];
 
