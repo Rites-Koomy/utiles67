@@ -449,55 +449,55 @@ export const team: TeamMember[] = [
     bio: "Militante engagée, je place l’action collective et la transformation sociale au cœur de mon combat. Convaincue que la politique doit être un levier de justice, d’égalité.",
     photo: "/Team/Sans titre-2.png",
     tags: ["Services publics", "Seniors"],
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    videoUrl: ""
   },
   {
     id: "member-3",
     name: "Frédéric CADIOT",
-    quartier: "Elsau",
+    quartier: "Centre Ville",
     role: "Retraité",
     utilesRole: "Militant",
     quote: "Je milite au sein d’UTiles parce que ce parti incarne l’humanisme en action : un engagement sans compromis pour la justice sociale, l’écologie et la démocratie, sans tomber dans les pièges des extrêmes. ",
     bio: "Installé à Strasbourg depuis de nombreuses années, je connais les réalités de notre ville : ses forces, ses inégalités, et surtout le potentiel immense de ses habitant·e·s. Mon engagement politique est né ici, dans les quartiers, les associations et les luttes qui font vivre notre territoire..",
     photo: "/Team/Sans titre-5.png",
     tags: ["Services publics", "Numérique"],
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    videoUrl: ""
   },
   {
     id: "member-4",
     name: " Hinda Bouchrite,",
-    quartier: "Port-du-Rhin",
+    quartier: "Quartier Gare",
     role: "spécialiste en mode",
     utilesRole: "Militante",
     quote: "J'ai trouvé chez UTILES, un mouvement qui me ressemble, un espace où chacun a sa place, sans jugement ni étiquette. Aujourd’hui, je m’engage pour porter la voix des habitants de mon quartier, pour défendre ce qui compte vraiment pour eux et pour contribuer à un projet collectif fondé sur l’humain, la proximité et le respect.",
     bio: "Mon engagement est né autrement, dans le quotidien, dans l’observation, dans les échanges simples avec les habitants autour de moi. J’ai compris que l’utile se construit sur le terrain, par l’écoute et l’action concrète.C’est pour cela que je me suis engagée avec Utiles. J’y ai trouvé un mouvement qui me ressemble, un espace où chacun a sa place, sans jugement ni étiquette. Aujourd’hui, je m’engage pour porter la voix des habitants de mon quartier, pour défendre ce qui compte vraiment pour eux et pour contribuer à un projet collectif fondé sur l’humain, la proximité et le respect.",
     photo: "/Team/Sans titre-7.png",
     tags: ["Emploi", "Entrepreneuriat"],
-    videoUrl: "https://youtube.com/shorts/rptP-rn386Q?si=Ug-yCE9OiBZ_aiMV"
+    videoUrl: ""
   },
   {
     id: "member-5",
     name: "Mina Bezzari",
     quartier: "Robertsau",
-    role: "Enseignant",
-    utilesRole: "Référente Écologie",
+    role: "Militant associative",
+    utilesRole: "Référente quartier",
     quote: "Je crois en une ville qui prend soin de toutes les générations. Le bien-être dans sa ville doit être une réalité pour les jeunes comme pour les seniors. Personne ne doit être laissé de côté. Aujourd’hui, notre objectif est simple : aller vers les citoyens, rencontrer toutes les personnes inscrites sur les listes électorales, les écouter, les rassurer et les conforter. La citoyenneté ne se résume pas à un bulletin de vote.",
     bio: "J’ai été conseillère municipale de 2008 à 2014 et, en 2007, je me suis présentée aux élections législatives. Mais mon engagement ne s’est jamais arrêté là. J’ai travaillé de nombreuses années dans le milieu associatif et, aujourd’hui encore, je suis bénévole dans mon quartier.",
     photo: "/Team/Sans titre-3.png",
     tags: ["Écologie", "Éducation"],
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    videoUrl: ""
   },
   {
     id: "member-6",
-    name: "Durmaz Meral",
-    quartier: "Koenigshoffen",
-    role: "Militant",
+    name: "Hayta Nurdogan",
+    quartier: "Neuhof",
+    role: "Chef d'entreprise",
     utilesRole: "Agent commercial immobilier ",
-    quote: "Car c’est un parti qui me ressemble .",
-    bio: "Jean-Marc tient un atelier de menuiserie depuis 15 ans. Il défend les artisans et commerces de proximité.",
-    photo: "",
+    quote: "je porte une ambition claire :ouvrir des portes aux jeunes vers l’emploi, notamment à travers le programme TRACE, et redonner de l’élan à nos quartiers.",
+    bio: "Je crois en une vie locale dynamique, saine et solidaire, fondée sur le respect, la transmission et la détermination.Parce que rien n’est plus fort qu’un quartier qui croit en sa jeunesse.",
+    photo: "/Team/Sans%20titre-8.png",
     tags: ["Emploi", "Artisanat"],
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    videoUrl: ""
   }
 ];
 

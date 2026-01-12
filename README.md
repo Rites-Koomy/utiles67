@@ -45,7 +45,7 @@ Déployable sur **Cloudflare Pages** via GitHub.
 ```typescript
 export const config = {
   // Téléphone affiché sur le site (OBLIGATOIRE)
-  phoneNumber: "03 88 00 00 00",
+  phoneNumber: "06 52 81 71 34",
   phoneHours: "Lun-Ven 9h-18h",
   
   // URLs Tally (laisser vide = fallback localStorage)
