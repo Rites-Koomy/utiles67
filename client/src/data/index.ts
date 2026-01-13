@@ -378,7 +378,7 @@ export const videos: Video[] = [
   },
   {
     id: "video-4",
-    title: "Tentatives d'intimidationnos sommes ",
+    title: "Tentatives d'intimidations ",
     description: "Bus-Mairie, Voisins-Relais : rapprocher les services publics.",
     youtubeId: "D-bVV2DoGyM",
     priorityId: "services-publics"
@@ -402,49 +402,41 @@ export const videos: Video[] = [
 export const events: Event[] = [
   {
     id: "event-1",
-    title: "Réunion publique Centre-ville",
-    description: "Présentation du programme UTILES et échanges avec les habitants.",
-    date: "2026-01-25",
-    time: "19:00",
-    location: "Salle de la Bourse",
-    address: "1 Place de la Bourse, Strasbourg"
+    title: "Marché Boulevard de la Marne",
+    description: "Nous allons à la rencontre des habitants du quartier.",
+    date: "2026-01-13",
+    time: "09:30",
+    location: "Allées du Marché de la Marne",
+    address: "Boulevard de la Marne, Strasbourg"
   },
   {
     id: "event-2",
-    title: "Café citoyen Hautepierre",
-    description: "Discussion sur le logement et les services publics de proximité.",
-    date: "2026-02-01",
-    time: "10:30",
-    location: "Centre socio-culturel",
-    address: "1 Place André Maurois, Strasbourg"
+    title: "Marché Neuhof",
+    description: "Nous allons à la rencontre des habitants du quartier.",
+    date: "2026-01-15",
+    time: "09:30",
+    location: "Allées du Marché Neuhof",
+    address: "Allée Reuss, Strasbourg"
   },
   {
     id: "event-3",
-    title: "Marche de quartier Neuhof",
-    description: "Visite des points à améliorer avec les habitants du quartier.",
-    date: "2026-02-08",
-    time: "14:00",
-    location: "Place de l'Île de France",
-    address: "Place de l'Île de France, Strasbourg"
+    title: "Marché Cronenbourg",
+    description: "Nous allons à la rencontre des habitants du quartier.",
+    date: "2026-01-21",
+    time: "09:30",
+    location: "Allées du Marché Cronenbourg",
+    address: "Place de Haldenbourg, Strasbourg"
   },
   {
     id: "event-4",
-    title: "Atelier Stras'Impact",
-    description: "Rencontre avec les porteurs de projets locaux.",
-    date: "2026-02-15",
-    time: "18:00",
-    location: "Maison des associations",
-    address: "1a Place des Orphelins, Strasbourg"
+    title: "Marché de la Robertsau ",
+    description: "Nous allons à la rencontre des habitants du quartier.",
+    date: "2026-01-24",
+    time: "09:30",
+    location: "Allées du Marché Robertsau",
+    address: "Place du Corps de Garde, Strasbourg"
   },
-  {
-    id: "event-5",
-    title: "Réunion publique Meinau",
-    description: "Échanges sur la santé, l'écologie et les mobilités.",
-    date: "2026-02-22",
-    time: "18:30",
-    location: "Salle polyvalente",
-    address: "Rue de Bourgogne, Strasbourg"
-  }
+ 
 ];
 
 export const team: TeamMember[] = [
