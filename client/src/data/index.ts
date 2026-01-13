@@ -385,10 +385,10 @@ export const videos: Video[] = [
   },
   {
     id: "video-5",
-    title: "Stras'Impact : soutenir l'économie locale",
-    description: "Comment nous accompagnons les porteurs de projets.",
-    youtubeId: "dQw4w9WgXcQ",
-    priorityId: "emploi"
+    title: "Au marché de Haute Pierre : un quartier qui vit",
+    description: "A la rencontre des habitants de Haute Pierre",
+    youtubeId: "UvvbPBr9UkE",
+    priorityId: "Marché"
   },
   {
     id: "video-6",
