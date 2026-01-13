@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Header } from "./Header";
 import { BottomNav } from "./BottomNav";
 import { Footer } from "./Footer";
+import { CookieConsent } from "../CookieConsent";
 
 interface LayoutProps {
   children: ReactNode;
@@ -23,6 +24,7 @@ export function Layout({ children, showFooter = true }: LayoutProps) {
             <main className="pt-14 pb-20 lg:pb-20 flex-1">{children}</main>
             {showFooter && <Footer />}
             <BottomNav />
+            <CookieConsent />
           </div>
         </div>
       </div>

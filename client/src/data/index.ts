@@ -361,26 +361,26 @@ export const videos: Video[] = [
     id: "video-1",
     title: "UTILES pour Strasbourg : notre vision",
     description: "Un programme né du terrain, co-construit avec les habitants.",
-    youtubeId: "dQw4w9WgXcQ"
+    youtubeId: "pKJJ_dLjMB0"
   },
   {
     id: "video-2",
     title: "Le Cahier de doléances citoyen",
     description: "Comment nous avons recueilli la parole des Strasbourgeois.",
-    youtubeId: "dQw4w9WgXcQ"
+    youtubeId: "kXExpEcDLeI"
   },
   {
     id: "video-3",
-    title: "Logement : transparence et dignité",
+    title: "Yannick : Engagé avec UTILES 67",
     description: "Nos solutions pour un logement social plus juste.",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "rptP-rn386Q",
     priorityId: "logement"
   },
   {
     id: "video-4",
-    title: "La Ville vient à vous",
+    title: "Tentatives d'intimidationnos sommes ",
     description: "Bus-Mairie, Voisins-Relais : rapprocher les services publics.",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "D-bVV2DoGyM",
     priorityId: "services-publics"
   },
   {
