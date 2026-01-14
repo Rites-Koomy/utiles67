@@ -213,7 +213,7 @@ export const measures: Measure[] = [
     "proposition": "Donner plus de moyens au contrôle local de l’habitat et créer un droit d’alerte officiel envers les propriétaires, avec une coopération Ville–CCAS–associations.",
     "miseEnOeuvre": "Renforcer les commissions compétentes, organiser un circuit court de traitement des alertes, et coordonner l’accompagnement social et juridique.",
     "indicateur": "Nombre de logements contrôlés, Nombre de mises en demeure / procédures, Part des situations résolues",
-    "coverImage": "/measures/logement-habitat-indigne.jpg",
+    "coverImage": "/measures/logement-habitat.jpg",
     "coverAlt": "Réagir vite aux logements indignes",
     "isKeyMeasure": false
   },
@@ -227,7 +227,7 @@ export const measures: Measure[] = [
     "proposition": "Étendre et rendre plus efficace le permis de louer, avec contrôles et sanctions ciblées.",
     "miseEnOeuvre": "Cartographier les zones prioritaires, renforcer les contrôles, publier un guide simple pour propriétaires et locataires.",
     "indicateur": "Nombre de demandes instruites, Taux de non-conformité détecté, Évolution des signalements",
-    "coverImage": "/measures/logement-permis-louer.jpg",
+    "coverImage": "/measures/logement-locations.jpg",
     "coverAlt": "Étendre le permis de louer",
     "isKeyMeasure": false
   },
@@ -241,7 +241,7 @@ export const measures: Measure[] = [
     "proposition": "Action coordonnée contre les marchands de sommeil, avec suivi des plaintes et coopération institutionnelle.",
     "miseEnOeuvre": "Cellule de coordination Ville/CCAS/associations, priorisation des dossiers à risque, accompagnement des victimes.",
     "indicateur": "Nombre de dossiers traités, Procédures engagées, Relogements sécurisés",
-    "coverImage": "/measures/logement-marchands-sommeil.jpg",
+    "coverImage": "/measures/logement-habitat.jpg",
     "coverAlt": "Lutter contre les marchands de sommeil",
     "isKeyMeasure": false
   },
@@ -255,7 +255,7 @@ export const measures: Measure[] = [
     "proposition": "Encadrer et contrôler les locations touristiques type Airbnb, avec sanctions dissuasives.",
     "miseEnOeuvre": "Déclaration obligatoire, contrôles, limitation et amendes en cas de fraude.",
     "indicateur": "Nombre de contrôles, Nombre de sanctions, Nombre de logements revenus au marché classique",
-    "coverImage": "/measures/logement-airbnb.jpg",
+    "coverImage": "/measures/logement-locations.jpg",
     "coverAlt": "Encadrer strictement les locations touristiques",
     "isKeyMeasure": false
   },
@@ -311,7 +311,7 @@ export const measures: Measure[] = [
     "proposition": "Ateliers gratuits et pratiques (CAF, santé, transports, école) dans bibliothèques et maisons de quartier.",
     "miseEnOeuvre": "Créneaux réguliers, supports simples, binômes bénévoles/agents, accès sans jugement.",
     "indicateur": "Nombre de participants, Progression mesurée (auto-évaluation), Taux de réinscription",
-    "coverImage": "/measures/services-illectronisme.jpg",
+    "coverImage": "/measures/services-numerique.jpg",
     "coverAlt": "Ateliers « Pas à Pas Numérique »",
     "isKeyMeasure": false
   },
@@ -325,7 +325,7 @@ export const measures: Measure[] = [
     "proposition": "Organiser des permanences hebdomadaires dans CSC, maisons de quartier et résidences seniors.",
     "miseEnOeuvre": "Créneaux fixes publiés, prise en charge des cas simples et orientation des cas complexes.",
     "indicateur": "Nombre de permanences, Délai moyen d’obtention d’un rendez-vous, Satisfaction usagers",
-    "coverImage": "/measures/services-permanences.jpg",
+    "coverImage": "/measures/services-bus-mairie.jpg",
     "coverAlt": "Permanences administratives délocalisées",
     "isKeyMeasure": false
   },
@@ -367,7 +367,7 @@ export const measures: Measure[] = [
     "proposition": "Intégrer des clauses favorisant l’emploi local, l’insertion et l’apprentissage dans les marchés municipaux.",
     "miseEnOeuvre": "Guide acheteurs publics, clauses types, suivi des obligations, sanctions/bonus selon respect.",
     "indicateur": "Part des marchés incluant une clause, Heures d’insertion réalisées, Nombre de bénéficiaires",
-    "coverImage": "/measures/emploi-clauses-locales.jpg",
+    "coverImage": "/measures/emploi-artisans.jpg",
     "coverAlt": "Clauses locales dans les marchés municipaux",
     "isKeyMeasure": false
   },
@@ -381,7 +381,7 @@ export const measures: Measure[] = [
     "proposition": "Renforcer la mesure de la qualité de l’air et du bruit, avec priorité écoles/crèches, et déclencher des actions concrètes (apaisement, végétalisation, isolation).",
     "miseEnOeuvre": "Réseau de capteurs, données accessibles, plan d’action par quartier, suivi public des améliorations.",
     "indicateur": "Couverture du réseau de mesure, Nombre d’actions déclenchées, Évolution des niveaux air/bruit",
-    "coverImage": "/measures/eco-air-bruit.jpg",
+    "coverImage": "/measures/ecologie-capteurs.jpg",
     "coverAlt": "Mesurer l’air et le bruit pour protéger la santé",
     "isKeyMeasure": true
   },
@@ -409,7 +409,7 @@ export const measures: Measure[] = [
     "proposition": "Développer jardins partagés, circuits courts et accès à une alimentation saine et locale, y compris dans les quartiers populaires.",
     "miseEnOeuvre": "Appels à projets citoyens, partenariats producteurs, actions dans les écoles, paniers solidaires.",
     "indicateur": "Nombre de jardins/circuits soutenus, Participation habitants, Accès à l’offre dans les quartiers prioritaires",
-    "coverImage": "/measures/eco-ecologie-accessible.jpg",
+    "coverImage": "/measures/ecologie-jardins.jpg",
     "coverAlt": "Une écologie accessible à tous",
     "isKeyMeasure": false
   },
@@ -423,7 +423,7 @@ export const measures: Measure[] = [
     "proposition": "Construire un réseau cyclable continu, lisible et protégé, qui sécurise aussi piétons et automobilistes en clarifiant les usages.",
     "miseEnOeuvre": "Audit des discontinuités, priorisation des axes, aménagements protégés, signalétique claire, suivi public.",
     "indicateur": "Km de pistes protégées créés, Évolution accidents/incidents, Satisfaction usagers",
-    "coverImage": "/measures/mob-securiser.jpg",
+    "coverImage": "/measures/mobilite-securite.jpg",
     "coverAlt": "Pistes cyclables réellement sécurisées",
     "isKeyMeasure": true
   },
@@ -437,7 +437,7 @@ export const measures: Measure[] = [
     "proposition": "Refuser les solutions idéologiques uniques: décider à partir des usages réels et des contraintes de chaque quartier.",
     "miseEnOeuvre": "Diagnostics de terrain, tests temporaires, ajustements, bilan public avant généralisation.",
     "indicateur": "Nombre de projets avec diagnostic local, Taux d’ajustements après test, Taux d’acceptation",
-    "coverImage": "/measures/mob-quartier-par-quartier.jpg",
+    "coverImage": "/measures/mobilite-securite.jpg",
     "coverAlt": "Des solutions adaptées quartier par quartier",
     "isKeyMeasure": false
   },
@@ -451,7 +451,7 @@ export const measures: Measure[] = [
     "proposition": "Avant toute modification de circulation ou stationnement, associer habitants et commerçants en amont.",
     "miseEnOeuvre": "Réunions ciblées, ateliers, restitution claire, calendrier partagé, droit à l’ajustement.",
     "indicateur": "Nombre de concertations en amont, Délai de publication des restitutions, Baisse des réclamations",
-    "coverImage": "/measures/mob-concertation.jpg",
+    "coverImage": "/measures/democratie-voix-quartier.jpg",
     "coverAlt": "Dialoguer avant de décider",
     "isKeyMeasure": false
   },
@@ -832,7 +832,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Référent quartier",
     "quote": "Je veux montrer qu’on peut réussir et s’investir pour sa ville, peu importe d’où l’on vient. Strasbourg a besoin de toutes ses énergies.",
     "bio": "Entrepreneur dans le bâtiment, je connais la valeur du travail et de l'effort. Je veux aider les jeunes à trouver leur voie.",
-    "photo": "/Team/Sans titre.png",
+    "photo": "/Team/Sans titre-7.png",
     "tags": [
       "Emploi",
       "Entrepreneuriat"
