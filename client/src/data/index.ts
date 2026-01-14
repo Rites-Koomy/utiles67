@@ -856,4 +856,15 @@ export const team: TeamMember[] = [
   }
 ];
 
+export const getMeasuresByPriority = (priorityId: string): Measure[] => {
+  return measures.filter((measure) => measure.priorityId === priorityId);
+};
+
+export const getPriorityById = (priorityId: string): Priority | undefined => {
+  return priorities.find((priority) => priority.id === priorityId);
+};
+
+export const getMeasureById = (measureId: string): Measure | undefined => {
+  return measures.find((measure) => measure.id === measureId);
+};
 
