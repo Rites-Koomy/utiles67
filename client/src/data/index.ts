@@ -802,7 +802,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Militante",
     "quote": "J'ai trouvé chez UTILES, un mouvement qui me ressemble, un espace où chacun a sa place, sans jugement ni étiquette. Aujourd’hui, je m’engage pour porter la voix des habitants de mon quartier, pour défendre ce qui compte vraiment pour eux et pour contribuer à un projet collectif fondé sur l’humain, la proximité et le respect.",
     "bio": "Mon engagement est né autrement, dans le quotidien, dans l’observation, dans les échanges simples avec les habitants autour de moi. J’ai compris que l’utile se construit sur le terrain, par l’écoute et l’action concrète.C’est pour cela que je me suis engagée avec Utiles. J’y ai trouvé un mouvement qui me ressemble, un espace où chacun a sa place, sans jugement ni étiquette. Aujourd’hui, je m’engage pour porter la voix des habitants de mon quartier, pour défendre ce qui compte vraiment pour eux et pour contribuer à un projet collectif fondé sur l’humain, la proximité et le respect.",
-    "photo": "/Team/Sans titre-3.png",
+    "photo": "/Team/Sans titre-7.png",
     "tags": [
       "Quartiers",
       "Jeunesse"
@@ -817,7 +817,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Militante",
     "quote": "Avec UTILES, j’ai découvert une politique qui écoute avant d’agir. Pas de grandes promesses, mais des solutions concrètes pour nos quartiers.",
     "bio": "Mère de famille et engagée dans mon quartier depuis 15 ans, je vois les besoins quotidiens des familles. Je veux porter leur voix.",
-    "photo": "/Team/Sans titre-4.png",
+    "photo": "/Team/Sans titre-3.png",
     "tags": [
       "Familles",
       "Éducation"
@@ -832,7 +832,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Référent quartier",
     "quote": "Je veux montrer qu’on peut réussir et s’investir pour sa ville, peu importe d’où l’on vient. Strasbourg a besoin de toutes ses énergies.",
     "bio": "Entrepreneur dans le bâtiment, je connais la valeur du travail et de l'effort. Je veux aider les jeunes à trouver leur voie.",
-    "photo": "/Team/Sans titre-7.png",
+    "photo": "/Team/Sans titre-8.png",
     "tags": [
       "Emploi",
       "Entrepreneuriat"
@@ -843,7 +843,7 @@ export const team: TeamMember[] = [
     "id": "member-7",
     "name": "Yannick K",
     "quartier": "Koenigshoffen",
-    "role": "Enseignant",
+    "role": "Technicien",
     "utilesRole": "Militant",
     "quote": "L'éducation et la culture sont les armes les plus puissantes pour changer le monde. À Strasbourg, nous devons les rendre accessibles à tous.",
     "bio": "Professeur d'histoire-géo, je vois chaque jour le potentiel de notre jeunesse. Il faut leur donner les moyens de rêver.",

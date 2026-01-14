@@ -13,10 +13,10 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
           <h1 className="font-display font-bold text-2xl sm:text-3xl text-white mb-1 drop-shadow-lg">
-            Le Strasbourg qu'on aime.
+            MOUVEMENT "UTILES" POUR STRASBOURG.
           </h1>
           <p className="text-white/90 text-sm sm:text-base drop-shadow-md">
-            Des idées simples, pour la vie réelle.
+            Notre programme pour Strasbourg- Municipales 2026.
           </p>
         </div>
       </div>
