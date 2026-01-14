@@ -1,0 +1,842 @@
+{
+  "meta": {
+    "name": "UTILES pour Strasbourg 2026",
+    "baseline": "Un programme co-construit avec les habitants. Du concret, quartier par quartier.",
+    "tone": "clair, utile, sans jargon",
+    "version": "v1.0",
+    "language": "fr-FR"
+  },
+  "priorities": [
+    {
+      "id": "logement",
+      "title": "Logement digne et abordable",
+      "description": "Un logement sain, accessible, et des attributions enfin transparentes."
+    },
+    {
+      "id": "services_publics",
+      "title": "Services publics de proximité",
+      "description": "Des démarches simples, un visage humain, et la Ville qui vient vers vous."
+    },
+    {
+      "id": "emploi",
+      "title": "Emploi local et inclusion",
+      "description": "Aider les projets utiles à démarrer et créer des opportunités pour ceux qui en manquent."
+    },
+    {
+      "id": "ecologie_sante",
+      "title": "Écologie de la santé",
+      "description": "Une écologie qui protège: air, bruit, factures, alimentation, espaces verts."
+    },
+    {
+      "id": "mobilites",
+      "title": "Mobilités et stationnement apaisés",
+      "description": "Sécuriser, adapter quartier par quartier, et dialoguer avant de décider."
+    },
+    {
+      "id": "jeunesse",
+      "title": "Jeunesse et éducation populaire",
+      "description": "Un mentor, un réseau, des portes qui s’ouvrent: des parcours qui tiennent."
+    },
+    {
+      "id": "democratie",
+      "title": "Démocratie locale réelle",
+      "description": "Décider avec les habitants, suivre les engagements, rendre des comptes."
+    },
+    {
+      "id": "culture_sport",
+      "title": "Culture, sport et vivre-ensemble",
+      "description": "Ce qui nous relie: traditions, mémoires, associations, activités accessibles."
+    },
+    {
+      "id": "inclusion_droits",
+      "title": "Ville inclusive et accès aux droits",
+      "description": "Personne ne reste sur le bord du chemin: dignité, accessibilité, protection."
+    },
+    {
+      "id": "prevention",
+      "title": "Prévention de la radicalisation",
+      "description": "Agir tôt, avec les familles, sans stigmatiser: prévenir plutôt que réparer."
+    },
+    {
+      "id": "finances",
+      "title": "Finances responsables et transparentes",
+      "description": "Chaque euro expliqué, contrôlé, et orienté vers l’utile."
+    },
+    {
+      "id": "securite",
+      "title": "Sécurité et tranquillité publique",
+      "description": "Présence humaine, médiation, aménagements: une sécurité de confiance."
+    },
+    {
+      "id": "europe",
+      "title": "Strasbourg capitale européenne concrète",
+      "description": "Faire profiter les quartiers du statut européen: projets visibles et utiles."
+    }
+  ],
+  "measures": [
+    {
+      "id": "logement-transparence",
+      "priorityId": "logement",
+      "title": "Transparence du logement social",
+      "impact": "Fin de l’opacité, priorité à l’équité",
+      "tag": "Logement digne et abordable",
+      "constat": "Des familles attendent des années sans comprendre les règles d’attribution, et certains logements se dégradent sans réponse.",
+      "proposition": "Créer un référent municipal « Logement social et transparence », centraliser les signalements et publier un rapport annuel clair sur les attributions et les contrôles.",
+      "miseEnOeuvre": "Référent identifié + canal unique de signalement + procédure de saisine de l’ANCOLS en cas de dysfonctionnements avérés + présentation publique annuelle.",
+      "indicateurs": [
+        "Délai moyen de réponse aux signalements",
+        "Nombre de contrôles déclenchés / suites données",
+        "Publication annuelle accessible"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "logement-habitat-indigne",
+      "priorityId": "logement",
+      "title": "Réagir vite aux logements indignes",
+      "impact": "Plus personne ne reste seul face à l’insalubrité",
+      "tag": "Logement digne et abordable",
+      "constat": "Humidité, chauffage défaillant, insalubrité: les habitants disent ne plus savoir à qui s’adresser.",
+      "proposition": "Donner plus de moyens au contrôle local de l’habitat et créer un droit d’alerte officiel envers les propriétaires, avec une coopération Ville–CCAS–associations.",
+      "miseEnOeuvre": "Renforcer les commissions compétentes, organiser un circuit court de traitement des alertes, et coordonner l’accompagnement social et juridique.",
+      "indicateurs": [
+        "Nombre de logements contrôlés",
+        "Nombre de mises en demeure / procédures",
+        "Part des situations résolues"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "logement-permis-louer",
+      "priorityId": "logement",
+      "title": "Étendre le permis de louer",
+      "impact": "Assainir le parc locatif",
+      "tag": "Logement digne et abordable",
+      "constat": "Des logements sont mis en location sans garanties minimales de salubrité.",
+      "proposition": "Étendre et rendre plus efficace le permis de louer, avec contrôles et sanctions ciblées.",
+      "miseEnOeuvre": "Cartographier les zones prioritaires, renforcer les contrôles, publier un guide simple pour propriétaires et locataires.",
+      "indicateurs": [
+        "Nombre de demandes instruites",
+        "Taux de non-conformité détecté",
+        "Évolution des signalements"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "logement-marchands-sommeil",
+      "priorityId": "logement",
+      "title": "Lutter contre les marchands de sommeil",
+      "impact": "Protéger les plus fragiles",
+      "tag": "Logement digne et abordable",
+      "constat": "Certains propriétaires exploitent la précarité avec des logements dangereux ou sur-occupés.",
+      "proposition": "Action coordonnée contre les marchands de sommeil, avec suivi des plaintes et coopération institutionnelle.",
+      "miseEnOeuvre": "Cellule de coordination Ville/CCAS/associations, priorisation des dossiers à risque, accompagnement des victimes.",
+      "indicateurs": [
+        "Nombre de dossiers traités",
+        "Procédures engagées",
+        "Relogements sécurisés"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "logement-airbnb",
+      "priorityId": "logement",
+      "title": "Encadrer strictement les locations touristiques",
+      "impact": "Remettre des logements sur le marché",
+      "tag": "Logement digne et abordable",
+      "constat": "Des logements quittent la location classique, aggravant la tension locative.",
+      "proposition": "Encadrer et contrôler les locations touristiques type Airbnb, avec sanctions dissuasives.",
+      "miseEnOeuvre": "Déclaration obligatoire, contrôles, limitation et amendes en cas de fraude.",
+      "indicateurs": [
+        "Nombre de contrôles",
+        "Nombre de sanctions",
+        "Nombre de logements revenus au marché classique"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "services-bus-mairie",
+      "priorityId": "services_publics",
+      "title": "Bus-Mairie itinérant",
+      "impact": "La Ville vient à vous, sans rendez-vous",
+      "tag": "Services publics de proximité",
+      "constat": "Démarches trop complexes, guichets saturés, tout en ligne sans accompagnement: beaucoup abandonnent.",
+      "proposition": "Déployer un bus municipal équipé pour l’orientation et les démarches simples, présent régulièrement dans les quartiers.",
+      "miseEnOeuvre": "Un véhicule aménagé, un planning public, des agents formés, passage régulier par secteur.",
+      "indicateurs": [
+        "Nombre de permanences réalisées",
+        "Nombre de démarches / orientations",
+        "Satisfaction usagers"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "services-marches",
+      "priorityId": "services_publics",
+      "title": "Stands municipaux sur les marchés",
+      "impact": "Un service public visible et convivial",
+      "tag": "Services publics de proximité",
+      "constat": "Les habitants veulent une aide simple, au bon endroit, au bon moment.",
+      "proposition": "Tenir des stands « Parlons Services Publics » sur les marchés: information, écoute, orientation immédiate.",
+      "miseEnOeuvre": "Stand léger + documentation claire + agents/volontaires formés, selon les jours de marché.",
+      "indicateurs": [
+        "Nombre de personnes reçues",
+        "Taux de résolution au premier contact"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "services-voisins-relais",
+      "priorityId": "services_publics",
+      "title": "Voisins-Relais",
+      "impact": "Un coup de main pour ne pas perdre ses droits",
+      "tag": "Services publics de proximité",
+      "constat": "Des aides sont perdues faute d’explication ou de papier au bon moment.",
+      "proposition": "Former des habitants volontaires pour accompagner les démarches et orienter vers les bons services, en lien avec CSC et associations.",
+      "miseEnOeuvre": "Appel à volontaires, formation, référent municipal de coordination, cadre éthique clair.",
+      "indicateurs": [
+        "Nombre de relais actifs",
+        "Nombre d’accompagnements",
+        "Taux de réorientation réussie"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "services-illectronisme",
+      "priorityId": "services_publics",
+      "title": "Ateliers « Pas à Pas Numérique »",
+      "impact": "Personne n’est exclu par le numérique",
+      "tag": "Services publics de proximité",
+      "constat": "Quand tout est en ligne, ceux qui maîtrisent mal Internet décrochent.",
+      "proposition": "Ateliers gratuits et pratiques (CAF, santé, transports, école) dans bibliothèques et maisons de quartier.",
+      "miseEnOeuvre": "Créneaux réguliers, supports simples, binômes bénévoles/agents, accès sans jugement.",
+      "indicateurs": [
+        "Nombre de participants",
+        "Progression mesurée (auto-évaluation)",
+        "Taux de réinscription"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "services-permanences",
+      "priorityId": "services_publics",
+      "title": "Permanences administratives délocalisées",
+      "impact": "Moins de déplacements, plus de solutions",
+      "tag": "Services publics de proximité",
+      "constat": "Les déplacements et files d’attente découragent, surtout pour seniors et familles.",
+      "proposition": "Organiser des permanences hebdomadaires dans CSC, maisons de quartier et résidences seniors.",
+      "miseEnOeuvre": "Créneaux fixes publiés, prise en charge des cas simples et orientation des cas complexes.",
+      "indicateurs": [
+        "Nombre de permanences",
+        "Délai moyen d’obtention d’un rendez-vous",
+        "Satisfaction usagers"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "services-referent",
+      "priorityId": "services_publics",
+      "title": "Référent administratif par quartier",
+      "impact": "Un interlocuteur unique pour les cas compliqués",
+      "tag": "Services publics de proximité",
+      "constat": "Les dossiers se perdent entre services: chacun renvoie à l’autre.",
+      "proposition": "Un agent identifié par quartier suit les situations complexes de bout en bout.",
+      "miseEnOeuvre": "Nomination, formation au suivi transversal, circuit court avec les services municipaux et partenaires.",
+      "indicateurs": [
+        "Nombre de dossiers suivis",
+        "Délai de résolution",
+        "Taux de retours positifs"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "emploi-strasimpact",
+      "priorityId": "emploi",
+      "title": "Stras’Impact",
+      "impact": "3 000 à 15 000€ pour débloquer les projets utiles",
+      "tag": "Emploi local et inclusion",
+      "constat": "Des artisans, indépendants, associations et porteurs de projet abandonnent faute d’un coup de pouce au bon moment.",
+      "proposition": "Créer un dispositif municipal de microfinancement + accompagnement obligatoire pour sécuriser et pérenniser les projets locaux.",
+      "miseEnOeuvre": "Fonds dédié, critères simples (impact local), accompagnement, sélection transparente, suivi à 6/12/24 mois.",
+      "indicateurs": [
+        "Nombre de projets soutenus",
+        "Emplois créés/maintenus",
+        "Taux de survie à 2 ans"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "emploi-clauses-locales",
+      "priorityId": "emploi",
+      "title": "Clauses locales dans les marchés municipaux",
+      "impact": "Faire travailler et former ici",
+      "tag": "Emploi local et inclusion",
+      "constat": "La commande publique est un levier puissant, souvent sous-utilisé pour l’emploi local.",
+      "proposition": "Intégrer des clauses favorisant l’emploi local, l’insertion et l’apprentissage dans les marchés municipaux.",
+      "miseEnOeuvre": "Guide acheteurs publics, clauses types, suivi des obligations, sanctions/bonus selon respect.",
+      "indicateurs": [
+        "Part des marchés incluant une clause",
+        "Heures d’insertion réalisées",
+        "Nombre de bénéficiaires"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "eco-air-bruit",
+      "priorityId": "ecologie_sante",
+      "title": "Mesurer l’air et le bruit pour protéger la santé",
+      "impact": "Agir là où ça fait mal, quartier par quartier",
+      "tag": "Écologie de la santé",
+      "constat": "Pollution et bruit touchent plus durement certains quartiers, notamment près des axes et autour des écoles.",
+      "proposition": "Renforcer la mesure de la qualité de l’air et du bruit, avec priorité écoles/crèches, et déclencher des actions concrètes (apaisement, végétalisation, isolation).",
+      "miseEnOeuvre": "Réseau de capteurs, données accessibles, plan d’action par quartier, suivi public des améliorations.",
+      "indicateurs": [
+        "Couverture du réseau de mesure",
+        "Nombre d’actions déclenchées",
+        "Évolution des niveaux air/bruit"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "eco-renovation",
+      "priorityId": "ecologie_sante",
+      "title": "Rénovation énergétique massive",
+      "impact": "Moins de factures, plus de confort",
+      "tag": "Écologie de la santé",
+      "constat": "Les passoires thermiques coûtent cher et abîment la santé, surtout chez les ménages modestes.",
+      "proposition": "Accélérer la rénovation énergétique des logements et bâtiments prioritaires (écoles, crèches, parc social), pour réduire les dépenses et les émissions.",
+      "miseEnOeuvre": "Audit, programmation pluriannuelle, accompagnement des ménages, mobilisation de financements dédiés.",
+      "indicateurs": [
+        "Nombre de logements/bâtiments rénovés",
+        "Économies d’énergie estimées",
+        "Baisse des émissions associées"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "eco-ecologie-accessible",
+      "priorityId": "ecologie_sante",
+      "title": "Une écologie accessible à tous",
+      "impact": "Alimentation saine et nature proche",
+      "tag": "Écologie de la santé",
+      "constat": "L’écologie ne doit pas être un luxe réservé à certains quartiers.",
+      "proposition": "Développer jardins partagés, circuits courts et accès à une alimentation saine et locale, y compris dans les quartiers populaires.",
+      "miseEnOeuvre": "Appels à projets citoyens, partenariats producteurs, actions dans les écoles, paniers solidaires.",
+      "indicateurs": [
+        "Nombre de jardins/circuits soutenus",
+        "Participation habitants",
+        "Accès à l’offre dans les quartiers prioritaires"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "mob-securiser",
+      "priorityId": "mobilites",
+      "title": "Pistes cyclables réellement sécurisées",
+      "impact": "Moins de conflits, plus de sécurité pour tous",
+      "tag": "Mobilités et stationnement apaisés",
+      "constat": "Une ligne au sol ne protège personne: pistes interrompues ou peu lisibles créent tensions et accidents.",
+      "proposition": "Construire un réseau cyclable continu, lisible et protégé, qui sécurise aussi piétons et automobilistes en clarifiant les usages.",
+      "miseEnOeuvre": "Audit des discontinuités, priorisation des axes, aménagements protégés, signalétique claire, suivi public.",
+      "indicateurs": [
+        "Km de pistes protégées créés",
+        "Évolution accidents/incidents",
+        "Satisfaction usagers"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "mob-quartier-par-quartier",
+      "priorityId": "mobilites",
+      "title": "Des solutions adaptées quartier par quartier",
+      "impact": "Fin des décisions « taille unique »",
+      "tag": "Mobilités et stationnement apaisés",
+      "constat": "Ce qui marche en hypercentre ne marche pas forcément en périphérie: commerces, écoles, artisans, seniors n’ont pas les mêmes besoins.",
+      "proposition": "Refuser les solutions idéologiques uniques: décider à partir des usages réels et des contraintes de chaque quartier.",
+      "miseEnOeuvre": "Diagnostics de terrain, tests temporaires, ajustements, bilan public avant généralisation.",
+      "indicateurs": [
+        "Nombre de projets avec diagnostic local",
+        "Taux d’ajustements après test",
+        "Taux d’acceptation"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "mob-concertation",
+      "priorityId": "mobilites",
+      "title": "Dialoguer avant de décider",
+      "impact": "Moins de crispations, plus d’efficacité",
+      "tag": "Mobilités et stationnement apaisés",
+      "constat": "Les tensions viennent souvent de décisions mal expliquées, mal anticipées et sans concertation.",
+      "proposition": "Avant toute modification de circulation ou stationnement, associer habitants et commerçants en amont.",
+      "miseEnOeuvre": "Réunions ciblées, ateliers, restitution claire, calendrier partagé, droit à l’ajustement.",
+      "indicateurs": [
+        "Nombre de concertations en amont",
+        "Délai de publication des restitutions",
+        "Baisse des réclamations"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "jeunesse-trace",
+      "priorityId": "jeunesse",
+      "title": "TRACE: mentorat municipal de proximité",
+      "impact": "Un réseau pour ceux qui n’en ont pas",
+      "tag": "Jeunesse et éducation populaire",
+      "constat": "Beaucoup de jeunes disent manquer de repères et de réseaux: ils veulent une personne qui les suit, pas seulement des dispositifs.",
+      "proposition": "Créer TRACE (Transmission, Réseau, Accompagnement, Compétences, Élan): mentorat mobilisant actifs et retraités, avec un label municipal pour les partenaires.",
+      "miseEnOeuvre": "Identification des jeunes, recrutement/formation des mentors, matching, suivi, valorisation des mentors via label TRACE.",
+      "indicateurs": [
+        "Nombre de binômes mentor/jeune",
+        "Taux de maintien dans le parcours",
+        "Accès à stages/emplois/formation"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "jeunesse-clauses",
+      "priorityId": "jeunesse",
+      "title": "Clauses d’embauche jeunesse dans les marchés",
+      "impact": "Des stages et contrats, sans coût supplémentaire",
+      "tag": "Jeunesse et éducation populaire",
+      "constat": "Sans réseau, accéder à un stage ou une première expérience devient un obstacle majeur.",
+      "proposition": "Fixer des objectifs progressifs: au moins 10% des heures sur certains marchés pour apprentissage, stages qualifiés ou embauches, avec priorité aux parcours fragilisés.",
+      "miseEnOeuvre": "Clauses types, pilotage par la Ville, reporting annuel, contrôle d’exécution.",
+      "indicateurs": [
+        "Heures dédiées à la jeunesse",
+        "Nombre de jeunes bénéficiaires/an",
+        "Part quartiers prioritaires"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "etudiant-epicerie",
+      "priorityId": "jeunesse",
+      "title": "Épiceries solidaires étudiantes",
+      "impact": "Manger dignement sans se cacher",
+      "tag": "Jeunesse et éducation populaire",
+      "constat": "Des étudiantes et étudiants renoncent à bien se nourrir, souvent par manque d’accès simple et digne.",
+      "proposition": "Créer une épicerie solidaire étudiante avec le CROUS, associations et producteurs locaux, complétée par une épicerie mobile et des supermarchés solidaires gérés par les étudiants (Stras’Impact).",
+      "miseEnOeuvre": "Partenariats, lieux accessibles, tarification sociale, logistique anti-gaspillage, tournée mobile campus.",
+      "indicateurs": [
+        "Nombre d’étudiants bénéficiaires",
+        "Volume de produits redistribués",
+        "Part de circuits courts"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "etudiant-logement",
+      "priorityId": "jeunesse",
+      "title": "Logement étudiant accessible",
+      "impact": "Étudier sans l’angoisse du loyer",
+      "tag": "Jeunesse et éducation populaire",
+      "constat": "Des logements existent mais sont mal mobilisés, trop chers ou inadaptés aux parcours.",
+      "proposition": "Mieux mobiliser le parc existant, renforcer l’encadrement des loyers abusifs dans les zones universitaires et développer des solutions temporaires dignes (rentrée, stage, transition).",
+      "miseEnOeuvre": "Charte tripartite Ville–Bailleurs–Associations étudiantes, information renforcée, solutions temporaires encadrées.",
+      "indicateurs": [
+        "Nombre de logements mobilisés",
+        "Signalements loyers abusifs traités",
+        "Solutions temporaires proposées"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "etudiant-droits",
+      "priorityId": "jeunesse",
+      "title": "Permanences municipales pour l’accès aux droits",
+      "impact": "Stop au non-recours",
+      "tag": "Jeunesse et éducation populaire",
+      "constat": "Beaucoup passent à côté de droits essentiels (CAF, APL, santé) faute d’accompagnement.",
+      "proposition": "Mettre en place des permanences municipales dédiées aux étudiants, en lien avec universités, CROUS et quartiers.",
+      "miseEnOeuvre": "Créneaux sur campus et en quartier, aide dossiers, prévention des ruptures de parcours.",
+      "indicateurs": [
+        "Nombre de permanences",
+        "Taux de dossiers finalisés",
+        "Baisse du non-recours (estimations)"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "etudiant-jobs",
+      "priorityId": "jeunesse",
+      "title": "Jobs municipaux compatibles avec les études",
+      "impact": "Travailler oui, s’épuiser non",
+      "tag": "Jeunesse et éducation populaire",
+      "constat": "Certains étudiants travaillent au détriment de leurs études.",
+      "proposition": "Créer des jobs municipaux adaptés aux rythmes étudiants et intégrer des clauses « Jeunes » dans les marchés publics (médiation, soutien scolaire, actions écologiques, événements).",
+      "miseEnOeuvre": "Catalogue de missions, horaires adaptés, partenariat universités, clauses marchés publics.",
+      "indicateurs": [
+        "Nombre de jobs créés",
+        "Taux de réussite/maintien des étudiants (enquête)",
+        "Heures réalisées"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "demo-budget",
+      "priorityId": "democratie",
+      "title": "Budgets participatifs renforcés",
+      "impact": "Les habitants décident et voient le résultat",
+      "tag": "Démocratie locale réelle",
+      "constat": "La participation est trop souvent consultative, sans suite visible.",
+      "proposition": "Renforcer les budgets participatifs « Quartiers en Action » avec suivi en ligne de la réalisation.",
+      "miseEnOeuvre": "Calendrier annuel, accompagnement des porteurs de projets, plateforme de vote, tableau de suivi par quartier.",
+      "indicateurs": [
+        "Taux de participation",
+        "Nombre de projets réalisés",
+        "Délai moyen de réalisation"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "demo-conseils",
+      "priorityId": "democratie",
+      "title": "Conseils de quartier décisionnels",
+      "impact": "Du pouvoir local, pas juste des réunions",
+      "tag": "Démocratie locale réelle",
+      "constat": "Les habitants veulent être associés avant les décisions et pouvoir suivre les engagements.",
+      "proposition": "Mettre en place des conseils de quartier avec pouvoir réel sur certaines priorités, et une articulation claire avec la mairie.",
+      "miseEnOeuvre": "Règlement de fonctionnement, périmètre de décisions, présence d’élus référents, compte-rendus publics.",
+      "indicateurs": [
+        "Nombre de décisions prises",
+        "Taux de mise en œuvre",
+        "Participation par quartier"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "demo-mavoix",
+      "priorityId": "democratie",
+      "title": "Application « Ma Voix Quartier »",
+      "impact": "Signaler, proposer, suivre",
+      "tag": "Démocratie locale réelle",
+      "constat": "Les idées et alertes se perdent, et les habitants n’ont pas de retour.",
+      "proposition": "Plateforme simple pour signaler des besoins, proposer, voter et suivre l’avancement en temps réel.",
+      "miseEnOeuvre": "Déploiement web + mobile, accusé réception, statut public des demandes, engagement de réponse.",
+      "indicateurs": [
+        "Nombre de signalements/propositions",
+        "Taux de résolution",
+        "Satisfaction utilisateurs"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "culture-festival",
+      "priorityId": "culture_sport",
+      "title": "Festival « Strasbourg Ouverte »",
+      "impact": "Célébrer les mémoires sans les opposer",
+      "tag": "Culture, sport et vivre-ensemble",
+      "constat": "Les habitants veulent transmettre le patrimoine sans se refermer, reconnaître toutes les identités et construire un vivre-ensemble concret.",
+      "proposition": "Festival annuel des mémoires et traditions avec ateliers, expositions et spectacles itinérants dans les quartiers.",
+      "miseEnOeuvre": "Programmation co-construite avec associations, écoles, CSC; itinérance; bilans publics.",
+      "indicateurs": [
+        "Nombre d’événements/quartiers",
+        "Participation",
+        "Diversité des partenaires"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "culture-sport-citoyen",
+      "priorityId": "culture_sport",
+      "title": "Sport citoyen « Strasbourg en Mouvement »",
+      "impact": "Du lien social par l’activité",
+      "tag": "Culture, sport et vivre-ensemble",
+      "constat": "Le sport rapproche quand il est accessible et pensé pour la mixité.",
+      "proposition": "Tournois interquartiers, parcours sportifs collaboratifs et activités de plein air accessibles à tous.",
+      "miseEnOeuvre": "Partenariats clubs/assos, créneaux gratuits, matériel partagé, communication locale.",
+      "indicateurs": [
+        "Nombre d’actions sportives",
+        "Participation femmes/jeunes/seniors",
+        "Satisfaction"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "culture-memoire",
+      "priorityId": "culture_sport",
+      "title": "Mémoire numérique participative",
+      "impact": "Un patrimoine partagé, vivant",
+      "tag": "Culture, sport et vivre-ensemble",
+      "constat": "Les histoires locales et familiales ne trouvent pas toujours leur place dans le récit commun.",
+      "proposition": "Plateforme où les habitants déposent photos, témoignages, recettes, chansons et récits, consultable en ligne et en bibliothèque.",
+      "miseEnOeuvre": "Collecte encadrée, médiation culturelle, ateliers intergénérationnels, archivage.",
+      "indicateurs": [
+        "Contributions déposées",
+        "Consultations",
+        "Ateliers organisés"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "inclu-accessibilite",
+      "priorityId": "inclusion_droits",
+      "title": "Accessibilité universelle renforcée",
+      "impact": "Une ville praticable pour tous",
+      "tag": "Ville inclusive et accès aux droits",
+      "constat": "Des obstacles persistent pour les personnes à mobilité réduite dans bâtiments, transports et loisirs.",
+      "proposition": "Plan d’accessibilité avec suivi participatif des associations, priorités par quartier.",
+      "miseEnOeuvre": "Diagnostic, plan d’investissement, calendrier public, contrôle citoyen.",
+      "indicateurs": [
+        "Nombre de points noirs traités",
+        "Accessibilité des bâtiments clés",
+        "Retours associations"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "inclu-violences",
+      "priorityId": "inclusion_droits",
+      "title": "Soutien aux femmes victimes de violences",
+      "impact": "Protection et accompagnement immédiats",
+      "tag": "Ville inclusive et accès aux droits",
+      "constat": "Des victimes ont besoin de lieux sûrs et d’un accompagnement psychologique et juridique.",
+      "proposition": "Centres d’accueil spécialisés et mise en réseau renforcée avec les associations.",
+      "miseEnOeuvre": "Parcours d’orientation, permanence dédiée, partenariats, suivi confidentiel.",
+      "indicateurs": [
+        "Nombre de personnes accompagnées",
+        "Délai de prise en charge",
+        "Taux d’orientation réussie"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "inclu-hebergement",
+      "priorityId": "inclusion_droits",
+      "title": "Réorganiser l’hébergement d’urgence",
+      "impact": "Moins d’errance, plus de continuité",
+      "tag": "Ville inclusive et accès aux droits",
+      "constat": "Trouver un hébergement est devenu un parcours du combattant, avec peu de coordination.",
+      "proposition": "Plateforme unique d’information sur les places disponibles, modernisation via fonds dédiés, coordination renforcée entre acteurs.",
+      "miseEnOeuvre": "Plateforme temps réel, conventions partenaires, suivi des personnes, évaluation annuelle.",
+      "indicateurs": [
+        "Taux d’occupation et rotation",
+        "Nombre de personnes suivies",
+        "Ruptures de parcours évitées"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "inclu-cimetiere-animaux",
+      "priorityId": "inclusion_droits",
+      "title": "Cimetière pour animaux de compagnie",
+      "impact": "Un lieu de mémoire digne",
+      "tag": "Ville inclusive et accès aux droits",
+      "constat": "Des habitants demandent un lieu pour dire au revoir à leurs compagnons.",
+      "proposition": "Créer un cimetière municipal pour animaux, intégré à un espace vert, avec gestion respectueuse.",
+      "miseEnOeuvre": "Identification d’un site, règlement, tarification accessible, gestion environnementale.",
+      "indicateurs": [
+        "Ouverture du site",
+        "Taux d’utilisation",
+        "Satisfaction"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "prev-pole",
+      "priorityId": "prevention",
+      "title": "Pôle municipal prévention et vigilance éducative",
+      "impact": "Un point d’entrée clair pour les familles",
+      "tag": "Prévention de la radicalisation",
+      "constat": "Les signaux faibles sont parfois ignorés, et les familles ne savent pas à qui parler.",
+      "proposition": "Créer une structure unique qui coordonne les acteurs et accompagne les familles dès le premier signal faible.",
+      "miseEnOeuvre": "Équipe dédiée, protocole de confidentialité, réseau partenaires (écoles, assos, services sociaux).",
+      "indicateurs": [
+        "Nombre de situations accompagnées",
+        "Délai de prise en charge",
+        "Retours des familles"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "prev-formation",
+      "priorityId": "prevention",
+      "title": "Former les acteurs de terrain",
+      "impact": "Reconnaître, dialoguer, orienter",
+      "tag": "Prévention de la radicalisation",
+      "constat": "Enseignants, éducateurs et bénévoles manquent parfois d’outils pour agir tôt.",
+      "proposition": "Formation continue à la détection, au dialogue familial et à l’orientation vers des activités positives.",
+      "miseEnOeuvre": "Modules réguliers, ressources pratiques, référents par quartier.",
+      "indicateurs": [
+        "Nombre de personnes formées",
+        "Signalements mieux orientés",
+        "Évaluations de formation"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "prev-passerelles-numeriques",
+      "priorityId": "prevention",
+      "title": "Passerelles numériques",
+      "impact": "Esprit critique face aux discours extrémistes",
+      "tag": "Prévention de la radicalisation",
+      "constat": "La radicalisation passe aussi par des contenus en ligne; il faut développer l’esprit critique sans stigmatiser.",
+      "proposition": "Actions en ligne et en présentiel pour sensibiliser et développer créativité et esprit critique.",
+      "miseEnOeuvre": "Ateliers dans maisons de quartier, partenariats, contenus pédagogiques.",
+      "indicateurs": [
+        "Nombre d’ateliers",
+        "Participation jeunes",
+        "Évaluations"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "fin-audit",
+      "priorityId": "finances",
+      "title": "Audit indépendant annuel",
+      "impact": "Comprendre où va l’argent public",
+      "tag": "Finances responsables et transparentes",
+      "constat": "Les habitants demandent clarté et exemplarité sur les dépenses municipales.",
+      "proposition": "Mettre en place un audit externe annuel avec publication des résultats en langage simple.",
+      "miseEnOeuvre": "Cahier des charges, prestataire indépendant, restitution publique, plan d’action correctif.",
+      "indicateurs": [
+        "Audits publiés",
+        "Actions correctives réalisées",
+        "Économies estimées"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "fin-transparence",
+      "priorityId": "finances",
+      "title": "Plateforme de transparence budgétaire",
+      "impact": "Un tableau clair, par quartier",
+      "tag": "Finances responsables et transparentes",
+      "constat": "Les citoyens veulent suivre les investissements et signaler les gaspillages.",
+      "proposition": "Créer un tableau interactif des dépenses et investissements par projet/quartier, avec possibilité de proposer des priorités.",
+      "miseEnOeuvre": "Mise en ligne progressive, données ouvertes, rubriques pédagogiques.",
+      "indicateurs": [
+        "Nombre de consultations",
+        "Propositions déposées",
+        "Délai de mise à jour"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "fin-patrimoine",
+      "priorityId": "finances",
+      "title": "Valoriser le patrimoine municipal",
+      "impact": "Mieux utiliser ce que la Ville possède",
+      "tag": "Finances responsables et transparentes",
+      "constat": "Des bâtiments et terrains peuvent être mieux exploités ou réaffectés.",
+      "proposition": "Réaffecter, louer ou exploiter durablement certains actifs municipaux pour générer des revenus complémentaires.",
+      "miseEnOeuvre": "Inventaire, arbitrages publics, projets de réaffectation, clauses durables.",
+      "indicateurs": [
+        "Recettes générées",
+        "Nombre de sites réaffectés",
+        "Coûts évités"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "sec-patrouilles-mixtes",
+      "priorityId": "securite",
+      "title": "Patrouilles mixtes de proximité",
+      "impact": "Présence rassurante, non stigmatisante",
+      "tag": "Sécurité et tranquillité publique",
+      "constat": "Les habitants veulent se sentir protégés, avec moins de tensions, sans répression systématique.",
+      "proposition": "Patrouilles combinant agents municipaux, médiateurs et bénévoles formés pour une présence visible et de dialogue.",
+      "miseEnOeuvre": "Formation, secteurs prioritaires, horaires adaptés, coordination avec partenaires.",
+      "indicateurs": [
+        "Heures de présence terrain",
+        "Évolution des incivilités signalées",
+        "Satisfaction habitants"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "sec-mediateurs-soiree",
+      "priorityId": "securite",
+      "title": "Médiateurs de soirée",
+      "impact": "Désamorcer avant que ça dégénère",
+      "tag": "Sécurité et tranquillité publique",
+      "constat": "Dans les zones nocturnes, les tensions montent vite sans médiation.",
+      "proposition": "Interventions ciblées de médiateurs le soir + sensibilisation aux règles de vie collective.",
+      "miseEnOeuvre": "Recrutement/formation, coordination avec acteurs de nuit, reporting.",
+      "indicateurs": [
+        "Interventions réalisées",
+        "Conflits évités (signalés)",
+        "Retours commerçants"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "sec-eclairage",
+      "priorityId": "securite",
+      "title": "Éclairage intelligent",
+      "impact": "Moins de zones d’ombre, moins d’énergie gaspillée",
+      "tag": "Sécurité et tranquillité publique",
+      "constat": "Certaines zones peu fréquentées génèrent un sentiment d’insécurité.",
+      "proposition": "Optimiser l’éclairage public avec équipements intelligents, pour sécuriser tout en économisant l’énergie.",
+      "miseEnOeuvre": "Cartographie points noirs, déploiement progressif, maintenance.",
+      "indicateurs": [
+        "Points noirs traités",
+        "Économies d’énergie",
+        "Sentiment de sécurité (enquête)"
+      ],
+      "isKeyMeasure": false
+    },
+
+    {
+      "id": "eu-marche-quartiers",
+      "priorityId": "europe",
+      "title": "Marché des Quartiers",
+      "impact": "Un Marché de Noël plus local et transparent",
+      "tag": "Strasbourg capitale européenne concrète",
+      "constat": "Les habitants veulent que le statut européen profite concrètement au quotidien, pas seulement en symbole.",
+      "proposition": "Créer un « Marché des Quartiers »: soutien aux artisans/producteurs locaux, circuits courts, traçabilité, animations citoyennes.",
+      "miseEnOeuvre": "Appel à candidatures, critères transparents, rotations entre quartiers, communication.",
+      "indicateurs": [
+        "Nombre d’exposants locaux",
+        "Fréquentation",
+        "Retombées économiques locales"
+      ],
+      "isKeyMeasure": true
+    },
+    {
+      "id": "eu-startup-impact",
+      "priorityId": "europe",
+      "title": "Soutien aux start-up à impact",
+      "impact": "Innover dans tous les quartiers",
+      "tag": "Strasbourg capitale européenne concrète",
+      "constat": "L’innovation ne doit pas rester l’apanage de quelques-uns.",
+      "proposition": "Incubateurs/espaces de coworking dans plusieurs quartiers, mentorat par des experts européens, financements pour projets à impact.",
+      "miseEnOeuvre": "Partenariats, appels à projets, mentorat, accès à fonds européens.",
+      "indicateurs": [
+        "Projets incubés",
+        "Emplois créés",
+        "Financements mobilisés"
+      ],
+      "isKeyMeasure": false
+    },
+    {
+      "id": "eu-plateforme",
+      "priorityId": "europe",
+      "title": "Plateforme « Mon Europe à Strasbourg »",
+      "impact": "Suivre les financements européens en clair",
+      "tag": "Strasbourg capitale européenne concrète",
+      "constat": "Beaucoup ne voient pas ce que l’Europe apporte concrètement.",
+      "proposition": "Application/site pour suivre les financements européens sur son quartier, proposer des idées et participer.",
+      "miseEnOeuvre": "Open data, visualisations simples, ateliers dans quartiers pour appropriation.",
+      "indicateurs": [
+        "Consultations",
+        "Idées déposées",
+        "Projets cofinancés"
+      ],
+      "isKeyMeasure": false
+    }
+  ]
+}

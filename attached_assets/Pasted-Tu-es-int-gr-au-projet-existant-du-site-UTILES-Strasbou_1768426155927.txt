@@ -1,0 +1,131 @@
+Tu es intégré au projet existant du site UTILES (Strasbourg). Objectif: mettre à jour le contenu du site pour refléter fidèlement le programme sans changer la structure UI/UX, ni la navigation, ni les composants. On veut uniquement remplacer / compléter les données de contenu (mesures, priorités, textes) pour qu’elles soient exhaustives et plus précises.
+
+Contrainte absolue
+
+Ne modifie pas le wording des contenus fournis (titres, constats, propositions, etc.). Tu peux uniquement:
+
+corriger micro-typos (accents, espaces) si nécessaire,
+
+adapter la ponctuation très légèrement si ça casse l’affichage,
+
+mais aucun changement de sens, aucun résumé, aucune suppression.
+
+Ne change pas la structure de l’app: pas de nouveaux composants, pas de refonte, pas de nouvelle route, pas de nouvelle logique de navigation.
+
+1) Structure des mesures à respecter à 100%
+
+Chaque measure DOIT avoir EXACTEMENT les champs suivants:
+
+{
+  id: "xxx-yyy",
+  priorityId: "xxx",
+  title: "...",
+  impact: "...",
+  tag: "...",
+  constat: "...",
+  proposition: "...",
+  miseEnOeuvre: "...",
+  indicateur: "...",
+  coverImage: "/measures/xxx-yyy.jpg",
+  coverAlt: "..."
+}
+
+
+Important:
+
+indicateur (singulier) et non indicateurs
+
+coverImage et coverAlt obligatoires
+
+Aucun champ supplémentaire (pas de meta, pas de isKeyMeasure, etc.)
+
+priorityId doit correspondre à un ID de priorité existant dans la structure du site.
+
+id doit être unique et stable (slug en kebab-case).
+
+2) Source de vérité du contenu
+
+Je te joins un fichier JSON “source canon” : programmePolitique.updated.json.
+Il contient toutes les priorités et toutes les mesures en contenu final.
+
+Ta mission: mapper son contenu vers le format Measure ci-dessus, et l’intégrer dans le fichier de contenu actuellement utilisé par le site (celui déjà en place dans le repo).
+
+3) Cover images: règle simple
+
+On ne bloque pas le déploiement sur les images.
+
+Utilise une règle de nommage automatique pour chaque coverImage:
+
+coverImage: "/measures/{id}.jpg"
+
+Pour coverAlt, utilise le titre de la mesure (ou une version courte):
+
+coverAlt: "{title}"
+
+⚠️ Ne crée pas de pipeline d’upload d’images, ne télécharge rien. On ajoute juste les chemins: les fichiers images seront fournis plus tard.
+
+4) Tags
+
+Le champ tag doit rester simple et “UX-friendly”, ex:
+
+"Logement"
+
+"Mobilités"
+
+"Jeunesse"
+
+"Écologie"
+
+"Démocratie"
+
+"Services publics"
+
+"Sécurité"
+
+"Finances"
+
+"Culture"
+
+"Europe"
+
+Si dans la source canon le tag est plus long, garde le sens mais réduis-le à une version courte (sans changer le contenu des autres champs). Le tag sert juste de label UI.
+
+5) Exhaustivité attendue
+
+Le candidat se plaint qu’il manque des éléments: ta mise à jour doit donc garantir:
+
+toutes les mesures du fichier canon sont présentes,
+
+rien n’est perdu,
+
+aucune mesure n’est écrasée par inadvertance.
+
+6) Vérifications avant commit (obligatoire)
+
+Avant de commit:
+
+Vérifie que le JSON final est valide.
+
+Vérifie qu’aucun id n’est en doublon.
+
+Vérifie que chaque mesure a bien priorityId existant.
+
+Vérifie que l’UI n’affiche pas “undefined” (notamment coverAlt/coverImage).
+
+Vérifie que la page Mesures / Programme affiche bien toutes les mesures.
+
+7) Livraison attendue (format clair)
+
+Dans ta réponse:
+
+liste les fichiers modifiés,
+
+résume le mapping (ex: “X mesures ajoutées, Y priorités alignées”),
+
+donne un court changelog.
+
+Ensuite, tu commits.
+
+Pièce jointe
+
+programmePolitique.updated.json (source canon)
