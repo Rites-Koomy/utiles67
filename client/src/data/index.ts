@@ -1,4 +1,74 @@
-import heroImage from "@assets/generated_images/strasbourg_green_peaceful_cityscape.png";\nimport cyclePath from "@assets/stock_images/bicycle_path_in_euro_29b3f3ae.jpg";\nimport apartment from "@assets/stock_images/modern_residential_a_2814c14f.jpg";\nimport urbanPark from "@assets/stock_images/urban_park_with_tree_d4acad64.jpg";\nimport community from "@assets/stock_images/community_gathering__3ece0604.jpg";\nimport democracy from "@assets/stock_images/citizens_voting_demo_81baa662.jpg";\nimport youth from "@assets/stock_images/young_people_student_2cf858dd.jpg";\n\nexport { heroImage, youth };\n\nexport interface Priority {\n  id: string;\n  title: string;\n  description: string;\n  icon: string;\n  color: string;\n  videoId?: string;\n  heroImage?: string;\n  heroAlt?: string;\n}\n\nexport interface Measure {\n  id: string;\n  priorityId: string;\n  title: string;\n  impact: string;\n  tag: string;\n  constat: string;\n  proposition: string;\n  miseEnOeuvre: string;\n  indicateur: string;\n  videoId?: string;\n  coverImage?: string;\n  coverAlt?: string;\n  baseSupportCount?: number;\n  baseReactionCount?: number;\n  isKeyMeasure?: boolean;\n}\n\nexport interface Video {\n  id: string;\n  title: string;\n  description: string;\n  youtubeId: string;\n  priorityId?: string;\n}\n\nexport interface Event {\n  id: string;\n  title: string;\n  description: string;\n  date: string;\n  time: string;\n  location: string;\n  address: string;\n}\n\nexport interface TeamMember {\n  id: string;\n  name: string;\n  quartier: string;\n  role?: string;\n  utilesRole?: string;\n  quote: string;\n  bio?: string;\n  photo?: string;\n  tags?: string[];\n  videoUrl?: string;\n}\n\nexport const priorities: Priority[] = [
+import heroImage from "@assets/generated_images/strasbourg_green_peaceful_cityscape.png";
+import cyclePath from "@assets/stock_images/bicycle_path_in_euro_29b3f3ae.jpg";
+import apartment from "@assets/stock_images/modern_residential_a_2814c14f.jpg";
+import urbanPark from "@assets/stock_images/urban_park_with_tree_d4acad64.jpg";
+import community from "@assets/stock_images/community_gathering__3ece0604.jpg";
+import democracy from "@assets/stock_images/citizens_voting_demo_81baa662.jpg";
+import youth from "@assets/stock_images/young_people_student_2cf858dd.jpg";
+
+export { heroImage, youth };
+
+export interface Priority {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  videoId?: string;
+  heroImage?: string;
+  heroAlt?: string;
+}
+
+export interface Measure {
+  id: string;
+  priorityId: string;
+  title: string;
+  impact: string;
+  tag: string;
+  constat: string;
+  proposition: string;
+  miseEnOeuvre: string;
+  indicateur: string;
+  videoId?: string;
+  coverImage?: string;
+  coverAlt?: string;
+  baseSupportCount?: number;
+  baseReactionCount?: number;
+  isKeyMeasure?: boolean;
+}
+
+export interface Video {
+  id: string;
+  title: string;
+  description: string;
+  youtubeId: string;
+  priorityId?: string;
+}
+
+export interface Event {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  address: string;
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  quartier: string;
+  role?: string;
+  utilesRole?: string;
+  quote: string;
+  bio?: string;
+  photo?: string;
+  tags?: string[];
+  videoUrl?: string;
+}
+
+export const priorities: Priority[] = [
   {
     "id": "logement",
     "title": "Logement digne et abordable",
@@ -116,7 +186,9 @@ import heroImage from "@assets/generated_images/strasbourg_green_peaceful_citysc
     "heroImage": heroImage,
     "heroAlt": "Strasbourg Europe"
   }
-];\n\nexport const measures: Measure[] = [
+];
+
+export const measures: Measure[] = [
   {
     "id": "logement-transparence",
     "priorityId": "logement",
@@ -593,7 +665,9 @@ import heroImage from "@assets/generated_images/strasbourg_green_peaceful_citysc
     "coverAlt": "L'Europe dans les quartiers",
     "isKeyMeasure": true
   }
-];\n\nexport const videos: Video[] = [
+];
+
+export const videos: Video[] = [
   {
     "id": "video-1",
     "title": "UTILES pour Strasbourg : notre vision",
@@ -634,7 +708,9 @@ import heroImage from "@assets/generated_images/strasbourg_green_peaceful_citysc
     "youtubeId": "dQw4w9WgXcQ",
     "priorityId": "ecologie_sante"
   }
-];\n\nexport const events: Event[] = [
+];
+
+export const events: Event[] = [
   {
     "id": "event-1",
     "title": "Marché Boulevard de la Marne",
@@ -671,7 +747,9 @@ import heroImage from "@assets/generated_images/strasbourg_green_peaceful_citysc
     "location": "Allées du Marché Robertsau",
     "address": "Place du Corps de Garde, Strasbourg"
   }
-];\n\nexport const team: TeamMember[] = [
+];
+
+export const team: TeamMember[] = [
   {
     "id": "member-1",
     "name": "Mohamed Sylla",
@@ -776,4 +854,6 @@ import heroImage from "@assets/generated_images/strasbourg_green_peaceful_citysc
     ],
     "videoUrl": "rptP-rn386Q"
   }
-];\n\n
+];
+
+
