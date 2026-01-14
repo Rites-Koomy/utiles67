@@ -1,0 +1,102 @@
+Tu es l’architecte full-stack du projet Koomy (SaaS multi-tenant). Objectif: modifier l’offre “Pro” pour que la limite passe de 2 000 membres à 1 000 membres, et appliquer ce changement de manière cohérente dans:
+
+1) UI (pricing page, composants, pages d’offres)
+2) FAQ / pages publiques / contenus marketing internes (texte “Jusqu’à 2 000 membres”)
+3) Logique métier (enforcement serveur + validations + droits)
+4) Tests (unit/integration si existants) + vérifications manuelles
+
+⚠️ Règles impératives:
+- Ne change rien d’autre aux plans (prix, nom, features) sauf la limite Pro.
+- Aucun “hardcode” de 1000 dans 10 fichiers: centralise la config.
+- La limite doit être appliquée côté serveur (source de vérité), l’UI doit consommer la même source.
+- Respecte l’existant (TypeScript/Node/DB/ORM selon projet). Pas de refonte.
+- Après implémentation, fournis un mini rapport: fichiers modifiés, logique, et checklist de tests.
+
+========================
+PHASE A — AUDIT (avant de coder)
+========================
+1) Cherche toutes les occurrences de “2000”, “2 000”, “2 000” et toute mention de limite Pro.
+   - inclut: UI pricing, composant cards, FAQ, pages statiques, i18n (fr/en), seed DB, constants, config.
+2) Identifie où est stockée la définition des plans:
+   - DB (table plans/pricing/tiers) ou fichiers config (constants) ou un mix.
+3) Identifie comment le système compte les “membres”:
+   - table members? users? membership? invite pending?
+   - clarifie la définition exacte: membre actif vs invité vs supprimé.
+4) Identifie où la limite est appliquée actuellement (si elle l’est):
+   - backend endpoint createMember / importMembers / inviteMember / joinFlow
+   - validation côté serveur
+   - guard côté client
+
+➡️ Résultat attendu de l’audit: une liste claire des endroits à modifier + la meilleure stratégie de centralisation.
+
+========================
+PHASE B — PLAN D’IMPLÉMENTATION (soumettre avant de coder)
+========================
+Propose un plan en 6–10 étapes max, incluant:
+- source unique de vérité “PlanLimits.PRO.membersMax = 1000”
+- mapping UI/FAQ/i18n → valeurs dynamiques
+- enforcement backend: empêcher création/import/invitation au-delà de 1000
+- messages d’erreur propres (FR + EN si i18n)
+- tests + checklist
+
+⚠️ Attends mon “GO” après ce plan avant de passer à la phase C.
+
+========================
+PHASE C — IMPLÉMENTATION (après GO)
+========================
+1) Centralisation
+- Crée/complète un module de configuration unique des plans (ex: /config/plans.ts ou équivalent).
+- Définit: FREE=20, PLUS=300, PRO=1000 (ne pas changer les autres).
+- Expose ces valeurs pour le backend et le frontend (selon architecture: shared package, endpoint /public/config, ou import partagé).
+
+2) Backend (source de vérité)
+- Applique la limite Pro=1000 à toute action qui augmente le nombre de membres:
+  a) create member
+  b) invite member
+  c) import CSV
+  d) join/accept invite si ça incrémente
+- La réponse doit être une erreur explicite:
+  - code: PLAN_LIMIT_REACHED
+  - message FR/EN: “Limite atteinte: le plan Pro est limité à 1 000 membres. Passez au plan Grand Compte.”
+- Attention aux conditions de concurrence (deux créations simultanées):
+  - si possible: transaction DB + recheck count
+  - sinon: recheck juste avant insert + rollback si dépassement
+- Assure-toi que les comptes Grand Compte ne sont pas concernés (illimité).
+
+3) Frontend UI
+- Met à jour la carte de pricing Pro: afficher “Jusqu’à 1 000 membres”.
+- Met à jour les listes de features si elles mentionnent 2 000.
+- Si le site est bilingue, maj FR + EN.
+- Idéal: l’UI lit la limite depuis la config unique (pas de texte hardcodé).
+
+4) FAQ / Pages publiques / Docs
+- Remplace toutes les mentions “2 000” par “1 000” liées au plan Pro.
+- Vérifie la cohérence “Pro = Piloter & développer”.
+
+5) Tests
+- Ajoute/maj tests backend:
+  - Pro: à 1000 → création refuse
+  - Pro: à 999 → création OK
+  - Grand Compte: >1000 → OK
+- Si pas de framework de test: ajoute au minimum un script de test manuel documenté.
+
+6) Vérifications finales
+- Lancer build + lint + tests
+- Parcours manuel:
+  - page pricing (FR/EN)
+  - FAQ
+  - création membre (Pro)
+  - import CSV (Pro)
+  - invitations (Pro)
+- Donne un rapport final: fichiers touchés + captures logs si utile.
+
+========================
+DEFINITION IMPORTANTES
+========================
+- “membre” = membre actif dans la communauté (à préciser après audit si statuts).
+- Les invités en attente comptent OU non: choisis la règle la plus cohérente avec l’existant et documente-la.
+- Ne pas changer le pricing (39€/mois), ni les noms des plans.
+
+GOAL FINAL
+- Partout dans le produit, le plan Pro est limité à 1 000 membres:
+  UI + FAQ + Backend enforced + tests.
