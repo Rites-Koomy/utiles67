@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Sparkles, MessageSquare, Rocket, X, Send, Check, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { youth } from "@/data";
 
 const quartiers = [
   "Centre-ville", "Neudorf", "Krutenau", "Orangerie", "Robertsau",
@@ -50,9 +49,9 @@ export function YouthSection() {
       <section className="py-10 opacity-0 animate-fade-up">
         <div className="relative rounded-2xl overflow-hidden mb-6">
           <img
-            src={youth}
+            src="/measures/jeunes-initiatives-au-service-av.jpeg"
             alt="Jeunes de Strasbourg"
-            className="w-full h-40 sm:h-48 object-cover"
+            className="w-full h-40 sm:h-48 object-cover object-top"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
