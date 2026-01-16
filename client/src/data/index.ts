@@ -479,7 +479,7 @@ export const measures: Measure[] = [
     "proposition": "Fixer des objectifs progressifs: au moins 10% des heures sur certains marchés pour apprentissage, stages qualifiés ou embauches, avec priorité aux parcours fragilisés.",
     "miseEnOeuvre": "Clauses types, pilotage par la Ville, reporting annuel, contrôle d’exécution.",
     "indicateur": "Heures dédiées à la jeunesse, Nombre de jeunes bénéficiaires/an, Part quartiers prioritaires",
-    "coverImage": "/measures/jeunesse-clauses.jpg",
+    "coverImage": "/measures/sport-santé.jpg",
     "coverAlt": "Clauses d’embauche jeunesse dans les marchés",
     "isKeyMeasure": false
   },
