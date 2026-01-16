@@ -199,7 +199,7 @@ export const measures: Measure[] = [
     "proposition": "Créer un référent municipal « Logement social et transparence », centraliser les signalements et publier un rapport annuel clair sur les attributions et les contrôles.",
     "miseEnOeuvre": "Référent identifié + canal unique de signalement + procédure de saisine de l’ANCOLS en cas de dysfonctionnements avérés + présentation publique annuelle.",
     "indicateur": "Délai moyen de réponse aux signalements, Nombre de contrôles déclenchés / suites données, Publication annuelle accessible",
-    "coverImage": "/measures/logement-transparence.jpg",
+    "coverImage": "/measures/210831StrasbourgLeSaintTrop_26-scaled.jpg",
     "coverAlt": "Transparence du logement social",
     "isKeyMeasure": true
   },
@@ -213,7 +213,7 @@ export const measures: Measure[] = [
     "proposition": "Donner plus de moyens au contrôle local de l’habitat et créer un droit d’alerte officiel envers les propriétaires, avec une coopération Ville–CCAS–associations.",
     "miseEnOeuvre": "Renforcer les commissions compétentes, organiser un circuit court de traitement des alertes, et coordonner l’accompagnement social et juridique.",
     "indicateur": "Nombre de logements contrôlés, Nombre de mises en demeure / procédures, Part des situations résolues",
-    "coverImage": "/measures/logement-habitat.jpg",
+    "coverImage": "/measures/bandeau-logement.jpg",
     "coverAlt": "Réagir vite aux logements indignes",
     "isKeyMeasure": false
   },
@@ -227,7 +227,7 @@ export const measures: Measure[] = [
     "proposition": "Étendre et rendre plus efficace le permis de louer, avec contrôles et sanctions ciblées.",
     "miseEnOeuvre": "Cartographier les zones prioritaires, renforcer les contrôles, publier un guide simple pour propriétaires et locataires.",
     "indicateur": "Nombre de demandes instruites, Taux de non-conformité détecté, Évolution des signalements",
-    "coverImage": "/measures/logement-locations.jpg",
+    "coverImage": "/measures/Permisdelouer.jpg",
     "coverAlt": "Étendre le permis de louer",
     "isKeyMeasure": false
   },
@@ -241,7 +241,7 @@ export const measures: Measure[] = [
     "proposition": "Action coordonnée contre les marchands de sommeil, avec suivi des plaintes et coopération institutionnelle.",
     "miseEnOeuvre": "Cellule de coordination Ville/CCAS/associations, priorisation des dossiers à risque, accompagnement des victimes.",
     "indicateur": "Nombre de dossiers traités, Procédures engagées, Relogements sécurisés",
-    "coverImage": "/measures/logement-habitat.jpg",
+    "coverImage": "/measures/appartement-coul-1-site-sommeil.jpg",
     "coverAlt": "Lutter contre les marchands de sommeil",
     "isKeyMeasure": false
   },
@@ -255,7 +255,7 @@ export const measures: Measure[] = [
     "proposition": "Encadrer et contrôler les locations touristiques type Airbnb, avec sanctions dissuasives.",
     "miseEnOeuvre": "Déclaration obligatoire, contrôles, limitation et amendes en cas de fraude.",
     "indicateur": "Nombre de contrôles, Nombre de sanctions, Nombre de logements revenus au marché classique",
-    "coverImage": "/measures/logement-locations.jpg",
+    "coverImage": "/measures/touristiques-cadena.jpg",
     "coverAlt": "Encadrer strictement les locations touristiques",
     "isKeyMeasure": false
   },
@@ -269,7 +269,7 @@ export const measures: Measure[] = [
     "proposition": "Déployer un bus municipal équipé pour l’orientation et les démarches simples, présent régulièrement dans les quartiers.",
     "miseEnOeuvre": "Un véhicule aménagé, un planning public, des agents formés, passage régulier par secteur.",
     "indicateur": "Nombre de permanences réalisées, Nombre de démarches / orientations, Satisfaction usagers",
-    "coverImage": "/measures/services-bus-mairie.jpg",
+    "coverImage": "/measures/image_processing20240315-15617-m75vm2.jpg",
     "coverAlt": "Bus-Mairie itinérant",
     "isKeyMeasure": true
   },
@@ -297,7 +297,7 @@ export const measures: Measure[] = [
     "proposition": "Former des habitants volontaires pour accompagner les démarches et orienter vers les bons services, en lien avec CSC et associations.",
     "miseEnOeuvre": "Appel à volontaires, formation, référent municipal de coordination, cadre éthique clair.",
     "indicateur": "Nombre de relais actifs, Nombre d’accompagnements, Taux de réorientation réussie",
-    "coverImage": "/measures/services-voisins-relais.jpg",
+    "coverImage": "/measures/Aide-administrative-www-espacemagnan-com.jpg",
     "coverAlt": "Voisins-Relais",
     "isKeyMeasure": false
   },
@@ -325,7 +325,7 @@ export const measures: Measure[] = [
     "proposition": "Organiser des permanences hebdomadaires dans CSC, maisons de quartier et résidences seniors.",
     "miseEnOeuvre": "Créneaux fixes publiés, prise en charge des cas simples et orientation des cas complexes.",
     "indicateur": "Nombre de permanences, Délai moyen d’obtention d’un rendez-vous, Satisfaction usagers",
-    "coverImage": "/measures/services-bus-mairie.jpg",
+    "coverImage": "/measures/cd54eb_1e9cfcb96d03484c95b39505497ee5ac~mv2.jpg",
     "coverAlt": "Permanences administratives délocalisées",
     "isKeyMeasure": false
   },
@@ -339,7 +339,7 @@ export const measures: Measure[] = [
     "proposition": "Un agent identifié par quartier suit les situations complexes de bout en bout.",
     "miseEnOeuvre": "Nomination, formation au suivi transversal, circuit court avec les services municipaux et partenaires.",
     "indicateur": "Nombre de dossiers suivis, Délai de résolution, Taux de retours positifs",
-    "coverImage": "/measures/services-referent.jpg",
+    "coverImage": "/measures/referent-administratif.jpg",
     "coverAlt": "Référent administratif par quartier",
     "isKeyMeasure": false
   },
@@ -367,7 +367,7 @@ export const measures: Measure[] = [
     "proposition": "Intégrer des clauses favorisant l’emploi local, l’insertion et l’apprentissage dans les marchés municipaux.",
     "miseEnOeuvre": "Guide acheteurs publics, clauses types, suivi des obligations, sanctions/bonus selon respect.",
     "indicateur": "Part des marchés incluant une clause, Heures d’insertion réalisées, Nombre de bénéficiaires",
-    "coverImage": "/measures/emploi-artisans.jpg",
+    "coverImage": "/measures/initial-jeunes-saisonniers-primeurs.jpg",
     "coverAlt": "Clauses locales dans les marchés municipaux",
     "isKeyMeasure": false
   },
@@ -395,7 +395,7 @@ export const measures: Measure[] = [
     "proposition": "Accélérer la rénovation énergétique des logements et bâtiments prioritaires (écoles, crèches, parc social), pour réduire les dépenses et les émissions.",
     "miseEnOeuvre": "Audit, programmation pluriannuelle, accompagnement des ménages, mobilisation de financements dédiés.",
     "indicateur": "Nombre de logements/bâtiments rénovés, Économies d’énergie estimées, Baisse des émissions associées",
-    "coverImage": "/measures/eco-renovation.jpg",
+    "coverImage": "/measures/prix-d-une-renovation-energetique-globale-jXERo.jpg",
     "coverAlt": "Rénovation énergétique massive",
     "isKeyMeasure": false
   },
@@ -409,7 +409,7 @@ export const measures: Measure[] = [
     "proposition": "Développer jardins partagés, circuits courts et accès à une alimentation saine et locale, y compris dans les quartiers populaires.",
     "miseEnOeuvre": "Appels à projets citoyens, partenariats producteurs, actions dans les écoles, paniers solidaires.",
     "indicateur": "Nombre de jardins/circuits soutenus, Participation habitants, Accès à l’offre dans les quartiers prioritaires",
-    "coverImage": "/measures/ecologie-jardins.jpg",
+    "coverImage": "/measures/action-collective-transition-ecologique-fb.png",
     "coverAlt": "Une écologie accessible à tous",
     "isKeyMeasure": false
   },
@@ -493,7 +493,7 @@ export const measures: Measure[] = [
     "proposition": "Créer une épicerie solidaire étudiante avec le CROUS, associations et producteurs locaux, complétée par une épicerie mobile et des supermarchés solidaires gérés par les étudiants (Stras’Impact).",
     "miseEnOeuvre": "Partenariats, lieux accessibles, tarification sociale, logistique anti-gaspillage, tournée mobile campus.",
     "indicateur": "Nombre d’étudiants bénéficiaires, Volume de produits redistribués, Part de circuits courts",
-    "coverImage": "/measures/etudiant-epicerie.jpg",
+    "coverImage": "/measures/definition-epicerie-solidaire.png",
     "coverAlt": "Épiceries solidaires étudiantes",
     "isKeyMeasure": false
   },
@@ -507,7 +507,7 @@ export const measures: Measure[] = [
     "proposition": "Mieux mobiliser le parc existant, renforcer l’encadrement des loyers abusifs dans les zones universitaires et développer des solutions temporaires dignes (rentrée, stage, transition).",
     "miseEnOeuvre": "Charte tripartite Ville–Bailleurs–Associations étudiantes, information renforcée, solutions temporaires encadrées.",
     "indicateur": "Nombre de logements mobilisés, Signalements loyers abusifs traités, Solutions temporaires proposées",
-    "coverImage": "/measures/etudiant-logement.jpg",
+    "coverImage": "/measures/hugo-kret-allavoine-etudiant-en-master-informatique-occupe-une-chambre-de-10-m-2-dans-la-residence-paul-appell-depuis-quatre-ans-photo-jean-francois-badias-1712512352.jpg",
     "coverAlt": "Logement étudiant accessible",
     "isKeyMeasure": false
   },
@@ -535,7 +535,7 @@ export const measures: Measure[] = [
     "proposition": "Créer des jobs municipaux adaptés aux rythmes étudiants et intégrer des clauses « Jeunes » dans les marchés publics (médiation, soutien scolaire, actions écologiques, événements).",
     "miseEnOeuvre": "Catalogue de missions, horaires adaptés, partenariat universités, clauses marchés publics.",
     "indicateur": "Nombre de jobs créés, Taux de réussite/maintien des étudiants (enquête), Heures réalisées",
-    "coverImage": "/measures/etudiant-jobs.jpg",
+    "coverImage": "/measures/animateur-scolaire.jpg",
     "coverAlt": "Jobs municipaux compatibles avec les études",
     "isKeyMeasure": false
   },
@@ -549,7 +549,7 @@ export const measures: Measure[] = [
     "proposition": "Renforcer les budgets participatifs « Quartiers en Action » avec suivi en ligne de la réalisation.",
     "miseEnOeuvre": "Augmentation de l'enveloppe, vote simplifié, plateforme de suivi des travaux en temps réel.",
     "indicateur": "Montant alloué, Nombre de projets réalisés, Taux de participation",
-    "coverImage": "/measures/demo-budget.jpg",
+    "coverImage": "/measures/BP-site.jpg",
     "coverAlt": "Budgets participatifs renforcés",
     "isKeyMeasure": true
   },
@@ -563,7 +563,7 @@ export const measures: Measure[] = [
     "proposition": "Abaisser les seuils du droit d’interpellation pour permettre l'organisation de référendums locaux d'initiative citoyenne.",
     "miseEnOeuvre": "Seuils abaissés, accompagnement méthodologique, débat public garanti.",
     "indicateur": "Nombre d'interpellations, Référendums organisés, Sujets mis à l'agenda",
-    "coverImage": "/measures/demo-referendum.jpg",
+    "coverImage": "/measures/referendum1.jpg",
     "coverAlt": "Droit d’interpellation et référendum local",
     "isKeyMeasure": false
   },
@@ -577,7 +577,7 @@ export const measures: Measure[] = [
     "proposition": "Développer une programmation « Hors les murs » dans les parcs, les places et les pieds d'immeubles.",
     "miseEnOeuvre": "Scènes ouvertes, bibliothèques de rue, festivals de quartier, résidences d'artistes in situ.",
     "indicateur": "Nombre d'événements hors les murs, Public touché (nouveaux publics), Satisfaction habitants",
-    "coverImage": "/measures/culture-accessible.jpg",
+    "coverImage": "/measures/a-la-manifestation-du-monde-de-la-culture-a-strasbourg-contre-l-austerite-le-13-juin-dernier-a-succede-la-mobilisation-contre-l-eventuelle-arrivee-du-rn-au-pouvoir-photo-david-geiss-1719339850.jpg",
     "coverAlt": "Culture hors les murs",
     "isKeyMeasure": true
   },
@@ -647,7 +647,7 @@ export const measures: Measure[] = [
     "proposition": "Une police municipale présente à pied et à vélo, formée à la médiation et au contact population.",
     "miseEnOeuvre": "Îlotage, patrouilles mixtes, formation continue, lien avec les habitants.",
     "indicateur": "Heures de patrouille pédestre, Contacts habitants, Sentiment de sécurité (enquête)",
-    "coverImage": "/measures/securite-police.jpg",
+    "coverImage": "/measures/thin-blue-line-blog-XVMea7f1ac4-332d-11eb-a0c5-c488b2411768.webp",
     "coverAlt": "Police municipale de proximité",
     "isKeyMeasure": true
   },
@@ -661,7 +661,7 @@ export const measures: Measure[] = [
     "proposition": "Utiliser les fonds européens pour des projets concrets dans les quartiers (isolation, formation, échanges).",
     "miseEnOeuvre": "Cellule de montage de projets, communication sur les réalisations UE, jumelages de quartiers.",
     "indicateur": "Montant fonds européens captés, Projets quartiers financés, Jeunes en mobilité européenne",
-    "coverImage": "/measures/europe-quartiers.jpg",
+    "coverImage": "/measures/00-21.jpg",
     "coverAlt": "L'Europe dans les quartiers",
     "isKeyMeasure": true
   }
