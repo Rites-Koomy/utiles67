@@ -381,7 +381,7 @@ export const measures: Measure[] = [
     "proposition": "Renforcer la mesure de la qualité de l’air et du bruit, avec priorité écoles/crèches, et déclencher des actions concrètes (apaisement, végétalisation, isolation).",
     "miseEnOeuvre": "Réseau de capteurs, données accessibles, plan d’action par quartier, suivi public des améliorations.",
     "indicateur": "Couverture du réseau de mesure, Nombre d’actions déclenchées, Évolution des niveaux air/bruit",
-    "coverImage": "/measures/ecologie-capteurs.jpg",
+    "coverImage": "/measures/mesure-qualite-air.webp",
     "coverAlt": "Mesurer l’air et le bruit pour protéger la santé",
     "isKeyMeasure": true
   },
@@ -423,7 +423,7 @@ export const measures: Measure[] = [
     "proposition": "Construire un réseau cyclable continu, lisible et protégé, qui sécurise aussi piétons et automobilistes en clarifiant les usages.",
     "miseEnOeuvre": "Audit des discontinuités, priorisation des axes, aménagements protégés, signalétique claire, suivi public.",
     "indicateur": "Km de pistes protégées créés, Évolution accidents/incidents, Satisfaction usagers",
-    "coverImage": "/measures/mobilite-securite.jpg",
+    "coverImage": "/measures/pistes cyclable.jpg",
     "coverAlt": "Pistes cyclables réellement sécurisées",
     "isKeyMeasure": true
   },
@@ -451,7 +451,7 @@ export const measures: Measure[] = [
     "proposition": "Avant toute modification de circulation ou stationnement, associer habitants et commerçants en amont.",
     "miseEnOeuvre": "Réunions ciblées, ateliers, restitution claire, calendrier partagé, droit à l’ajustement.",
     "indicateur": "Nombre de concertations en amont, Délai de publication des restitutions, Baisse des réclamations",
-    "coverImage": "/measures/democratie-voix-quartier.jpg",
+    "coverImage": "/measures/dsialogue-citoyen.webp",
     "coverAlt": "Dialoguer avant de décider",
     "isKeyMeasure": false
   },
@@ -465,7 +465,7 @@ export const measures: Measure[] = [
     "proposition": "Créer TRACE (Transmission, Réseau, Accompagnement, Compétences, Élan): mentorat mobilisant actifs et retraités, avec un label municipal pour les partenaires.",
     "miseEnOeuvre": "Identification des jeunes, recrutement/formation des mentors, matching, suivi, valorisation des mentors via label TRACE.",
     "indicateur": "Nombre de binômes mentor/jeune, Taux de maintien dans le parcours, Accès à stages/emplois/formation",
-    "coverImage": "/measures/jeunesse-trace.jpg",
+    "coverImage": "/measures/WhatsApp Image 2026-01-14 at 23.30.23.jpeg",
     "coverAlt": "TRACE: mentorat municipal de proximité",
     "isKeyMeasure": true
   },
