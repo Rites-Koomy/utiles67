@@ -591,7 +591,7 @@ export const measures: Measure[] = [
     "proposition": "Généraliser le dispositif Sport-Santé sur ordonnance et rendre accessibles les équipements sportifs en accès libre.",
     "miseEnOeuvre": "Partenariat médecins/clubs, créneaux dédiés, aménagement de parcours santé urbains.",
     "indicateur": "Nombre de bénéficiaires Sport-Santé, Nouveaux équipements accès libre, Partenaires engagés",
-    "coverImage": "/measures/sport-sante.jpg",
+    "coverImage": "/measures/sport-santé.jpg",
     "coverAlt": "Sport-Santé sur ordonnance",
     "isKeyMeasure": false
   },
@@ -633,7 +633,7 @@ export const measures: Measure[] = [
     "proposition": "Réaliser un audit citoyen en début de mandat et créer un tableau de bord financier accessible à tous.",
     "miseEnOeuvre": "Commission mixte élus/citoyens/experts, publication simplifiée, open data budgétaire.",
     "indicateur": "Publication de l'audit, Consultations du tableau de bord, Économies identifiées",
-    "coverImage": "/measures/finances-audit.jpg",
+    "coverImage": "/measures/audit finance.webp",
     "coverAlt": "Audit citoyen des finances",
     "isKeyMeasure": true
   },
