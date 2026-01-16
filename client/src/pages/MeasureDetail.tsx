@@ -1,5 +1,5 @@
 import { useParams, Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { QuestionsModal } from "@/components/QuestionsModal";
 import { EngagementBlock } from "@/components/EngagementBlock";
@@ -11,6 +11,11 @@ export default function MeasureDetail() {
   const measure = getMeasureById(id || "");
   const priority = measure ? getPriorityById(measure.priorityId) : null;
   const [showQuestions, setShowQuestions] = useState(false);
+
+  // Scroll to top when the component mounts or when the measure ID changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!measure) {
     return (

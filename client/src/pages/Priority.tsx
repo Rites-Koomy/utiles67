@@ -1,4 +1,5 @@
 import { useParams, Link } from "wouter";
+import { useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { MeasureCard } from "@/components/MeasureCard";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
@@ -18,6 +19,11 @@ export default function Priority() {
   const { id } = useParams<{ id: string }>();
   const priority = getPriorityById(id || "");
   const measures = priority ? getMeasuresByPriority(priority.id) : [];
+
+  // Scroll to top when the component mounts or when the priority ID changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!priority) {
     return (
