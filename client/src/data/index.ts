@@ -283,7 +283,7 @@ export const measures: Measure[] = [
     "proposition": "Tenir des stands « Parlons Services Publics » sur les marchés: information, écoute, orientation immédiate.",
     "miseEnOeuvre": "Stand léger + documentation claire + agents/volontaires formés, selon les jours de marché.",
     "indicateur": "Nombre de personnes reçues, Taux de résolution au premier contact",
-    "coverImage": "/measures/services-marches.jpg",
+    "coverImage": "/measures/stand-marché.jpeg",
     "coverAlt": "Stands municipaux sur les marchés",
     "isKeyMeasure": false
   },
@@ -339,7 +339,7 @@ export const measures: Measure[] = [
     "proposition": "Un agent identifié par quartier suit les situations complexes de bout en bout.",
     "miseEnOeuvre": "Nomination, formation au suivi transversal, circuit court avec les services municipaux et partenaires.",
     "indicateur": "Nombre de dossiers suivis, Délai de résolution, Taux de retours positifs",
-    "coverImage": "/measures/referent-administratif.jpg",
+    "coverImage": "/measures/referent-administratif.jpeg",
     "coverAlt": "Référent administratif par quartier",
     "isKeyMeasure": false
   },
@@ -451,7 +451,7 @@ export const measures: Measure[] = [
     "proposition": "Avant toute modification de circulation ou stationnement, associer habitants et commerçants en amont.",
     "miseEnOeuvre": "Réunions ciblées, ateliers, restitution claire, calendrier partagé, droit à l’ajustement.",
     "indicateur": "Nombre de concertations en amont, Délai de publication des restitutions, Baisse des réclamations",
-    "coverImage": "/measures/dsialogue-citoyen.webp",
+    "coverImage": "/measures/dialoguer2.jpeg",
     "coverAlt": "Dialoguer avant de décider",
     "isKeyMeasure": false
   },
@@ -633,7 +633,7 @@ export const measures: Measure[] = [
     "proposition": "Réaliser un audit citoyen en début de mandat et créer un tableau de bord financier accessible à tous.",
     "miseEnOeuvre": "Commission mixte élus/citoyens/experts, publication simplifiée, open data budgétaire.",
     "indicateur": "Publication de l'audit, Consultations du tableau de bord, Économies identifiées",
-    "coverImage": "/measures/audit finance.webp",
+    "coverImage": "/measures/audit-citoyen.jpeg",
     "coverAlt": "Audit citoyen des finances",
     "isKeyMeasure": true
   },
@@ -700,14 +700,8 @@ export const videos: Video[] = [
     "description": "A la rencontre des habitants de Haute Pierre",
     "youtubeId": "UvvbPBr9UkE",
     "priorityId": "Marché"
-  },
-  {
-    "id": "video-6",
-    "title": "Une écologie du quotidien",
-    "description": "Respirer, manger sain, se déplacer : notre engagement.",
-    "youtubeId": "dQw4w9WgXcQ",
-    "priorityId": "ecologie_sante"
   }
+  
 ];
 
 export const events: Event[] = [
