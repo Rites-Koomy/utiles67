@@ -670,6 +670,12 @@ export const measures: Measure[] = [
 export const videos: Video[] = [
   {
     "id": "video-1",
+    "title": "UTILES : l'administration proche des habitants",
+    "description": "Déployer un bus municipal équipé pour l’orientation et les démarches simples, présent régulièrement dans les quartiers.",
+    "youtubeId": "_LI9toOcs40"
+  },
+  {
+    "id": "video-1",
     "title": "UTILES pour Strasbourg : notre vision",
     "description": "Un programme né du terrain, co-construit avec les habitants.",
     "youtubeId": "pKJJ_dLjMB0"
