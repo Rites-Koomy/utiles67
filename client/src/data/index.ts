@@ -521,7 +521,7 @@ export const measures: Measure[] = [
     "proposition": "Mettre en place des permanences municipales dédiées aux étudiants, en lien avec universités, CROUS et quartiers.",
     "miseEnOeuvre": "Créneaux sur campus et en quartier, aide dossiers, prévention des ruptures de parcours.",
     "indicateur": "Nombre de permanences, Taux de dossiers finalisés, Baisse du non-recours (estimations)",
-    "coverImage": "/measures/etudiant-droits.jpg",
+    "coverImage": "/measures/aides-acces-droits-jeuns.webp",
     "coverAlt": "Permanences municipales pour l’accès aux droits",
     "isKeyMeasure": false
   },
@@ -605,7 +605,7 @@ export const measures: Measure[] = [
     "proposition": "Plan de mise en accessibilité universelle (voirie, bâtiments, transports) avec commission de suivi citoyenne.",
     "miseEnOeuvre": "Audit participatif, travaux priorisés, sanction des obstacles illégaux, formation des agents.",
     "indicateur": "Taux d'équipements accessibles, Linéaire de voirie traité, Satisfaction usagers PMR",
-    "coverImage": "/measures/inclusion-accessibilite.jpg",
+    "coverImage": "/measures/accessibilite.jpg",
     "coverAlt": "Strasbourg 100% accessible",
     "isKeyMeasure": true
   },
@@ -619,7 +619,7 @@ export const measures: Measure[] = [
     "proposition": "Redéployer des équipes d'éducateurs de rue formés, en lien avec les familles et les associations.",
     "miseEnOeuvre": "Recrutement d'éducateurs, présence en soirée et week-end, coordination avec l'État.",
     "indicateur": "Nombre d'éducateurs terrain, Jeunes accompagnés, Actions de prévention",
-    "coverImage": "/measures/prevention-jeunes.jpg",
+    "coverImage": "/measures/educateur-jeune.jpg",
     "coverAlt": "Prévention spécialisée renforcée",
     "isKeyMeasure": true
   },
