@@ -30,16 +30,18 @@ export function ExpandableInfoBox({
   }, [content, collapsedHeight]);
 
   return (
-    <div className="bg-background border border-border/50 rounded-2xl p-4 sm:p-5 mb-4 shadow-sm">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="font-semibold text-foreground text-lg">{title}</h3>
+    <div className="bg-background border border-border/50 rounded-2xl p-3 sm:p-4 mb-4 shadow-sm">
+      <div className="mb-2 text-center">
+        <h3 className="font-extrabold text-primary text-base sm:text-lg uppercase tracking-tight leading-tight">
+          {title}
+        </h3>
       </div>
       
       <div className="relative">
         <div
           ref={contentRef}
           className={cn(
-            "text-muted-foreground text-base leading-relaxed overflow-hidden transition-[max-height] duration-300 ease-in-out",
+            "text-muted-foreground text-sm leading-relaxed overflow-hidden transition-[max-height] duration-300 ease-in-out",
           )}
           style={{
             maxHeight: isExpanded ? `${contentRef.current?.scrollHeight}px` : `${collapsedHeight}px`,

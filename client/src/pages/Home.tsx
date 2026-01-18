@@ -188,7 +188,7 @@ UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un 
 
         <section className="py-6">
           <ExpandableInfoBox 
-            title="Présentation du mouvement"
+            title="DÉCOUVREZ LE MOUVEMENT UTILES"
             content={presentationText}
           />
 
