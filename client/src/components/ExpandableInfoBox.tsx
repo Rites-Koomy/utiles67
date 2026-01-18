@@ -11,7 +11,7 @@ interface ExpandableInfoBoxProps {
 export function ExpandableInfoBox({
   title,
   content,
-  collapsedHeight = 92,
+  collapsedHeight = 48,
 }: ExpandableInfoBoxProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [shouldShowButton, setShouldShowButton] = useState(false);
@@ -56,7 +56,7 @@ export function ExpandableInfoBox({
 
         {/* Gradient overlay when collapsed */}
         {!isExpanded && shouldShowButton && (
-          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent pointer-events-none" />
         )}
       </div>
 
