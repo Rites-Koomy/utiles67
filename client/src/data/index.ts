@@ -473,7 +473,7 @@ export const measures: Measure[] = [
     "proposition": "Développer une politique municipale favorisant les circuits courts, la production locale et l’accès à une alimentation de qualité pour tous.",
     "miseEnOeuvre": "• Soutien aux producteurs locaux et aux marchés de proximité\n• Introduction accrue de produits locaux et bio dans la restauration collective\n• Partenariats avec les associations d’aide alimentaire\n• Sensibilisation à l’alimentation durable dans les quartiers",
     "indicateur": "• Part de produits locaux dans la restauration collective\n• Nombre de producteurs partenaires\n• Nombre de bénéficiaires des dispositifs solidaires",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/circuits-courts.jpg",
     "coverAlt": "Alimentation saine et circuits courts accessibles",
     "isKeyMeasure": false
   },
@@ -487,7 +487,7 @@ export const measures: Measure[] = [
     "proposition": "Créer un réseau cyclable continu, lisible et sécurisé, pensé pour tous les âges et tous les usages.",
     "miseEnOeuvre": "• Sécurisation physique des pistes existantes\n• Suppression des discontinuités dangereuses\n• Priorité aux axes domicile-travail et domicile-école\n• Concertation avec les usagers cyclistes",
     "indicateur": "• Kilomètres de pistes sécurisées\n• Fréquentation cyclable\n• Nombre d’accidents impliquant des cyclistes",
-    "coverImage": "/measures/pistes cyclable.jpg",
+    "coverImage": "/measures/balade-velo-strasbourg_0.jpg",
     "coverAlt": "Des pistes cyclables réellement sécurisées",
     "isKeyMeasure": false
   },
@@ -501,7 +501,7 @@ export const measures: Measure[] = [
     "proposition": "Donner aux quartiers les moyens de construire leurs propres solutions, avec l’appui de la ville.",
     "miseEnOeuvre": "• Ateliers citoyens réguliers par quartier\n• Soutien technique et financier aux projets locaux\n• Évaluation partagée des actions mises en place",
     "indicateur": "• Nombre de projets coconstruits\n• Taux de participation des habitants",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/coconstruire.jpeg",
     "coverAlt": "Des solutions coconstruites par quartier",
     "isKeyMeasure": false
   },

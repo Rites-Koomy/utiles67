@@ -1,0 +1,34 @@
+BUILD FAIL: le build échoue sur une étape PIP/Python (“Getting requirements to build wheel did not run successfully”).
+Ce projet est un site web (Node/Vite/TS). Il ne doit pas lancer de build Python pendant le déploiement.
+
+OBJECTIF
+1) Identifier pourquoi pip/pip3 est exécuté pendant le build.
+2) Supprimer/neutraliser l’étape Python du pipeline de build si elle n’est pas nécessaire au site.
+3) Faire passer le build.
+
+ÉTAPES (OBLIGATOIRES)
+A) Afficher la commande exacte du build utilisée en CI (Cloudflare Pages / pipeline).
+   - Vérifier package.json scripts: build, postinstall, prepare
+   - Vérifier presence de requirements.txt / pyproject.toml / setup.py
+   - Vérifier scripts dans package.json qui lancent python/pip
+   - Vérifier si un outil (ex: playwright, node-gyp, sharp, etc.) déclenche un python install via hook (moins probable) 
+B) Trouver le package Python précis qui échoue (le nom doit être affiché dans les logs).
+   - Si les logs CI sont tronqués, logguer explicitement l’installation (echo + set -x) ou produire un log file pendant build.
+C) Fix selon cause:
+   1) Si un dossier / fichier Python (requirements.txt) est présent mais inutile:
+      - le retirer du build (ne pas l’installer)
+      - s’assurer que le build command ne fait QUE npm ci && npm run build
+   2) Si un script npm déclenche pip:
+      - supprimer ce hook (postinstall/prepare) ou le rendre conditionnel (uniquement en local dev).
+   3) Si Cloudflare Pages exécute un “pip install” car détecte un projet Python:
+      - forcer un build Node uniquement (via settings / build command)
+      - s’assurer que le root directory pointe sur le bon sous-dossier (celui du front).
+D) Mettre à jour la config de build (package.json et/ou config) pour:
+   - build command: npm ci && npm run build
+   - output directory: dist (ou le dossier correct)
+   - aucun pip install pendant build
+
+LIVRABLE
+- Une explication claire: “Pourquoi pip tournait ?”
+- Le(s) fichier(s) modifié(s) (package.json, config, scripts)
+- Le build passe et le site se déploie
