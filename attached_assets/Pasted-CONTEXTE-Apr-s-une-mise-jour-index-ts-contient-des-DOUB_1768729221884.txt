@@ -1,0 +1,74 @@
+CONTEXTE
+Après une mise à jour, index.ts contient des DOUBLONS : Replit a ajouté de nouvelles mesures alors qu’il fallait enrichir des mesures existantes.
+Objectif: corriger index.ts en garantissant qu’il n’existe QU’UNE SEULE mesure par id, et que les enrichissements soient appliqués sur l’objet existant (UPDATE) au lieu d’ajouter un nouvel objet (ADD).
+
+SOURCE DE VÉRITÉ
+Le contenu texte à utiliser est exclusivement dans PROGRAMME_MAJ_CONTENU.md.
+Tu ne dois PAS inventer de texte, ni reformuler.
+Tu dois copier/coller les champs title/impact/constat/proposition/miseEnOeuvre/indicateur depuis le .md.
+
+RÈGLE DE NON-NÉGOCIATION
+1) L’unicité se fait par `id`. Dans le tableau measures, chaque id doit apparaître UNE SEULE FOIS.
+2) Si un id apparaît plusieurs fois:
+   - conserver UNE version (celle qui garde les bons champs non-textuels: coverImage, coverAlt, isKeyMeasure, priorityId, tag si déjà corrects)
+   - fusionner le contenu: remplacer les champs texte par ceux de PROGRAMME_MAJ_CONTENU.md
+   - supprimer les autres entrées (doublons) du tableau
+3) Ne jamais créer de nouvelle mesure si l’id existe déjà.
+4) Ne modifier coverImage/coverAlt/isKeyMeasure/priorityId/tag QUE si:
+   - ils sont absents/invalides, ou
+   - PROGRAMME_MAJ_CONTENU.md fournit explicitement une valeur (sinon conserver l’existant).
+5) Aucune mesure ne doit avoir id vide, ni id différent de ceux imposés.
+
+ÉTAPES TECHNIQUES (OBLIGATOIRES)
+A) Localiser le tableau des mesures dans index.ts (ou le fichier source réel).
+B) Construire un map par id:
+   - Pour chaque mesure existante:
+       - si id non vu: l’enregistrer
+       - si id déjà vu: détecter doublon, mettre dans une liste "duplicates"
+C) Pour chaque id en doublon:
+   - choisir une "base object" à conserver (priorité: celle qui a coverImage non vide OU isKeyMeasure défini OU la plus complète en métadonnées)
+   - écraser les champs texte avec ceux du PROGRAMME_MAJ_CONTENU.md
+   - supprimer toutes les autres occurrences de cet id du tableau
+D) Pour chaque id présent dans PROGRAMME_MAJ_CONTENU.md:
+   - si id existe dans index.ts: UPDATE uniquement (écraser les champs texte avec le .md)
+   - si id n’existe pas: ADD (création d’un nouvel objet complet, en respectant la structure)
+E) Validation:
+   - vérifier unicité des ids (Set size == array length)
+   - vérifier champs obligatoires non vides: id, priorityId, title, tag, constat, proposition, miseEnOeuvre, indicateur
+   - build/test OK
+
+LISTE DES IDS À GÉRER (IMPOSÉE)
+UPDATE:
+- eco-renovation
+
+ADD (uniquement si absent):
+- eco-alimentation-locale
+- mobilites-pistes-securisees
+- democratie-solutions-quartiers
+- democratie-concertation-proactive
+- jeunesse-trace-mentorat
+- emploi-clauses-jeunesse-marches
+- jeunesse-epiceries-etudiantes
+- logement-etudiant-accessible
+- emploi-jobs-etudiants
+- democratie-budget-participatif-plus
+- democratie-referendum-local
+- culture-hors-les-murs
+- sante-sport-ordonnance
+- inclusion-accessibilite-universelle
+- prevention-educateurs-rue
+
+FORMAT DU TEXTE (IMPORTANT)
+- Les bullet points doivent rester dans les strings sous forme:
+  "• point 1\n• point 2\n• point 3"
+- Ne pas convertir en tableaux.
+- Conserver accents et typographie française.
+
+SORTIE ATTENDUE
+1) index.ts corrigé (doublons supprimés, mises à jour appliquées, nouvelles mesures ajoutées si manquantes).
+2) Un récap explicite dans la réponse:
+   - DEDUPED: [liste des ids dédoublonnés + nombre d’entrées supprimées]
+   - UPDATED: [liste des ids mis à jour]
+   - ADDED: [liste des ids ajoutés]
+   - COUNT FINAL: X mesures
+3) Aucun autre changement hors du tableau measures.
