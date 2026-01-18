@@ -10,12 +10,24 @@ import { YouthSection } from "@/components/YouthSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { priorities, measures, getMeasuresByPriority } from "@/data";
 
+import { ExpandableInfoBox } from "@/components/ExpandableInfoBox";
+
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
   const [hasAnimated, setHasAnimated] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const presentationText = `UTILES 67 est un mouvement citoyen local implanté dans le Bas-Rhin et profondément ancrée dans les réalités de terrain, issu de l’émancipation locale de la dynamique portée au niveau national par le groupe parlementaire LIOT.
+
+UTILES 67 rassemble des citoyennes et des citoyens aux parcours, origines et sensibilités diverses, unis par l’envie de construire des solutions concrètes, utiles et applicables au quotidien.
+
+Notre démarche repose sur l’écoute, la méthode est la participation citoyenne : cahiers de doléances, rencontres de quartier, cafés citoyens et ateliers participatifs nourrissent nos propositions.
+
+Nous croyons en une écologie de solutions, une démocratie locale vivante, une solidarité active et une ville qui fait confiance à ses habitants.
+
+UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un collectif ouvert, indépendant et engagé, qui place l’intérêt général, la transparence et l’humain au cœur de l’action.`;
 
   const filteredMeasures = activeFilter
     ? getMeasuresByPriority(activeFilter)
@@ -175,6 +187,11 @@ export default function Home() {
         </div>
 
         <section className="py-6">
+          <ExpandableInfoBox 
+            title="Présentation du mouvement"
+            content={presentationText}
+          />
+
           <div className="grid gap-4">
             {filteredMeasures.map((measure, index) => (
               <MeasureCard key={measure.id} measure={measure} index={index} />

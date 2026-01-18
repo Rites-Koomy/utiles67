@@ -1,0 +1,57 @@
+TÂCHE
+Ajouter sur la page Mesures (homepage / section mesures) une petite box texte “Présentation du mouvement” avec un aperçu (preview) et un dépliage au clic sur un bouton (icône + ou flèche bas). La box doit être placée:
+- juste SOUS le menu/bandeau de filtres des mesures (ex: “Toutes”, “Logement…”, etc.)
+- et AVANT la première carte de mesure.
+
+CONTENU (texte exact à afficher)
+UTILES 67 est un mouvement citoyen local implanté dans le Bas-Rhin et profondément ancrée dans les réalités de terrain, issu de l’émancipation locale de la dynamique portée au niveau national par le groupe parlementaire LIOT.
+
+UTILES 67 rassemble des citoyennes et des citoyens aux parcours, origines et sensibilités diverses, unis par l’envie de construire des solutions concrètes, utiles et applicables au quotidien.
+
+Notre démarche repose sur l’écoute, la méthode est la participation citoyenne : cahiers de doléances, rencontres de quartier, cafés citoyens et ateliers participatifs nourrissent nos propositions.
+
+Nous croyons en une écologie de solutions, une démocratie locale vivante, une solidarité active et une ville qui fait confiance à ses habitants.
+
+UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un collectif ouvert, indépendant et engagé, qui place l’intérêt général, la transparence et l’humain au cœur de l’action.
+
+COMPORTEMENT UI
+1) Par défaut (état replié):
+- Afficher un titre: “Présentation du mouvement”
+- Afficher uniquement un aperçu: ~2 à 3 lignes max (ou une hauteur fixe, ex 76–92px), avec un fondu de fin (gradient) ou ellipsis.
+- Afficher un bouton à droite (icône “chevron bas” ou “+”).
+2) Au clic:
+- La box se déplie en augmentant sa hauteur (animation douce) pour montrer tout le texte.
+- Le bouton devient “chevron haut” ou “–”.
+3) Accessibilité:
+- Le bouton doit être un <button> avec aria-expanded et aria-controls.
+- Le texte doit rester sélectionnable (pas d’overlay bloquant).
+4) UX:
+- La box ne doit jamais créer de scroll horizontal.
+- Le texte doit respecter les sauts de paragraphe (séparations vides).
+- Sur mobile: coins arrondis, padding confortable.
+- Sur desktop: max-width cohérent et aligné avec la liste de cartes.
+
+STYLE (cohérence avec le design actuel)
+- Box background: blanc ou très léger (selon thème), bordure légère, radius 16px
+- padding: 14–18px
+- Titre en semi-bold
+- Texte en taille normale, couleur secondaire
+- Icône de toggle dans un petit rond discret (optionnel)
+- Animation: transition de max-height + opacity (ou animation height mesurée) ~200–300ms
+
+IMPLÉMENTATION TECHNIQUE (React/TS)
+- Créer un composant réutilisable: <ExpandableInfoBox />
+- Props: title, content (string ou array paragraphs), collapsedLines (ou collapsedHeight)
+- Pour le contenu: gérer les paragraphes en split sur lignes vides, puis rendre <p> avec margin-bottom.
+- Utiliser CSS pour:
+  - overflow: hidden
+  - transition (max-height)
+  - gradient fade en bas en mode replié (pseudo-element) OU line-clamp si disponible
+- IMPORTANT: utiliser un state local (useState) pour isExpanded.
+- Placer le composant exactement entre le composant “filters/tabs” des mesures et la première carte.
+
+LIVRABLE
+- Code propre + typé
+- Aucun changement fonctionnel sur les mesures, uniquement insertion de la box.
+- Indiquer les fichiers modifiés et où la box est insérée.
+- Tester: mobile + desktop (pas de débordement du texte).
