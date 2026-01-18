@@ -1,0 +1,234 @@
+Objectif: Neutraliser UNSA Lidl + Décontaminer le code (sans casser)
+Contexte
+
+La sandbox est une copie de prod et contient un tenant WL “UNSA Lidl” avec PII réelles (emails/noms), et des références hardcodées dans le code.
+Nous devons:
+
+PHASE 1 (DB sandbox): rendre le tenant UNSA Lidl inaccessible et non exposable (archiver/disable), sans supprimer en masse.
+PHASE 2 (code): supprimer/neutraliser toutes références hardcodées “UNSA/Lidl” et pages légales dédiées, en remplaçant par du générique/configurable, sans casser l’app.
+
+⚠️ IMPORTANT: on ne crée pas encore demo-wl.koomy.app dans ce ticket.
+
+0) Garde-fous obligatoires (anti-prod + anti-destruction)
+
+Avant toute action:
+
+Si NODE_ENV === "production" ou APP_ENV === "production" → ABORT
+
+Si KOOMY_ENV !== "sandbox" → ABORT
+
+Si SEED_SANDBOX !== "true" → ABORT
+
+Vérifier que DATABASE_URL ne pointe pas prod (patterns prod)
+
+Log clair en cas de blocage.
+
+Interdictions:
+
+❌ Ne pas supprimer de tables
+
+❌ Ne pas drop de schéma
+
+❌ Ne pas créer/modifier des rôles/permissions
+
+❌ Ne pas modifier les autres tenants démo (club de foot, APER, chorale)
+
+PHASE 1 — Neutraliser UNSA Lidl dans la DB sandbox (sans delete massif)
+1) Identifier le tenant UNSA Lidl
+
+D’après l’audit:
+
+Tenant ID: 2b129b86-3a39-4d19-a6fc-3d0cec067a79
+
+Nom: UNSA Lidl
+
+Custom domain: unsalidlfrance via champ custom_domain (table communities)
+
+Admin email réel: mlaminesylla@yahoo.fr
+
+19 membres PII réelles
+
+Confirmer ces infos par requête avant d’écrire quoi que ce soit.
+
+2) Rendre le tenant “inaccessible”
+
+Objectif: aucun accès via host, aucun accès backoffice/membres.
+
+Actions (choisir selon schéma existant, sans inventer de colonnes):
+
+Mettre le tenant en archived ou disabled (ou statut équivalent existant)
+
+si champ status existe, utiliser DISABLED/ARCHIVED
+
+sinon, utiliser un mécanisme existant (ex: is_active=false, suspended=true, etc.)
+
+Neutraliser l’exposition web:
+
+Mettre custom_domain = NULL pour UNSA Lidl (ou string vide)
+
+Conserver l’ancienne valeur dans un champ “notes” si existant, sinon logguer dans le rapport.
+
+Bloquer les comptes admins du tenant:
+
+Désactiver admin(s) via champ existant (is_active=false, disabled_at, etc.)
+
+Si aucun champ, forcer un reset non destructif: remplacer email par un alias sandbox + flag disabled si possible
+
+⚠️ Ne pas créer de nouveau compte admin
+
+Bloquer les membres PII réelles du tenant:
+
+Ne pas supprimer en masse maintenant (risque de FK)
+
+Désactiver l’accès (flag disabled si existant)
+
+Si aucun flag, anonymiser à minima “emails” en domaine sandbox uniquement si nécessaire pour empêcher login (préférer disable plutôt que rewrite)
+
+✅ Priorité = rendre INACCESSIBLE, pas “nettoyer toutes les PII” (ce sera la phase WL suivante si besoin).
+
+3) Vérifications post-phase 1
+
+Le tenant UNSA Lidl n’a plus de custom_domain
+
+Le tenant est disabled/archived
+
+Les admins du tenant ne peuvent plus se connecter (flag/disabled)
+
+Les autres tenants restent inchangés
+
+PHASE 2 — Décontamination du code (UNSA/Lidl hardcodé)
+4) Liste de fichiers à traiter (issus de l’audit)
+
+Références “UNSA”/“Lidl” présentes dans:
+
+server/seed.ts
+
+server/routes.ts
+
+client/src/lib/mockSupportData.ts
+
+client/src/lib/mockData.ts
+
+client/src/pages/mobile/Card.tsx
+
+client/src/pages/admin/EventDetails.tsx
+
+client/src/pages/website/Blog.tsx
+
+client/src/pages/Landing.tsx
+
+client/src/api/config.ts
+
+client/src/App.tsx
+
+Pages légales dédiées:
+
+client/src/pages/legal/UnsaLidlPrivacy.tsx
+
+client/src/pages/legal/UnsaLidlTerms.tsx
+
+client/src/pages/legal/UnsaLidlDeleteAccount.tsx
+
+5) Règle de refacto (ne rien casser)
+
+❌ Ne pas supprimer des routes utilisées en prod/sandbox sans fallback
+
+✅ Remplacer tout hardcoding client par:
+
+une valeur générique (ex: “Koomy”)
+
+ou une configuration dépendante du tenant/brand_config déjà existant
+
+✅ Les pages légales spécifiques doivent:
+
+soit être supprimées si non routées
+
+soit être remplacées par des pages légales génériques:
+
+Privacy.tsx, Terms.tsx, DeleteAccount.tsx
+
+et les routes doivent pointer vers les pages génériques
+
+6) Nettoyage précis demandé
+
+A) Recherche globale
+
+Faire un search global UNSA, Lidl, UnsaLidl, unsalidl, unsalidlfrance
+
+Produire une liste complète des occurrences (dans le rapport)
+
+B) Remplacements attendus
+
+Dans les mocks: remplacer par données génériques “Demo WL” ou “Koomy”
+
+Dans UI Card/Landing/Blog: retirer toute mention de marque UNSA/Lidl, rendre tenant-driven ou neutre
+
+Dans config API: aucun host hardcodé UNSA
+
+Dans routes: aucun chemin spécial UNSA (sauf si conditionné par tenant config, mais à éviter)
+
+C) Pages légales
+
+Retirer les 3 fichiers UnsaLidl*.tsx (ou les garder mais plus aucune route ne les utilise)
+
+Mettre en place des pages légales génériques si manquantes
+
+S’assurer que build passe et routes front fonctionnent
+
+7) Tests & build
+
+Après modifications:
+
+npm test si existant (sinon skip)
+
+npm run build côté client
+
+npm run build côté server si existant
+
+Vérifier que:
+
+l’app charge
+
+les routes principales fonctionnent
+
+aucune référence “UNSA/Lidl” n’apparaît dans l’UI (au moins sur Landing, Blog, Legal)
+
+8) Livrables obligatoires
+A) Rapport Markdown
+
+Générer: SANDBOX_WL_PHASE1_2_REPORT.md
+
+Contenu minimal:
+
+Résumé exécutif (ce qui a été neutralisé + ce qui a été modifié)
+
+Phase 1:
+
+tenant UNSA Lidl: statut avant/après
+
+custom_domain avant/après
+
+admins: état avant/après (sans exposer PII complète si anonymisée)
+
+membres: action appliquée (disable/anonymisation minimale)
+
+Phase 2:
+
+liste des fichiers modifiés
+
+liste des fichiers supprimés/renommés (si applicable)
+
+liste des occurrences “UNSA/Lidl” restantes (doit être 0, ou justifiées)
+
+Résultats tests/build
+
+Checklist “OK pour Phase WL suivante: création demo-wl.koomy.app”
+
+B) Zéro secret dans les logs
+
+Ne pas afficher de STRIPE keys, tokens, secrets.
+
+9) Rappel final
+
+Ne pas créer demo-wl.koomy.app dans ce ticket.
+On fera la création du tenant WL démo dans une étape séparée après validation du rapport.
