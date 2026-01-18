@@ -189,7 +189,7 @@ export const priorities: Priority[] = [
 ];
 
 export const measures: Measure[] = [
-  {
+{
     "id": "logement-transparence",
     "priorityId": "logement",
     "title": "Transparence du logement social",
@@ -201,9 +201,8 @@ export const measures: Measure[] = [
     "indicateur": "Délai moyen de réponse aux signalements, Nombre de contrôles déclenchés / suites données, Publication annuelle accessible",
     "coverImage": "/measures/210831StrasbourgLeSaintTrop_26-scaled.jpg",
     "coverAlt": "Transparence du logement social",
-    "isKeyMeasure": true
-  },
-  {
+    "isKeyMeasure": true},
+{
     "id": "logement-habitat-indigne",
     "priorityId": "logement",
     "title": "Réagir vite aux logements indignes",
@@ -215,9 +214,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de logements contrôlés, Nombre de mises en demeure / procédures, Part des situations résolues",
     "coverImage": "/measures/bandeau-logement.jpg",
     "coverAlt": "Réagir vite aux logements indignes",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "logement-permis-louer",
     "priorityId": "logement",
     "title": "Étendre le permis de louer",
@@ -229,9 +227,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de demandes instruites, Taux de non-conformité détecté, Évolution des signalements",
     "coverImage": "/measures/Permisdelouer.jpg",
     "coverAlt": "Étendre le permis de louer",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "logement-marchands-sommeil",
     "priorityId": "logement",
     "title": "Lutter contre les marchands de sommeil",
@@ -243,9 +240,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de dossiers traités, Procédures engagées, Relogements sécurisés",
     "coverImage": "/measures/appartement-coul-1-site-sommeil.jpg",
     "coverAlt": "Lutter contre les marchands de sommeil",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "logement-airbnb",
     "priorityId": "logement",
     "title": "Encadrer strictement les locations touristiques",
@@ -257,9 +253,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de contrôles, Nombre de sanctions, Nombre de logements revenus au marché classique",
     "coverImage": "/measures/touristiques-cadena.jpg",
     "coverAlt": "Encadrer strictement les locations touristiques",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "services-bus-mairie",
     "priorityId": "services_publics",
     "title": "Bus-Mairie itinérant",
@@ -271,9 +266,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de permanences réalisées, Nombre de démarches / orientations, Satisfaction usagers",
     "coverImage": "/measures/image_processing20240315-15617-m75vm2.jpg",
     "coverAlt": "Bus-Mairie itinérant",
-    "isKeyMeasure": true
-  },
-  {
+    "isKeyMeasure": true},
+{
     "id": "services-marches",
     "priorityId": "services_publics",
     "title": "Stands municipaux sur les marchés",
@@ -285,9 +279,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de personnes reçues, Taux de résolution au premier contact",
     "coverImage": "/measures/stand-marché.jpeg",
     "coverAlt": "Stands municipaux sur les marchés",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "services-voisins-relais",
     "priorityId": "services_publics",
     "title": "Voisins-Relais",
@@ -299,9 +292,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de relais actifs, Nombre d’accompagnements, Taux de réorientation réussie",
     "coverImage": "/measures/Aide-administrative-www-espacemagnan-com.jpg",
     "coverAlt": "Voisins-Relais",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "services-illectronisme",
     "priorityId": "services_publics",
     "title": "Ateliers « Pas à Pas Numérique »",
@@ -313,9 +305,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de participants, Progression mesurée (auto-évaluation), Taux de réinscription",
     "coverImage": "/measures/services-numerique.jpg",
     "coverAlt": "Ateliers « Pas à Pas Numérique »",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "services-permanences",
     "priorityId": "services_publics",
     "title": "Permanences administratives délocalisées",
@@ -327,9 +318,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de permanences, Délai moyen d’obtention d’un rendez-vous, Satisfaction usagers",
     "coverImage": "/measures/cd54eb_1e9cfcb96d03484c95b39505497ee5ac~mv2.jpg",
     "coverAlt": "Permanences administratives délocalisées",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "services-referent",
     "priorityId": "services_publics",
     "title": "Référent administratif par quartier",
@@ -341,9 +331,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de dossiers suivis, Délai de résolution, Taux de retours positifs",
     "coverImage": "/measures/referent-administratif.jpeg",
     "coverAlt": "Référent administratif par quartier",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "emploi-strasimpact",
     "priorityId": "emploi",
     "title": "Stras’Impact",
@@ -355,9 +344,8 @@ export const measures: Measure[] = [
     "indicateur": "Nombre de projets soutenus, Emplois créés/maintenus, Taux de survie à 2 ans",
     "coverImage": "/measures/emploi-strasimpact.jpg",
     "coverAlt": "Stras’Impact",
-    "isKeyMeasure": true
-  },
-  {
+    "isKeyMeasure": true},
+{
     "id": "emploi-clauses-locales",
     "priorityId": "emploi",
     "title": "Clauses locales dans les marchés municipaux",
@@ -369,9 +357,8 @@ export const measures: Measure[] = [
     "indicateur": "Part des marchés incluant une clause, Heures d’insertion réalisées, Nombre de bénéficiaires",
     "coverImage": "/measures/initial-jeunes-saisonniers-primeurs.jpg",
     "coverAlt": "Clauses locales dans les marchés municipaux",
-    "isKeyMeasure": false
-  },
-  {
+    "isKeyMeasure": false},
+{
     "id": "eco-air-bruit",
     "priorityId": "ecologie_sante",
     "title": "Mesurer l’air et le bruit pour protéger la santé",
@@ -383,8 +370,85 @@ export const measures: Measure[] = [
     "indicateur": "Couverture du réseau de mesure, Nombre d’actions déclenchées, Évolution des niveaux air/bruit",
     "coverImage": "/measures/mesure-qualite-air.webp",
     "coverAlt": "Mesurer l’air et le bruit pour protéger la santé",
-    "isKeyMeasure": true
-  },
+    "isKeyMeasure": true},
+{
+    "id": "eco-ecologie-accessible",
+    "priorityId": "ecologie_sante",
+    "title": "Une écologie accessible à tous",
+    "impact": "Alimentation saine et nature proche",
+    "tag": "Écologie",
+    "constat": "L’écologie ne doit pas être un luxe réservé à certains quartiers.",
+    "proposition": "Développer jardins partagés, circuits courts et accès à une alimentation saine et locale, y compris dans les quartiers populaires.",
+    "miseEnOeuvre": "Appels à projets citoyens, partenariats producteurs, actions dans les écoles, paniers solidaires.",
+    "indicateur": "Nombre de jardins/circuits soutenus, Participation habitants, Accès à l’offre dans les quartiers prioritaires",
+    "coverImage": "/measures/action-collective-transition-ecologique-fb.png",
+    "coverAlt": "Une écologie accessible à tous",
+    "isKeyMeasure": false},
+{
+    "id": "mob-quartier-par-quartier",
+    "priorityId": "mobilites",
+    "title": "Des solutions adaptées quartier par quartier",
+    "impact": "Fin des décisions « taille unique »",
+    "tag": "Mobilités",
+    "constat": "Ce qui marche en hypercentre ne marche pas forcément en périphérie: commerces, écoles, artisans, seniors n’ont pas les mêmes besoins.",
+    "proposition": "Refuser les solutions idéologiques uniques: décider à partir des usages réels et des contraintes de chaque quartier.",
+    "miseEnOeuvre": "Diagnostics de terrain, tests temporaires, ajustements, bilan public avant généralisation.",
+    "indicateur": "Nombre de projets avec diagnostic local, Taux d’ajustements après test, Taux d’acceptation",
+    "coverImage": "/measures/mobilite-securite.jpg",
+    "coverAlt": "Des solutions adaptées quartier par quartier",
+    "isKeyMeasure": false},
+{
+    "id": "etudiant-droits",
+    "priorityId": "jeunesse",
+    "title": "Permanences municipales pour l’accès aux droits",
+    "impact": "Stop au non-recours",
+    "tag": "Jeunesse",
+    "constat": "Beaucoup passent à côté de droits essentiels (CAF, APL, santé) faute d’accompagnement.",
+    "proposition": "Mettre en place des permanences municipales dédiées aux étudiants, en lien avec universités, CROUS et quartiers.",
+    "miseEnOeuvre": "Créneaux sur campus et en quartier, aide dossiers, prévention des ruptures de parcours.",
+    "indicateur": "Nombre de permanences, Taux de dossiers finalisés, Baisse du non-recours (estimations)",
+    "coverImage": "/measures/aides-acces-droits-jeuns.webp",
+    "coverAlt": "Permanences municipales pour l’accès aux droits",
+    "isKeyMeasure": false},
+{
+    "id": "finances-audit",
+    "priorityId": "finances",
+    "title": "Audit citoyen des finances",
+    "impact": "Savoir où va chaque euro",
+    "tag": "Finances",
+    "constat": "Le budget municipal est opaque pour le grand public.",
+    "proposition": "Réaliser un audit citoyen en début de mandat et créer un tableau de bord financier accessible à tous.",
+    "miseEnOeuvre": "Commission mixte élus/citoyens/experts, publication simplifiée, open data budgétaire.",
+    "indicateur": "Publication de l'audit, Consultations du tableau de bord, Économies identifiées",
+    "coverImage": "/measures/audit-citoyen.jpeg",
+    "coverAlt": "Audit citoyen des finances",
+    "isKeyMeasure": true},
+{
+    "id": "securite-police",
+    "priorityId": "securite",
+    "title": "Police municipale de proximité",
+    "impact": "Rassurer et dissuader",
+    "tag": "Sécurité",
+    "constat": "Le sentiment d'insécurité grandit dans certains quartiers.",
+    "proposition": "Une police municipale présente à pied et à vélo, formée à la médiation et au contact population.",
+    "miseEnOeuvre": "Îlotage, patrouilles mixtes, formation continue, lien avec les habitants.",
+    "indicateur": "Heures de patrouille pédestre, Contacts habitants, Sentiment de sécurité (enquête)",
+    "coverImage": "/measures/thin-blue-line-blog-XVMea7f1ac4-332d-11eb-a0c5-c488b2411768.webp",
+    "coverAlt": "Police municipale de proximité",
+    "isKeyMeasure": true},
+{
+    "id": "europe-quartiers",
+    "priorityId": "europe",
+    "title": "L'Europe dans les quartiers",
+    "impact": "L'Europe finance votre quotidien",
+    "tag": "Europe",
+    "constat": "L'Europe semble lointaine et bureaucratique pour beaucoup.",
+    "proposition": "Utiliser les fonds européens pour des projets concrets dans les quartiers (isolation, formation, échanges).",
+    "miseEnOeuvre": "Cellule de montage de projets, communication sur les réalisations UE, jumelages de quartiers.",
+    "indicateur": "Montant fonds européens captés, Projets quartiers financés, Jeunes en mobilité européenne",
+    "coverImage": "/measures/00-21.jpg",
+    "coverAlt": "L'Europe dans les quartiers",
+    "isKeyMeasure": true},
   {
     "id": "eco-renovation",
     "priorityId": "ecologie_sante",
@@ -398,272 +462,6 @@ export const measures: Measure[] = [
     "coverImage": "/measures/prix-d-une-renovation-energetique-globale-jXERo.jpg",
     "coverAlt": "Rénovation énergétique massive",
     "isKeyMeasure": false
-  },
-  {
-    "id": "eco-ecologie-accessible",
-    "priorityId": "ecologie_sante",
-    "title": "Une écologie accessible à tous",
-    "impact": "Alimentation saine et nature proche",
-    "tag": "Écologie",
-    "constat": "L’écologie ne doit pas être un luxe réservé à certains quartiers.",
-    "proposition": "Développer jardins partagés, circuits courts et accès à une alimentation saine et locale, y compris dans les quartiers populaires.",
-    "miseEnOeuvre": "Appels à projets citoyens, partenariats producteurs, actions dans les écoles, paniers solidaires.",
-    "indicateur": "Nombre de jardins/circuits soutenus, Participation habitants, Accès à l’offre dans les quartiers prioritaires",
-    "coverImage": "/measures/action-collective-transition-ecologique-fb.png",
-    "coverAlt": "Une écologie accessible à tous",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "mob-securiser",
-    "priorityId": "mobilites",
-    "title": "Pistes cyclables réellement sécurisées",
-    "impact": "Moins de conflits, plus de sécurité pour tous",
-    "tag": "Mobilités",
-    "constat": "Une ligne au sol ne protège personne: pistes interrompues ou peu lisibles créent tensions et accidents.",
-    "proposition": "Construire un réseau cyclable continu, lisible et protégé, qui sécurise aussi piétons et automobilistes en clarifiant les usages.",
-    "miseEnOeuvre": "Audit des discontinuités, priorisation des axes, aménagements protégés, signalétique claire, suivi public.",
-    "indicateur": "Km de pistes protégées créés, Évolution accidents/incidents, Satisfaction usagers",
-    "coverImage": "/measures/pistes cyclable.jpg",
-    "coverAlt": "Pistes cyclables réellement sécurisées",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "mob-quartier-par-quartier",
-    "priorityId": "mobilites",
-    "title": "Des solutions adaptées quartier par quartier",
-    "impact": "Fin des décisions « taille unique »",
-    "tag": "Mobilités",
-    "constat": "Ce qui marche en hypercentre ne marche pas forcément en périphérie: commerces, écoles, artisans, seniors n’ont pas les mêmes besoins.",
-    "proposition": "Refuser les solutions idéologiques uniques: décider à partir des usages réels et des contraintes de chaque quartier.",
-    "miseEnOeuvre": "Diagnostics de terrain, tests temporaires, ajustements, bilan public avant généralisation.",
-    "indicateur": "Nombre de projets avec diagnostic local, Taux d’ajustements après test, Taux d’acceptation",
-    "coverImage": "/measures/mobilite-securite.jpg",
-    "coverAlt": "Des solutions adaptées quartier par quartier",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "mob-concertation",
-    "priorityId": "mobilites",
-    "title": "Dialoguer avant de décider",
-    "impact": "Moins de crispations, plus d’efficacité",
-    "tag": "Mobilités",
-    "constat": "Les tensions viennent souvent de décisions mal expliquées, mal anticipées et sans concertation.",
-    "proposition": "Avant toute modification de circulation ou stationnement, associer habitants et commerçants en amont.",
-    "miseEnOeuvre": "Réunions ciblées, ateliers, restitution claire, calendrier partagé, droit à l’ajustement.",
-    "indicateur": "Nombre de concertations en amont, Délai de publication des restitutions, Baisse des réclamations",
-    "coverImage": "/measures/dialoguer2.jpeg",
-    "coverAlt": "Dialoguer avant de décider",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "jeunesse-trace",
-    "priorityId": "jeunesse",
-    "title": "TRACE: mentorat municipal de proximité",
-    "impact": "Un réseau pour ceux qui n’en ont pas",
-    "tag": "Jeunesse",
-    "constat": "Beaucoup de jeunes disent manquer de repères et de réseaux: ils veulent une personne qui les suit, pas seulement des dispositifs.",
-    "proposition": "Créer TRACE (Transmission, Réseau, Accompagnement, Compétences, Élan): mentorat mobilisant actifs et retraités, avec un label municipal pour les partenaires.",
-    "miseEnOeuvre": "Identification des jeunes, recrutement/formation des mentors, matching, suivi, valorisation des mentors via label TRACE.",
-    "indicateur": "Nombre de binômes mentor/jeune, Taux de maintien dans le parcours, Accès à stages/emplois/formation",
-    "coverImage": "/measures/WhatsApp Image 2026-01-14 at 23.30.23.jpeg",
-    "coverAlt": "TRACE: mentorat municipal de proximité",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "jeunesse-clauses",
-    "priorityId": "jeunesse",
-    "title": "Clauses d’embauche jeunesse dans les marchés",
-    "impact": "Des stages et contrats, sans coût supplémentaire",
-    "tag": "Jeunesse",
-    "constat": "Sans réseau, accéder à un stage ou une première expérience devient un obstacle majeur.",
-    "proposition": "Fixer des objectifs progressifs: au moins 10% des heures sur certains marchés pour apprentissage, stages qualifiés ou embauches, avec priorité aux parcours fragilisés.",
-    "miseEnOeuvre": "Clauses types, pilotage par la Ville, reporting annuel, contrôle d’exécution.",
-    "indicateur": "Heures dédiées à la jeunesse, Nombre de jeunes bénéficiaires/an, Part quartiers prioritaires",
-    "coverImage": "/measures/sport-santé.jpg",
-    "coverAlt": "Clauses d’embauche jeunesse dans les marchés",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "etudiant-epicerie",
-    "priorityId": "jeunesse",
-    "title": "Épiceries solidaires étudiantes",
-    "impact": "Manger dignement sans se cacher",
-    "tag": "Jeunesse",
-    "constat": "Des étudiantes et étudiants renoncent à bien se nourrir, souvent par manque d’accès simple et digne.",
-    "proposition": "Créer une épicerie solidaire étudiante avec le CROUS, associations et producteurs locaux, complétée par une épicerie mobile et des supermarchés solidaires gérés par les étudiants (Stras’Impact).",
-    "miseEnOeuvre": "Partenariats, lieux accessibles, tarification sociale, logistique anti-gaspillage, tournée mobile campus.",
-    "indicateur": "Nombre d’étudiants bénéficiaires, Volume de produits redistribués, Part de circuits courts",
-    "coverImage": "/measures/definition-epicerie-solidaire.png",
-    "coverAlt": "Épiceries solidaires étudiantes",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "etudiant-logement",
-    "priorityId": "jeunesse",
-    "title": "Logement étudiant accessible",
-    "impact": "Étudier sans l’angoisse du loyer",
-    "tag": "Jeunesse",
-    "constat": "Des logements existent mais sont mal mobilisés, trop chers ou inadaptés aux parcours.",
-    "proposition": "Mieux mobiliser le parc existant, renforcer l’encadrement des loyers abusifs dans les zones universitaires et développer des solutions temporaires dignes (rentrée, stage, transition).",
-    "miseEnOeuvre": "Charte tripartite Ville–Bailleurs–Associations étudiantes, information renforcée, solutions temporaires encadrées.",
-    "indicateur": "Nombre de logements mobilisés, Signalements loyers abusifs traités, Solutions temporaires proposées",
-    "coverImage": "/measures/hugo-kret-allavoine-etudiant-en-master-informatique-occupe-une-chambre-de-10-m-2-dans-la-residence-paul-appell-depuis-quatre-ans-photo-jean-francois-badias-1712512352.jpg",
-    "coverAlt": "Logement étudiant accessible",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "etudiant-droits",
-    "priorityId": "jeunesse",
-    "title": "Permanences municipales pour l’accès aux droits",
-    "impact": "Stop au non-recours",
-    "tag": "Jeunesse",
-    "constat": "Beaucoup passent à côté de droits essentiels (CAF, APL, santé) faute d’accompagnement.",
-    "proposition": "Mettre en place des permanences municipales dédiées aux étudiants, en lien avec universités, CROUS et quartiers.",
-    "miseEnOeuvre": "Créneaux sur campus et en quartier, aide dossiers, prévention des ruptures de parcours.",
-    "indicateur": "Nombre de permanences, Taux de dossiers finalisés, Baisse du non-recours (estimations)",
-    "coverImage": "/measures/aides-acces-droits-jeuns.webp",
-    "coverAlt": "Permanences municipales pour l’accès aux droits",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "etudiant-jobs",
-    "priorityId": "jeunesse",
-    "title": "Jobs municipaux compatibles avec les études",
-    "impact": "Travailler oui, s’épuiser non",
-    "tag": "Jeunesse",
-    "constat": "Certains étudiants travaillent au détriment de leurs études.",
-    "proposition": "Créer des jobs municipaux adaptés aux rythmes étudiants et intégrer des clauses « Jeunes » dans les marchés publics (médiation, soutien scolaire, actions écologiques, événements).",
-    "miseEnOeuvre": "Catalogue de missions, horaires adaptés, partenariat universités, clauses marchés publics.",
-    "indicateur": "Nombre de jobs créés, Taux de réussite/maintien des étudiants (enquête), Heures réalisées",
-    "coverImage": "/measures/animateur-scolaire.jpg",
-    "coverAlt": "Jobs municipaux compatibles avec les études",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "demo-budget",
-    "priorityId": "democratie",
-    "title": "Budgets participatifs renforcés",
-    "impact": "Les habitants décident et voient le résultat",
-    "tag": "Démocratie",
-    "constat": "La participation est trop souvent consultative, sans suite visible.",
-    "proposition": "Renforcer les budgets participatifs « Quartiers en Action » avec suivi en ligne de la réalisation.",
-    "miseEnOeuvre": "Augmentation de l'enveloppe, vote simplifié, plateforme de suivi des travaux en temps réel.",
-    "indicateur": "Montant alloué, Nombre de projets réalisés, Taux de participation",
-    "coverImage": "/measures/BP-site.jpg",
-    "coverAlt": "Budgets participatifs renforcés",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "demo-referendum",
-    "priorityId": "democratie",
-    "title": "Droit d’interpellation et référendum local",
-    "impact": "Pouvoir imposer un sujet à l'agenda",
-    "tag": "Démocratie",
-    "constat": "Les citoyens ne peuvent pas forcer le débat sur un sujet majeur.",
-    "proposition": "Abaisser les seuils du droit d’interpellation pour permettre l'organisation de référendums locaux d'initiative citoyenne.",
-    "miseEnOeuvre": "Seuils abaissés, accompagnement méthodologique, débat public garanti.",
-    "indicateur": "Nombre d'interpellations, Référendums organisés, Sujets mis à l'agenda",
-    "coverImage": "/measures/referendum1.jpg",
-    "coverAlt": "Droit d’interpellation et référendum local",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "culture-accessible",
-    "priorityId": "culture_sport",
-    "title": "Culture hors les murs",
-    "impact": "La culture partout, pour tous",
-    "tag": "Culture & Sport",
-    "constat": "Les équipements culturels sont intimidants ou éloignés pour certains habitants.",
-    "proposition": "Développer une programmation « Hors les murs » dans les parcs, les places et les pieds d'immeubles.",
-    "miseEnOeuvre": "Scènes ouvertes, bibliothèques de rue, festivals de quartier, résidences d'artistes in situ.",
-    "indicateur": "Nombre d'événements hors les murs, Public touché (nouveaux publics), Satisfaction habitants",
-    "coverImage": "/measures/a-la-manifestation-du-monde-de-la-culture-a-strasbourg-contre-l-austerite-le-13-juin-dernier-a-succede-la-mobilisation-contre-l-eventuelle-arrivee-du-rn-au-pouvoir-photo-david-geiss-1719339850.jpg",
-    "coverAlt": "Culture hors les murs",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "sport-sante",
-    "priorityId": "culture_sport",
-    "title": "Sport-Santé sur ordonnance",
-    "impact": "Le sport comme médicament gratuit",
-    "tag": "Culture & Sport",
-    "constat": "La sédentarité est un enjeu de santé publique majeur.",
-    "proposition": "Généraliser le dispositif Sport-Santé sur ordonnance et rendre accessibles les équipements sportifs en accès libre.",
-    "miseEnOeuvre": "Partenariat médecins/clubs, créneaux dédiés, aménagement de parcours santé urbains.",
-    "indicateur": "Nombre de bénéficiaires Sport-Santé, Nouveaux équipements accès libre, Partenaires engagés",
-    "coverImage": "/measures/sport-santé.jpg",
-    "coverAlt": "Sport-Santé sur ordonnance",
-    "isKeyMeasure": false
-  },
-  {
-    "id": "inclusion-accessibilite",
-    "priorityId": "inclusion_droits",
-    "title": "Strasbourg 100% accessible",
-    "impact": "Une ville praticable pour tous",
-    "tag": "Inclusion",
-    "constat": "Trottoirs encombrés, bâtiments inadaptés : la ville reste un parcours d'obstacles.",
-    "proposition": "Plan de mise en accessibilité universelle (voirie, bâtiments, transports) avec commission de suivi citoyenne.",
-    "miseEnOeuvre": "Audit participatif, travaux priorisés, sanction des obstacles illégaux, formation des agents.",
-    "indicateur": "Taux d'équipements accessibles, Linéaire de voirie traité, Satisfaction usagers PMR",
-    "coverImage": "/measures/accessibilite.jpg",
-    "coverAlt": "Strasbourg 100% accessible",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "prevention-jeunes",
-    "priorityId": "prevention",
-    "title": "Prévention spécialisée renforcée",
-    "impact": "Des éducateurs là où les jeunes sont",
-    "tag": "Prévention",
-    "constat": "Le retrait des éducateurs de rue a laissé un vide dans certains quartiers.",
-    "proposition": "Redéployer des équipes d'éducateurs de rue formés, en lien avec les familles et les associations.",
-    "miseEnOeuvre": "Recrutement d'éducateurs, présence en soirée et week-end, coordination avec l'État.",
-    "indicateur": "Nombre d'éducateurs terrain, Jeunes accompagnés, Actions de prévention",
-    "coverImage": "/measures/educateur-jeune.jpg",
-    "coverAlt": "Prévention spécialisée renforcée",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "finances-audit",
-    "priorityId": "finances",
-    "title": "Audit citoyen des finances",
-    "impact": "Savoir où va chaque euro",
-    "tag": "Finances",
-    "constat": "Le budget municipal est opaque pour le grand public.",
-    "proposition": "Réaliser un audit citoyen en début de mandat et créer un tableau de bord financier accessible à tous.",
-    "miseEnOeuvre": "Commission mixte élus/citoyens/experts, publication simplifiée, open data budgétaire.",
-    "indicateur": "Publication de l'audit, Consultations du tableau de bord, Économies identifiées",
-    "coverImage": "/measures/audit-citoyen.jpeg",
-    "coverAlt": "Audit citoyen des finances",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "securite-police",
-    "priorityId": "securite",
-    "title": "Police municipale de proximité",
-    "impact": "Rassurer et dissuader",
-    "tag": "Sécurité",
-    "constat": "Le sentiment d'insécurité grandit dans certains quartiers.",
-    "proposition": "Une police municipale présente à pied et à vélo, formée à la médiation et au contact population.",
-    "miseEnOeuvre": "Îlotage, patrouilles mixtes, formation continue, lien avec les habitants.",
-    "indicateur": "Heures de patrouille pédestre, Contacts habitants, Sentiment de sécurité (enquête)",
-    "coverImage": "/measures/thin-blue-line-blog-XVMea7f1ac4-332d-11eb-a0c5-c488b2411768.webp",
-    "coverAlt": "Police municipale de proximité",
-    "isKeyMeasure": true
-  },
-  {
-    "id": "europe-quartiers",
-    "priorityId": "europe",
-    "title": "L'Europe dans les quartiers",
-    "impact": "L'Europe finance votre quotidien",
-    "tag": "Europe",
-    "constat": "L'Europe semble lointaine et bureaucratique pour beaucoup.",
-    "proposition": "Utiliser les fonds européens pour des projets concrets dans les quartiers (isolation, formation, échanges).",
-    "miseEnOeuvre": "Cellule de montage de projets, communication sur les réalisations UE, jumelages de quartiers.",
-    "indicateur": "Montant fonds européens captés, Projets quartiers financés, Jeunes en mobilité européenne",
-    "coverImage": "/measures/00-21.jpg",
-    "coverAlt": "L'Europe dans les quartiers",
-    "isKeyMeasure": true
   },
   {
     "id": "eco-alimentation-locale",
@@ -689,7 +487,7 @@ export const measures: Measure[] = [
     "proposition": "Créer un réseau cyclable continu, lisible et sécurisé, pensé pour tous les âges et tous les usages.",
     "miseEnOeuvre": "• Sécurisation physique des pistes existantes\n• Suppression des discontinuités dangereuses\n• Priorité aux axes domicile-travail et domicile-école\n• Concertation avec les usagers cyclistes",
     "indicateur": "• Kilomètres de pistes sécurisées\n• Fréquentation cyclable\n• Nombre d’accidents impliquant des cyclistes",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/pistes cyclable.jpg",
     "coverAlt": "Des pistes cyclables réellement sécurisées",
     "isKeyMeasure": false
   },
@@ -717,7 +515,7 @@ export const measures: Measure[] = [
     "proposition": "Instaurer une concertation systématique en amont des grands projets municipaux.",
     "miseEnOeuvre": "• Réunions publiques dès la phase de réflexion\n• Mise à disposition d’informations claires et accessibles\n• Prise en compte des contributions citoyennes",
     "indicateur": "• Nombre de concertations organisées\n• Taux de participation\n• Projets modifiés suite aux contributions",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/dialoguer2.jpeg",
     "coverAlt": "Dialoguer avant de décider",
     "isKeyMeasure": false
   },
@@ -731,7 +529,7 @@ export const measures: Measure[] = [
     "proposition": "Mettre en place un parcours de mentorat municipal associant professionnels, associations et services publics.",
     "miseEnOeuvre": "• Identification des jeunes volontaires\n• Mise en relation avec des mentors formés\n• Suivi régulier du parcours",
     "indicateur": "• Nombre de jeunes accompagnés\n• Taux de poursuite en formation ou emploi",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/WhatsApp Image 2026-01-14 at 23.30.23.jpeg",
     "coverAlt": "TRACE : un mentor pour chaque jeune",
     "isKeyMeasure": false
   },
@@ -745,7 +543,7 @@ export const measures: Measure[] = [
     "proposition": "Intégrer des clauses favorisant l’embauche et la formation des jeunes dans les marchés municipaux.",
     "miseEnOeuvre": "• Clauses sociales renforcées\n• Suivi des engagements des entreprises\n• Partenariats avec les acteurs de l’insertion",
     "indicateur": "• Nombre de jeunes recrutés\n• Nombre de marchés intégrant ces clauses",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/sport-santé.jpg",
     "coverAlt": "L’emploi des jeunes au cœur des marchés publics",
     "isKeyMeasure": false
   },
@@ -759,7 +557,7 @@ export const measures: Measure[] = [
     "proposition": "Créer et soutenir des épiceries solidaires dédiées aux étudiants.",
     "miseEnOeuvre": "• Mise à disposition de locaux\n• Partenariats associatifs\n• Produits à prix réduits",
     "indicateur": "• Nombre d’étudiants bénéficiaires",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/definition-epicerie-solidaire.png",
     "coverAlt": "Des épiceries solidaires pour les étudiants",
     "isKeyMeasure": false
   },
@@ -773,7 +571,7 @@ export const measures: Measure[] = [
     "proposition": "Développer une offre de logements étudiants accessibles et diversifiés.",
     "miseEnOeuvre": "• Mobilisation du parc existant\n• Soutien aux résidences étudiantes\n• Encadrement des loyers abusifs",
     "indicateur": "• Nombre de logements créés ou mobilisés",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/hugo-kret-allavoine-etudiant-en-master-informatique-occupe-une-chambre-de-10-m-2-dans-la-residence-paul-appell-depuis-quatre-ans-photo-jean-francois-badias-1712512352.jpg",
     "coverAlt": "Un logement étudiant accessible",
     "isKeyMeasure": false
   },
@@ -787,7 +585,7 @@ export const measures: Measure[] = [
     "proposition": "Proposer des emplois municipaux adaptés aux contraintes étudiantes.",
     "miseEnOeuvre": "• Contrats flexibles\n• Horaires adaptés\n• Missions utiles à la collectivité",
     "indicateur": "• Nombre d’emplois créés",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/animateur-scolaire.jpg",
     "coverAlt": "Des jobs municipaux compatibles avec les études",
     "isKeyMeasure": false
   },
@@ -801,7 +599,7 @@ export const measures: Measure[] = [
     "proposition": "Augmenter les moyens et simplifier l’accès aux budgets participatifs.",
     "miseEnOeuvre": "• Budget augmenté\n• Accompagnement des porteurs de projets\n• Suivi public des réalisations",
     "indicateur": "• Montant alloué\n• Nombre de projets réalisés",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/BP-site.jpg",
     "coverAlt": "Des budgets participatifs renforcés",
     "isKeyMeasure": false
   },
@@ -815,7 +613,7 @@ export const measures: Measure[] = [
     "proposition": "Instaurer un droit d’interpellation citoyenne et des référendums locaux sur les sujets majeurs.",
     "miseEnOeuvre": "• Seuils de signatures clairs\n• Procédures transparentes\n• Engagement de réponse municipale",
     "indicateur": "• Nombre d’interpellations citoyennes",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/referendum1.jpg",
     "coverAlt": "Droit d’interpellation et référendum local",
     "isKeyMeasure": false
   },
@@ -829,7 +627,7 @@ export const measures: Measure[] = [
     "proposition": "Déployer la culture dans les quartiers, l’espace public et les lieux de vie.",
     "miseEnOeuvre": "• Spectacles itinérants\n• Soutien aux artistes locaux\n• Actions culturelles de proximité",
     "indicateur": "• Nombre d’événements organisés",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/a-la-manifestation-du-monde-de-la-culture-a-strasbourg-contre-l-austerite-le-13-juin-dernier-a-succede-la-mobilisation-contre-l-eventuelle-arrivee-du-rn-au-pouvoir-photo-david-geiss-1719339850.jpg",
     "coverAlt": "La culture hors les murs",
     "isKeyMeasure": false
   },
@@ -843,7 +641,7 @@ export const measures: Measure[] = [
     "proposition": "Développer le sport-santé prescrit par les professionnels de santé.",
     "miseEnOeuvre": "• Partenariats médicaux et sportifs\n• Accès facilité aux équipements\n• Suivi des bénéficiaires",
     "indicateur": "• Nombre de prescriptions sport-santé",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/sport-santé.jpg",
     "coverAlt": "Le sport-santé sur ordonnance",
     "isKeyMeasure": false
   },
@@ -857,7 +655,7 @@ export const measures: Measure[] = [
     "proposition": "Faire de l’accessibilité universelle une priorité municipale.",
     "miseEnOeuvre": "• Mise aux normes des équipements\n• Accessibilité de l’espace public\n• Formation des agents",
     "indicateur": "• Taux d’équipements accessibles",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/accessibilite.jpg",
     "coverAlt": "Une ville 100 % accessible",
     "isKeyMeasure": false
   },
@@ -871,7 +669,7 @@ export const measures: Measure[] = [
     "proposition": "Renforcer les équipes de prévention spécialisée et les éducateurs de rue.",
     "miseEnOeuvre": "• Recrutement d’éducateurs\n• Présence renforcée sur le terrain\n• Partenariats associatifs",
     "indicateur": "• Nombre d’éducateurs déployés",
-    "coverImage": "/measures/placeholder.jpg",
+    "coverImage": "/measures/educateur-jeune.jpg",
     "coverAlt": "Prévention spécialisée et éducateurs de rue renforcés",
     "isKeyMeasure": false
   }

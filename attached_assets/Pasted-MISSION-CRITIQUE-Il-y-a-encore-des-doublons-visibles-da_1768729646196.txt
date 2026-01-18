@@ -1,0 +1,82 @@
+MISSION CRITIQUE
+Il y a encore des doublons visibles dans l’UI (ex: “Le sport-santé sur ordonnance” apparaît 2 fois avec des variantes de titre/tag, et “Une ville 100% accessible” apparaît 2 fois).
+Tu dois corriger le contenu pour qu’il n’y ait plus qu’UNE seule mesure par sujet et qu’elle corresponde EXACTEMENT à la version canonique.
+
+SOURCE DE VÉRITÉ (CANONIQUE)
+PROGRAMME_MAJ_CONTENU.md est la SEULE vérité sur:
+- title
+- impact
+- constat
+- proposition
+- miseEnOeuvre
+- indicateur
+- et aussi les ids canoniques imposés ci-dessous.
+
+IMPORTANT: Tu ne dois PAS choisir “la première info” et ignorer le reste.
+Tu dois traiter TOUTE la liste canonique, id par id, et produire une vérification finale.
+
+LISTE CANONIQUE IMPOSÉE (ids + titles attendus)
+- sante-sport-ordonnance => "Le sport-santé sur ordonnance"
+- inclusion-accessibilite-universelle => "Une ville 100 % accessible"
+- prevention-educateurs-rue => "Prévention spécialisée et éducateurs de rue renforcés"
+- culture-hors-les-murs => "La culture hors les murs"
+- democratie-referendum-local => "Droit d’interpellation et référendum local"
+- democratie-budget-participatif-plus => "Des budgets participatifs renforcés"
+- emploi-jobs-etudiants => "Des jobs municipaux compatibles avec les études"
+- logement-etudiant-accessible => "Un logement étudiant accessible"
+- jeunesse-epiceries-etudiantes => "Des épiceries solidaires pour les étudiants"
+- emploi-clauses-jeunesse-marches => "L’emploi des jeunes au cœur des marchés publics"
+- jeunesse-trace-mentorat => "TRACE : un mentor pour chaque jeune"
+- democratie-concertation-proactive => "Dialoguer avant de décider"
+- democratie-solutions-quartiers => "Des solutions coconstruites par quartier"
+- mobilites-pistes-securisees => "Des pistes cyclables réellement sécurisées"
+- eco-alimentation-locale => "Alimentation saine et circuits courts accessibles"
+- eco-renovation => "Rénovation énergétique massive" (UPDATE enrichissement)
+
+RÈGLES DE SUPPRESSION (ANTI-DOUBLONS PAR SUJET)
+1) Dédoublonnage par id:
+   - Unicité stricte: chaque id ne doit apparaître qu’une seule fois.
+2) Dédoublonnage par SUJET:
+   - Si tu trouves une mesure dont le titre ressemble fortement à un titre canonique
+     (comparaison insensible à la casse, aux accents, aux tirets, aux espaces, et aux variantes comme "Strasbourg 100% accessible" vs "Une ville 100 % accessible")
+     MAIS dont l’id n’est PAS l’id canonique,
+     ALORS c’est un doublon parasite => tu dois la SUPPRIMER.
+   - Exemple: toutes les variantes de “Sport-Santé sur ordonnance” doivent disparaître sauf l’id canonique `sante-sport-ordonnance`.
+   - Exemple: toutes les variantes de “Strasbourg 100% accessible / 100 % accessible” doivent disparaître sauf `inclusion-accessibilite-universelle`.
+
+RÈGLES D’UPDATE
+Pour chaque id canonique présent dans index.ts:
+- écraser les champs texte (title/impact/constat/proposition/miseEnOeuvre/indicateur) avec le contenu exact de PROGRAMME_MAJ_CONTENU.md.
+- si tag/priorityId ne correspondent pas au mapping voulu dans le codebase, les corriger selon la configuration attendue par l’app (en restant cohérent).
+
+RÈGLES D’ADD
+- Si un id canonique est absent, l’ajouter (objet complet).
+- Ne jamais ajouter d’autre id “inventé”.
+
+CHAMPS NON-TEXTUELS
+- coverImage/coverAlt/isKeyMeasure: conserver ceux déjà existants pour l’id canonique si présents.
+- Si coverImage est cassée (image qui ne charge pas):
+  -> remplacer par une image valide existante dans le repo (placeholder stable).
+  -> ne jamais laisser une URL cassée.
+
+PROCÉDURE À SUIVRE (OBLIGATOIRE)
+A) Dans le fichier source (index.ts ou data/measures), extraire la liste actuelle: (id, title, tag, priorityId, coverImage).
+B) Créer une table “canonicalMap” depuis PROGRAMME_MAJ_CONTENU.md.
+C) Nettoyage:
+   1) supprimer doublons même id (garder une seule entrée)
+   2) supprimer doublons par SUJET (titre quasi identique à un canonique mais id différent)
+D) Appliquer UPDATE/ADD sur tous les ids canoniques.
+E) Vérifier en fin:
+   - chaque id canonique est présent EXACTEMENT une fois
+   - aucune mesure “parasite” avec un titre quasi identique aux titres canoniques n’existe
+F) Sortie obligatoire dans ta réponse:
+   - REMOVED (parasites): liste des ids supprimés + leur title
+   - DEDUPED (same id): liste des ids concernés + nombre supprimé
+   - UPDATED: liste des ids canoniques mis à jour
+   - ADDED: liste des ids canoniques ajoutés
+   - FINAL COUNT: nombre total de mesures
+   - SANITY CHECK: confirmer que “Sport-santé sur ordonnance” n’existe qu’une fois et “Une ville 100% accessible” n’existe qu’une fois dans la liste.
+
+INTERDICTION
+- Ne pas ignorer une partie des ids.
+- Ne pas répondre “Ensure all measurement data is unique and updated” sans fournir le rapport REMOVED/UPDATED/ADDED/COUNT.
