@@ -1,0 +1,61 @@
+CONTEXTE
+On met à jour le programme du site utiles67.
+Le contenu existant est dans index.ts (tableau JSON des mesures).
+Nouveau contenu à intégrer depuis le document fourni (docx -> texte structuré).
+
+OBJECTIF
+1) Mettre à jour la mesure existante eco-renovation en l’enrichissant avec “Éco-Rénov’ Citoyenne”.
+2) Créer 15 nouvelles mesures (objets JSON) correspondant aux nouveaux blocs du document.
+
+RÈGLE DE DÉTECTION
+- Si id existe déjà dans index.ts => UPDATE (enrichissement)
+- Si id n’existe pas => ADD (nouvelle mesure)
+
+A) UPDATE À FAIRE (id existant)
+- Trouver l’objet dont id = "eco-renovation"
+- Conserver: id, priorityId, tag, coverImage, coverAlt, isKeyMeasure
+- Mettre à jour les champs texte:
+  - proposition: intégrer “Éco-Rénov’ Citoyenne” + plateforme + parrainage + ateliers + suivi collaboratif + complément des aides existantes
+  - miseEnOeuvre: détailler fonctionnement (plateforme, mentorat, ateliers quartiers, partenariat artisans RGE/centres sociaux, indicateurs visibles)
+  - indicateur: ajouter kWh économisés, CO2 évité, budget mobilisé, nb foyers accompagnés, nb mentors/ateliers
+  - constat: optionnel, renforcer si nécessaire (passoires + coût + besoin d’accélération via dispositif citoyen)
+
+B) 15 NOUVEAUX OBJETS À AJOUTER (ids imposés)
+Ajouter en fin de tableau ces mesures avec les ids / priorityId / tag suivants:
+1) eco-alimentation-locale (ecologie_sante, Écologie)
+2) mobilites-pistes-securisees (mobilites, Mobilités)
+3) democratie-solutions-quartiers (democratie, Démocratie)
+4) democratie-concertation-proactive (democratie, Démocratie)
+5) jeunesse-trace-mentorat (jeunesse, Jeunesse)
+6) emploi-clauses-jeunesse-marches (emploi, Emploi)
+7) jeunesse-epiceries-etudiantes (jeunesse, Jeunesse)
+8) logement-etudiant-accessible (logement, Logement)
+9) emploi-jobs-etudiants (emploi, Emploi)
+10) democratie-budget-participatif-plus (democratie, Démocratie)
+11) democratie-referendum-local (democratie, Démocratie)
+12) culture-hors-les-murs (culture_sport, Culture & Sport)
+13) sante-sport-ordonnance (ecologie_sante, Écologie)
+14) inclusion-accessibilite-universelle (inclusion_droits, Inclusion)
+15) prevention-educateurs-rue (prevention, Prévention)
+
+STRUCTURE JSON À RESPECTER
+Chaque mesure doit contenir:
+id, priorityId, title, impact, tag, constat, proposition, miseEnOeuvre, indicateur, coverImage, coverAlt, isKeyMeasure
+
+CONSIGNES DE TEXTE
+- Le document source contient des titres + sections + bullet points.
+- Convertir les bullet points en texte multi-ligne dans les strings:
+  "• point 1\n• point 2\n• point 3"
+- Ne PAS utiliser des tableaux Markdown dans les champs: transformer les tableaux Action/Partenaire/Impact en listes lisibles.
+- Conserver les guillemets français, accents, typographie.
+
+IMAGES
+- Pour les nouvelles mesures, si aucune image n’est fournie:
+  - coverImage: mettre un placeholder cohérent (ex: "/measures/placeholder.jpg")
+  - coverAlt: reprendre le title
+  - isKeyMeasure: false (par défaut)
+
+SORTIE ATTENDUE
+- index.ts modifié
+- log récap: UPDATED: eco-renovation + ADDED: [liste des 15 ids]
+- build OK
