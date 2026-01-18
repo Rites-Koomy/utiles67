@@ -1,0 +1,111 @@
+# MISSION: Réconciliation "Programme" — Les .md sont source de vérité, réécrire index.ts (priorities/measures)
+
+## Contexte
+Le contenu du programme sur le site est actuellement hardcodé dans un fichier data (index.ts) contenant:
+- `export const priorities: Priority[] = [...]`
+- `export const measures: Measure[] = [...]`
+
+Nous avons refondu le programme pour être STRICTEMENT fidèle aux textes du candidat.
+Ces nouveaux contenus existent sous forme de fichiers Markdown dans:
+`attached_assets/programme/`
+
+Fichiers:
+- LOGEMENT.md
+- ECOLOGIE.md
+- JEUNESSE.md
+- DÉMOCRATIE LOCALE.md
+- SERVICES PUBLICS.md
+- SOLIDARITÉS.md
+
+## Objectif
+Réécrire `index.ts` pour que:
+1) Le texte affiché sur le site corresponde au nouveau programme (contenu des .md)
+2) Le nouveau contenu soit PRIORITAIRE et ÉCRASE l’ancien
+3) On CONSERVE la structure attendue par l’UI (mêmes champs, même shape des objets)
+4) On garde au maximum les IDs existants et les assets (coverImage, heroImage) pour ne pas casser les routes/UI
+5) Aucune phrase "inventée" ne doit rester (plateformes, labels, chiffres, dispositifs non présents dans les .md)
+
+⚠️ Important: Nous NE voulons PAS créer de nouvelles pages Markdown.
+Nous voulons que `index.ts` reste la source consommée par l’UI, mais alimentée par les .md.
+
+## Règle d’or (non négociable)
+Tout texte présent dans index.ts doit être:
+- soit extrait directement des .md
+- soit une reformulation MINIMALE uniquement pour rentrer dans les champs existants (constat/proposition/miseEnOeuvre/indicateur),
+sans ajouter de nouvelles idées.
+
+Si tu ne peux pas justifier une phrase par les .md -> tu la supprimes.
+
+## Contraintes de structure (à conserver)
+Chaque `Measure` doit conserver le schéma:
+- id (string)
+- priorityId (string)
+- title (string)
+- impact (string)
+- tag (string)
+- constat (string)
+- proposition (string)
+- miseEnOeuvre (string)
+- indicateur (string)
+- coverImage (string)  (à conserver si possible)
+- coverAlt (string)
+- isKeyMeasure (boolean)
+
+Chaque `Priority` doit conserver:
+- id, title, description, icon, color, heroImage, heroAlt
+
+## Réconciliation attendue: comment mapper les .md vers measures
+Les .md contiennent des sections structurées (Constat / Objectif / 1.,2.,3. / Mise en œuvre / etc.).
+L’UI actuelle affiche des "measures" individuelles.
+Donc tu dois:
+- garder la liste des measures existantes par priorityId (logement, ecologie_sante, jeunesse, democratie, services_publics, solidarites)
+- réécrire leurs champs textuels (title/impact/constat/proposition/miseEnOeuvre/indicateur) en te basant sur le .md correspondant.
+
+### Règles de remplissage
+- `constat` : reprendre les phrases du bloc "Constat" du .md (ou synthèse fidèle en 1-2 phrases max)
+- `proposition` : reprendre le contenu du point correspondant (ex: "1. Une rénovation énergétique massive..." devient une proposition)
+- `miseEnOeuvre` : reprendre le bloc "Mise en œuvre" du .md, adapté au point si nécessaire
+- `indicateur` : reprendre le bloc "Indicateurs de suivi" du .md, adapté au point si nécessaire
+- `title` : doit être une formulation issue du .md (ou très proche)
+- `impact` : courte phrase fidèle au .md ("faire baisser les factures", "protéger la santé", "réduire le non-recours", etc.)
+
+⚠️ Interdiction d’inventer de nouveaux dispositifs. On reste sur le texte.
+
+## Mapping des priorités (IDs existants à conserver)
+- logement -> LOGEMENT.md
+- ecologie_sante -> ECOLOGIE.md
+- jeunesse -> JEUNESSE.md
+- democratie (ou id existant le plus proche) -> DÉMOCRATIE LOCALE.md
+- services_publics -> SERVICES PUBLICS.md
+- solidarites -> SOLIDARITÉS.md
+
+Si l’ID "democratie" n’existe pas, ne change pas les routes: crée une correspondance interne mais garde l’UI stable.
+
+## Nettoyage obligatoire
+- Supprimer dans index.ts toutes les phrases technocratiques ajoutées auparavant:
+  - "plateforme", "carte interactive", "label", "outil numérique de suivi" etc.
+  sauf si c’est explicitement dans les .md (ce n’est pas le cas).
+- Supprimer les chiffres hyper précis non présents dans les .md.
+
+## Plan de travail demandé (AVANT CODAGE)
+1) Ouvre index.ts et liste:
+   - les priorities IDs existants
+   - le nombre de measures par priorityId
+2) Propose une stratégie de réécriture:
+   - conserver les IDs measures existants
+   - remplacer les champs textuels
+   - conserver coverImage/heroImage
+3) Indique les fichiers exacts modifiés
+
+Attends mon "GO" avant de commit.
+
+## Vérifications finales
+- Le site compile
+- Chaque priorité affiche des measures cohérentes et alignées
+- Aucune ancienne phrase “inventée” ne reste dans les champs (constat/proposition/miseEnOeuvre/indicateur)
+- Validation manuelle: comparer 2-3 measures par thème avec les .md et confirmer l’alignement
+
+## Livrables dans la PR
+- index.ts mis à jour
+- note courte "mapping appliqué" (dans un commentaire ou fichier README interne)
+- captures des pages programme
