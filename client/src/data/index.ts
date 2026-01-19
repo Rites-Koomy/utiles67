@@ -399,7 +399,7 @@ export const measures: Measure[] = [
     "proposition": "Utiliser les marchés publics pour créer des opportunités d'emploi et de formation pour les jeunes Strasbourgeois.",
     "miseEnOeuvre": "Clauses d'insertion spécifiques, missions valorisantes, lien avec les entreprises attributaires.",
     "indicateur": "Heures d'insertion jeunes réalisées, Nombre de bénéficiaires",
-    "coverImage": "/measures/sport-santé.jpg",
+    "coverImage": "/measures/solutions-jeunes.jpeg",
     "coverAlt": "L’emploi des jeunes dans la commande publique",
     "isKeyMeasure": false},
 
@@ -658,7 +658,7 @@ export const measures: Measure[] = [
     "proposition": "Soutenir les initiatives locales qui favorisent les rencontres et recréent du lien dans les quartiers.",
     "miseEnOeuvre": "Soutien aux initiatives de lien social, accompagnement des personnes isolées.",
     "indicateur": "Renforcement du lien social, Actions contre l'isolement",
-    "coverImage": "/measures/community_gathering__3ece0604.jpg",
+    "coverImage": "/measures/isolement2.webp",
     "coverAlt": "Rompre l’isolement",
     "isKeyMeasure": false},
 
