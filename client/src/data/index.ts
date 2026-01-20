@@ -312,7 +312,7 @@ export const measures: Measure[] = [
     "tag": "Emploi",
     "impact": "Soutenir l'emploi local",
     "isKeyMeasure": true,
-    "coverImage": "/measures/emploi-strasimpact.jpg",
+    "coverImage": "/measures/solutions-jeunes.jpeg",
     "coverAlt": "Emploi local"
   },
   {
@@ -740,7 +740,7 @@ export const measures: Measure[] = [
     "tag": "Europe",
     "impact": "Une capitale européenne concrète",
     "isKeyMeasure": true,
-    "coverImage": "/measures/hero-new.jpg",
+    "coverImage": "/measures/00-21.jpg",
     "coverAlt": "Strasbourg européenne"
   }
 ];
