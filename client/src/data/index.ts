@@ -764,17 +764,72 @@ export const videos: Video[] = [
 
 export const events: Event[] = [];
 
-export const teamMembers: TeamMember[] = [
+export const team: TeamMember[] = [
   {
-    "id": "pierre-dupont",
-    "name": "Pierre Dupont",
-    "quartier": "Neudorf",
-    "role": "Candidat Maire",
+    "id": "rebecca-breitman",
+    "name": "Rebecca Breitman",
+    "quartier": "Gare / Laiterie",
+    "role": "Candidate Maire",
     "utilesRole": "Tête de liste",
-    "quote": "Pour une ville qui écoute enfin ses habitants.",
-    "bio": "Engagé depuis 20 ans dans la vie associative locale.",
-    "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "tags": ["Logement", "Démocratie"]
+    "quote": "Strasbourg mérite un nouveau souffle, porté par ceux qui la vivent au quotidien.",
+    "bio": "Entrepreneure engagée, Rebecca porte la voix d'une société civile qui veut agir concrètement pour sa ville.",
+    "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Démocratie", "Entrepreneuriat"]
+  },
+  {
+    "id": "jean-philippe-vetter",
+    "name": "Jean-Philippe Vetter",
+    "quartier": "Centre-ville",
+    "role": "Conseiller municipal",
+    "utilesRole": "Porte-parole",
+    "quote": "La proximité n'est pas un vain mot, c'est ma méthode de travail chaque jour.",
+    "bio": "Élu de terrain, il défend inlassablement le patrimoine et la qualité de vie des Strasbourgeois.",
+    "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Patrimoine", "Proximité"]
+  },
+  {
+    "id": "le-comte",
+    "name": "Ludovic Le Comte",
+    "quartier": "Neudorf",
+    "role": "Médecin urgentiste",
+    "utilesRole": "Référent Santé",
+    "quote": "La santé de nos concitoyens doit être la priorité absolue de l'action publique.",
+    "bio": "Médecin aux urgences, il connaît les failles du système et porte des solutions concrètes pour l'accès aux soins.",
+    "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Santé", "Solidarité"]
+  },
+  {
+    "id": "sophie-martin",
+    "name": "Sophie Martin",
+    "quartier": "Cronenbourg",
+    "role": "Institutrice",
+    "utilesRole": "Référente Éducation",
+    "quote": "L'école est le premier lieu de l'égalité des chances.",
+    "bio": "Enseignante passionnée, elle s'engage pour des écoles plus vertes et plus inclusives.",
+    "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Éducation", "Jeunesse"]
+  },
+  {
+    "id": "malik-b",
+    "name": "Malik Benahmed",
+    "quartier": "Hautepierre",
+    "role": "Chef d'entreprise",
+    "utilesRole": "Référent Économie",
+    "quote": "Il faut libérer les énergies créatrices dans tous nos quartiers.",
+    "bio": "Issu de Hautepierre, il a réussi à monter sa boîte et veut aider les jeunes à entreprendre.",
+    "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Emploi", "Entrepreneuriat"]
+  },
+  {
+    "id": "anne-lise",
+    "name": "Anne-Lise Weber",
+    "quartier": "Robertsau",
+    "role": "Retraitée active",
+    "utilesRole": "Référente Seniors",
+    "quote": "Une ville bienveillante est une ville qui n'oublie personne.",
+    "bio": "Engagée dans plusieurs associations, elle veille à ce que les seniors restent au cœur de la cité.",
+    "photo": "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Seniors", "Solidarité"]
   }
 ];
 
