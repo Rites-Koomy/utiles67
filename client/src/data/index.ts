@@ -1,12 +1,8 @@
 import heroImage from "@assets/generated_images/strasbourg_green_peaceful_cityscape.png";
-import cyclePath from "@assets/stock_images/bicycle_path_in_euro_29b3f3ae.jpg";
-import apartment from "@assets/stock_images/modern_residential_a_2814c14f.jpg";
-import urbanPark from "@assets/stock_images/urban_park_with_tree_d4acad64.jpg";
-import community from "@assets/stock_images/community_gathering__3ece0604.jpg";
-import democracy from "@assets/stock_images/citizens_voting_demo_81baa662.jpg";
-import youth from "@assets/stock_images/young_people_student_2cf858dd.jpg";
 
-export { heroImage, youth };
+// Images are now referenced directly from public/measures/ directory
+
+export { heroImage };
 
 export interface Priority {
   id: string;
@@ -80,7 +76,7 @@ export const priorities: Priority[] = [
     "description": "Les habitants dénoncent l’opacité des attributions et la dégradation de certains logements.",
     "icon": "Home",
     "color": "amber",
-    "heroImage": apartment,
+    "heroImage": "/measures/bandeau-logement.jpg",
     "heroAlt": "Logement à Strasbourg"
   },
   {
@@ -89,7 +85,7 @@ export const priorities: Priority[] = [
     "description": "Pour beaucoup, l’administration est devenue un mur : démarches incompréhensibles, guichets éloignés.",
     "icon": "Building2",
     "color": "blue",
-    "heroImage": community,
+    "heroImage": "/measures/referent-administratif.jpeg",
     "heroAlt": "Services publics de proximité"
   },
   {
@@ -98,7 +94,7 @@ export const priorities: Priority[] = [
     "description": "Trop de projets s’éteignent avant même de voir le jour faute de soutien au bon moment.",
     "icon": "Briefcase",
     "color": "orange",
-    "heroImage": community,
+    "heroImage": "/measures/emploi-strasimpact.jpg",
     "heroAlt": "Emploi local"
   },
   {
@@ -107,7 +103,7 @@ export const priorities: Priority[] = [
     "description": "L’écologie se vit de manière très inégale selon les quartiers.",
     "icon": "Leaf",
     "color": "emerald",
-    "heroImage": urbanPark,
+    "heroImage": "/measures/action-collective-transition-ecologique-fb.png",
     "heroAlt": "Écologie et santé"
   },
   {
@@ -116,7 +112,7 @@ export const priorities: Priority[] = [
     "description": "Les jeunes veulent des perspectives, pas des discours.",
     "icon": "Sparkles",
     "color": "rose",
-    "heroImage": youth,
+    "heroImage": "/measures/solutions-jeunes.jpeg",
     "heroAlt": "Jeunesse et éducation"
   },
   {
@@ -125,7 +121,7 @@ export const priorities: Priority[] = [
     "description": "Les habitants expriment une frustration commune : la démocratie est trop souvent distante.",
     "icon": "Users",
     "color": "violet",
-    "heroImage": democracy,
+    "heroImage": "/measures/coconstruire.jpeg",
     "heroAlt": "Démocratie locale"
   },
   {
@@ -134,7 +130,7 @@ export const priorities: Priority[] = [
     "description": "Les habitants montrent un attachement profond aux traditions locales et aux mémoires multiples.",
     "icon": "Music",
     "color": "fuchsia",
-    "heroImage": community,
+    "heroImage": "/measures/a-la-manifestation-du-monde-de-la-culture-a-strasbourg-contre-l-austerite-le-13-juin-dernier-a-succede-la-mobilisation-contre-l-eventuelle-arrivee-du-rn-au-pouvoir-photo-david-geiss-1719339850.jpg",
     "heroAlt": "Culture et sport"
   },
   {
@@ -143,7 +139,7 @@ export const priorities: Priority[] = [
     "description": "Ce sont les habitants eux-mêmes qui racontent la difficulté de traverser l’urgence sociale.",
     "icon": "Heart",
     "color": "red",
-    "heroImage": community,
+    "heroImage": "/measures/accessibilite.jpg",
     "heroAlt": "Ville inclusive"
   },
   {
@@ -152,7 +148,7 @@ export const priorities: Priority[] = [
     "description": "Les signaux faibles sont souvent ignorés, et les familles ne sont pas suffisamment associées.",
     "icon": "Shield",
     "color": "slate",
-    "heroImage": community,
+    "heroImage": "/measures/dialoguer2.jpeg",
     "heroAlt": "Prévention de la radicalisation"
   },
   {
@@ -161,7 +157,7 @@ export const priorities: Priority[] = [
     "description": "Les habitants réclament clarté et exemplarité : où va l’argent public ?",
     "icon": "Euro",
     "color": "cyan",
-    "heroImage": community,
+    "heroImage": "/measures/BP-site.jpg",
     "heroAlt": "Finances responsables"
   },
   {
@@ -170,7 +166,7 @@ export const priorities: Priority[] = [
     "description": "Les habitants réclament plus de présence humaine et des réponses adaptées aux réalités locales.",
     "icon": "ShieldCheck",
     "color": "blue",
-    "heroImage": community,
+    "heroImage": "/measures/thin-blue-line-blog-XVMea7f1ac4-332d-11eb-a0c5-c488b2411768.webp",
     "heroAlt": "Sécurité publique"
   },
   {
@@ -179,7 +175,7 @@ export const priorities: Priority[] = [
     "description": "Les habitants veulent que le statut européen profite concrètement à leur quotidien.",
     "icon": "Flag",
     "color": "indigo",
-    "heroImage": heroImage,
+    "heroImage": "/measures/hero-new.jpg",
     "heroAlt": "Strasbourg Europe"
   }
 ];
@@ -233,7 +229,7 @@ export const measures: Measure[] = [
     "tag": "Logement",
     "impact": "Un logement digne pour tous",
     "isKeyMeasure": true,
-    "coverImage": apartment,
+    "coverImage": "/measures/bandeau-logement.jpg",
     "coverAlt": "Logements à Strasbourg"
   },
   {
@@ -281,7 +277,7 @@ export const measures: Measure[] = [
     "tag": "Services publics",
     "impact": "Des services accessibles partout",
     "isKeyMeasure": true,
-    "coverImage": community,
+    "coverImage": "/measures/referent-administratif.jpeg",
     "coverAlt": "Services de proximité"
   },
   {
@@ -316,7 +312,7 @@ export const measures: Measure[] = [
     "tag": "Emploi",
     "impact": "Soutenir l'emploi local",
     "isKeyMeasure": true,
-    "coverImage": community,
+    "coverImage": "/measures/emploi-strasimpact.jpg",
     "coverAlt": "Emploi local"
   },
   {
@@ -368,7 +364,7 @@ export const measures: Measure[] = [
     "tag": "Écologie",
     "impact": "Un environnement sain pour tous",
     "isKeyMeasure": true,
-    "coverImage": urbanPark,
+    "coverImage": "/measures/action-collective-transition-ecologique-fb.png",
     "coverAlt": "Écologie urbaine"
   },
   {
@@ -405,7 +401,7 @@ export const measures: Measure[] = [
     "tag": "Jeunesse",
     "impact": "Des perspectives pour chaque jeune",
     "isKeyMeasure": true,
-    "coverImage": youth,
+    "coverImage": "/measures/solutions-jeunes.jpeg",
     "coverAlt": "Jeunesse de Strasbourg"
   },
   {
@@ -456,7 +452,7 @@ export const measures: Measure[] = [
     "tag": "Démocratie",
     "impact": "Le pouvoir aux habitants",
     "isKeyMeasure": true,
-    "coverImage": democracy,
+    "coverImage": "/measures/coconstruire.jpeg",
     "coverAlt": "Démocratie participative"
   },
   {
@@ -507,7 +503,7 @@ export const measures: Measure[] = [
     "tag": "Culture et Sport",
     "impact": "Vivre ensemble et traditions",
     "isKeyMeasure": true,
-    "coverImage": community,
+    "coverImage": "/measures/a-la-manifestation-du-monde-de-la-culture-a-strasbourg-contre-l-austerite-le-13-juin-dernier-a-succede-la-mobilisation-contre-l-eventuelle-arrivee-du-rn-au-pouvoir-photo-david-geiss-1719339850.jpg",
     "coverAlt": "Culture et sport"
   },
   {
@@ -517,61 +513,58 @@ export const measures: Measure[] = [
     "constat": "À Strasbourg, ce sont les habitants eux-mêmes qui racontent la difficulté de traverser l’urgence sociale au quotidien. Ils témoignent de parcours chaotiques : hébergements discontinus, accès limité pour les personnes à mobilité réduite, dispositifs peu coordonnés et suivi insuffisant.",
     "proposition": [
       {
-        "title": "Accessibilité universelle renforcée",
-        "description": "Tous les bâtiments publics, transports et espaces de loisirs doivent être accessibles aux PMR, avec signalétique adaptée et suivi participatif."
+        "title": "Maison de l’Inclusion et des Droits (MID)",
+        "description": "Un lieu unique, central et accessible (avec antennes mobiles), regroupant CCAS, associations d’aide juridique, services sociaux et santé, pour un accompagnement global."
       },
       {
-        "title": "Soutien prioritaire aux femmes victimes de violences et aux personnes en fragilité",
-        "description": "Centres d’accueil spécialisés, accompagnement psychologique et juridique gratuit, mise en réseau avec les associations locales."
+        "title": "Équipe mobile « Aller-Vers »",
+        "description": "Travailleurs sociaux et bénévoles allant directement à la rencontre des personnes isolées (SDF, seniors, familles monoparentales) pour proposer de l’aide sans attendre qu’elles la demandent."
       },
       {
-        "title": "Réorganisation de l’hébergement d’urgence",
-        "description": "Plateforme unique et centralisée d’information, fonds européens pour moderniser les centres, coordination renforcée entre acteurs publics et associations."
+        "title": "Carte Solidaire Strasbourg",
+        "description": "Une carte unique donnant accès aux transports gratuits (sous conditions), aux cantines, aux musées et à des réductions sur les services municipaux, sans stigmatisation."
       },
       {
-        "title": "Charte de transparence hôtelière pour l’urgence sociale",
-        "description": "Engagement public des hôtels et résidences temporaires à afficher la transparence des prestations."
+        "title": "Accessibilité universelle réelle",
+        "description": "Plan d'urgence pour rendre accessibles tous les bâtiments municipaux et les arrêts de transport en commun d’ici 2030, avec consultation des associations de personnes handicapées."
       },
       {
-        "title": "Création d’un cimetière pour animaux de compagnie",
-        "description": "Lieu de mémoire intégrant espaces verts, compostage respectueux et cérémonies symboliques."
+        "title": "Réseau de parrainage solidaire",
+        "description": "Mise en lien de familles strasbourgeoises volontaires avec des personnes isolées ou nouvellement arrivées pour créer du lien et faciliter l’intégration."
       },
       {
-        "title": "Espaces de socialisation intergénérationnels et interculturels",
-        "description": "Lieux favorisant liens et inclusion dans chaque quartier."
-      },
-      {
-        "title": "Innovation numérique et participation citoyenne",
-        "description": "Application mobile et site Internet pour signaler les besoins, suivre les aides reçues et proposer des initiatives de solidarité locale."
+        "title": "Hébergement d'urgence digne et pérenne",
+        "description": "Renforcement des places d'hébergement, mobilisation du parc privé vacant et accompagnement vers le logement autonome."
       }
     ],
     "miseEnOeuvre": [
-      "Financements ciblés (fonds européens, budgets nationaux).",
-      "Partenariats avec associations locales et fondations privées."
+      "Création de la Maison de l’Inclusion.",
+      "Déploiement des équipes mobiles.",
+      "Mise en place de la Carte Solidaire."
     ],
     "indicateur": [
-      "Nombre de places d'hébergement modernisées.",
-      "Taux d'accessibilité des bâtiments publics.",
-      "Nombre de signalements via l'application solidaire."
+      "Nombre de personnes accompagnées par la MID.",
+      "Nombre de cartes solidaires distribuées.",
+      "Taux d'accessibilité des bâtiments publics."
     ],
     "tag": "Inclusion",
     "impact": "Une ville pour tous",
     "isKeyMeasure": true,
-    "coverImage": community,
-    "coverAlt": "Inclusion sociale"
+    "coverImage": "/measures/accessibilite.jpg",
+    "coverAlt": "Ville inclusive"
   },
   {
     "id": "prevention-details",
     "priorityId": "prevention",
     "title": "Prévention de la radicalisation",
-    "constat": "À Strasbourg, familles, éducateurs et bénévoles alertent depuis trop longtemps : les signaux faibles sont souvent ignorés, et les familles, qui sont pourtant centrales, ne sont pas suffisamment associées aux dispositifs de prévention.",
+    "constat": "Les signaux faibles sont souvent ignorés, et les familles ne sont pas suffisamment associées. Il manque des espaces de dialogue apaisés et des alternatives éducatives solides.",
     "proposition": [
       {
-        "title": "Pôle municipal dédié à la prévention et à la vigilance éducative",
-        "description": "Structure unique qui centralise l’information, coordonne les acteurs locaux et accompagne les familles dès le premier signal faible."
+        "title": "Pôle municipal de vigilance et d’écoute",
+        "description": "Cellule dédiée, confidentielle et réactive, composée de psychologues, éducateurs et médiateurs, pour écouter les familles inquiètes et les professionnels."
       },
       {
-        "title": "Coordination renforcée",
+        "title": "Comités de suivi de quartier",
         "description": "Réunions trimestrielles de suivi dans chaque quartier et plateforme sécurisée pour signaler et partager les alertes en toute confidentialité."
       },
       {
@@ -608,7 +601,7 @@ export const measures: Measure[] = [
     "tag": "Prévention",
     "impact": "Protéger et prévenir",
     "isKeyMeasure": true,
-    "coverImage": community,
+    "coverImage": "/measures/dialoguer2.jpeg",
     "coverAlt": "Prévention et dialogue"
   },
   {
@@ -654,7 +647,7 @@ export const measures: Measure[] = [
     "tag": "Finances",
     "impact": "Transparence et efficacité",
     "isKeyMeasure": true,
-    "coverImage": community,
+    "coverImage": "/measures/BP-site.jpg",
     "coverAlt": "Finances responsables"
   },
   {
@@ -701,7 +694,7 @@ export const measures: Measure[] = [
     "tag": "Sécurité",
     "impact": "Une ville apaisée",
     "isKeyMeasure": true,
-    "coverImage": community,
+    "coverImage": "/measures/thin-blue-line-blog-XVMea7f1ac4-332d-11eb-a0c5-c488b2411768.webp",
     "coverAlt": "Sécurité publique"
   },
   {
@@ -747,7 +740,7 @@ export const measures: Measure[] = [
     "tag": "Europe",
     "impact": "Une capitale européenne concrète",
     "isKeyMeasure": true,
-    "coverImage": heroImage,
+    "coverImage": "/measures/hero-new.jpg",
     "coverAlt": "Strasbourg européenne"
   }
 ];
