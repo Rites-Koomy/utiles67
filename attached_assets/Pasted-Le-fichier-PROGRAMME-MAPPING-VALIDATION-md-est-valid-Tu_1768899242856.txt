@@ -1,0 +1,106 @@
+Le fichier PROGRAMME_MAPPING_VALIDATION.md est validé.
+👉 Tu peux passer à la phase d’injection.
+
+1) Principe fondamental (non négociable)
+
+Constats et propositions = texte sacralisé
+
+Aucun mot modifié
+
+Aucun ajout
+
+Aucune reformulation
+
+Aucune synthèse
+
+Tout ce qui relève du fond politique doit provenir exclusivement du document programme.
+
+2) Marge autorisée (limitée et encadrée)
+
+Une marge est autorisée uniquement pour assurer une structure uniforme du site, à condition de respecter strictement les règles ci-dessous.
+
+✅ Autorisé
+
+Ajouter des libellés techniques neutres pour compléter la structure si un champ est vide:
+
+ex: titres de sections génériques ("Mise en œuvre", "Indicateurs de suivi")
+
+ex: textes purement fonctionnels ("Voir les mesures", "Retour aux priorités")
+
+Compléter les champs UI non politiques:
+
+heroAlt descriptif visuel uniquement
+
+choix d’icônes, couleurs, images
+
+Ajouter une phrase de liaison neutre UNIQUEMENT SI elle:
+
+ne contient aucun qualificatif politique,
+
+n’interprète pas le constat,
+
+ne promet rien,
+
+sert uniquement à la lisibilité (ex: “Les propositions ci-dessous répondent à ce constat.”)
+
+❌ Interdit
+
+Ajouter une idée, un objectif ou une intention non explicitement écrite
+
+Qualifier l’impact (“ambitieux”, “fort”, “innovant”, etc.)
+
+Résumer un constat ou une proposition
+
+Combler un vide par une “bonne idée” non écrite
+
+3) Menus et sections
+
+Les 12 sections validées restent la structure officielle.
+
+Chaque menu correspond exactement à un chapitre du programme.
+
+Les descriptions de menu:
+
+peuvent être laissées vides,
+
+ou contenir une phrase copiée mot pour mot du chapitre,
+
+ou une phrase neutre purement structurelle (ex: “Mesures du programme – section 5”).
+
+4) Structure des mesures (obligatoire)
+
+Pour chaque section:
+
+title → titre exact du document
+
+constat → texte exact
+
+propositions → bullets strictement issus du document
+
+miseEnOeuvre → bullets exacts s’ils existent
+
+indicateur → bullets exacts s’ils existent
+
+Si un champ n’existe pas dans le document:
+
+laisser vide
+
+ou utiliser un placeholder neutre technique (ex: “—”).
+
+5) Vérification finale demandée
+
+Après injection, produire un court rapport Markdown indiquant:
+
+les champs laissés vides faute de contenu source,
+
+les phrases de liaison neutres ajoutées (s’il y en a),
+
+confirmation explicite:
+
+“Aucun constat ni aucune proposition n’ont été modifiés ou complétés.”
+
+6) Critère de validation
+
+✔️ Le programme est lisible et homogène
+✔️ Le candidat reconnaît mot pour mot son texte
+✔️ Les ajouts sont purement techniques et assumés comme tels
