@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { MeasureCard } from "@/components/MeasureCard";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { IllustrationBlock } from "@/components/IllustrationBlock";
-import { getPriorityById, getMeasuresByPriority } from "@/data";
+import { getPriorityById, getMeasuresByPriorityId } from "@/data";
 import { ArrowLeft, Play, Bike, Home, Leaf, Heart, Users, LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -18,7 +18,7 @@ const iconMap: Record<string, LucideIcon> = {
 export default function Priority() {
   const { id } = useParams<{ id: string }>();
   const priority = getPriorityById(id || "");
-  const measures = priority ? getMeasuresByPriority(priority.id) : [];
+  const measures = priority ? getMeasuresByPriorityId(priority.id) : [];
 
   // Scroll to top when the component mounts or when the priority ID changes
   useEffect(() => {

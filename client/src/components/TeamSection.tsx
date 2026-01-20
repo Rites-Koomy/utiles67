@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { team, TeamMember } from "@/data";
+import { teamMembers as team, TeamMember } from "@/data";
 import { TeamCard } from "./TeamCard";
 import { TeamProfileModal } from "./TeamProfileModal";
 import { Users } from "lucide-react";

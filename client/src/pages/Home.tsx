@@ -8,7 +8,7 @@ import { FeedbackSection } from "@/components/FeedbackSection";
 import { QuestionsBlock } from "@/components/QuestionsBlock";
 import { YouthSection } from "@/components/YouthSection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { priorities, measures, getMeasuresByPriority } from "@/data";
+import { priorities, measures, getMeasuresByPriorityId } from "@/data";
 
 import { ExpandableInfoBox } from "@/components/ExpandableInfoBox";
 
@@ -30,7 +30,7 @@ Nous croyons en une écologie de solutions, une démocratie locale vivante, une 
 UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un collectif ouvert, indépendant et engagé, qui place l’intérêt général, la transparence et l’humain au cœur de l’action.`;
 
   const filteredMeasures = activeFilter
-    ? getMeasuresByPriority(activeFilter)
+    ? getMeasuresByPriorityId(activeFilter)
     : measures;
 
   const checkScrollPosition = () => {
