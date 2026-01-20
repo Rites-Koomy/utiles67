@@ -1,0 +1,157 @@
+Nous avons une version finale validée du programme au format Markdown.
+👉 Source unique et exclusive: le fichier 2-PROGRAMME_REFONTE_2026.md (fourni en pièce jointe). 
+
+2-PROGRAMME_REFONTE_2026
+
+0) Règle d’or (non négociable)
+
+Aucun mot ne doit être changé, aucune reformulation, aucune invention.
+
+Tout le contenu affiché (titres, constats, propositions, mise en œuvre, indicateurs) doit provenir uniquement de ce document. 
+
+2-PROGRAMME_REFONTE_2026
+
+Tu peux seulement:
+
+numéroter,
+
+structurer (listes/bullets),
+
+adapter les menus/sections pour refléter exactement les chapitres du document,
+
+faire du mapping entre les anciens IDs et les nouveaux.
+
+1) Nouveau plan officiel à refléter dans le site (menus + sections)
+
+Le document contient 12 sections numérotées (1 → 12).
+Le site doit afficher ces 12 sections, dans cet ordre, comme navigation principale (menu, landing, etc.):
+
+Un logement digne et abordable pour tous
+
+Services publics de proximité
+
+Emploi local et inclusion
+
+Écologie de la santé – environnement et justice sociale
+
+Jeunesse et éducation populaire
+
+Démocratie locale réelle
+
+Culture, sport, mémoire et vivre ensemble
+
+Ville inclusive et accès aux droits
+
+Prévention de la radicalisation
+
+Gestion responsable et transparente des finances
+
+Sécurité et tranquillité publique équilibrée
+
+Strasbourg, capitale européenne vivante et innovante
+
+⚠️ Cela implique que les menus/thèmes actuels (ex: mobilites, etc.) doivent être réconciliés avec ces 12 sections:
+
+soit renommés/remappés si équivalents,
+
+soit retirés du menu si non présents dans le document,
+
+mais rien ne doit apparaître si ce n’est pas dans le document.
+
+2) Travail demandé: adaptation des menus existants
+
+Actuellement, le menu est basé sur une liste d’objets JSON de type:
+
+{
+  "id": "logement",
+  "title": "...",
+  "description": "...",
+  "icon": "...",
+  "color": "...",
+  "heroImage": ...,
+  "heroAlt": "..."
+}
+
+
+👉 Tu dois adapter cette structure pour qu’elle corresponde aux 12 sections du document:
+
+title = exactement le titre du chapitre (sans changer les mots)
+
+description = si une description est nécessaire, elle doit être extraite du constat (phrase existante) et non inventée
+
+id = stable, slug cohérent (tu peux slugger le titre, ou reprendre les IDs existants quand c’est clairement équivalent)
+
+icon, color, heroImage, heroAlt = tu peux garder une valeur par défaut si nécessaire au design, mais sans inventer de texte politique (ex: heroAlt doit rester descriptif visuel neutre)
+
+⚠️ Important: la numérotation 1→12 doit être visible au moins dans le programme (ex: heading, breadcrumb, ou tag “Section 1”, etc.), sans modifier le texte source.
+
+3) Structure interne d’une mesure (format data)
+
+Chaque section du document doit se traduire en objet “priority/measure” (selon votre modèle actuel), avec les champs suivants:
+
+title (exact)
+
+constat (exact)
+
+propositions = liste bullet structurée, chaque proposition = { title, description } en reprenant strictement le texte
+
+miseEnOeuvre = liste bullet (exact)
+
+indicateur = liste bullet (exact)
+
+⚠️ Interdiction de condenser des propositions en une phrase séparée par des virgules.
+Chaque proposition doit être un item distinct (comme dans le document). 
+
+2-PROGRAMME_REFONTE_2026
+
+4) LIVRABLE OBLIGATOIRE AVANT INJECTION (phase de validation)
+
+Avant toute modification des fichiers de data du site, tu dois produire un fichier:
+
+PROGRAMME_MAPPING_VALIDATION.md
+
+Ce fichier doit contenir:
+
+Table de correspondance “Ancien menu → Nouveau chapitre”
+
+ancienne clé id (ex: logement, services_publics, emploi, ecologie_sante, jeunesse, democratie, culture_sport, inclusion_droits, prevention, finances, securite, europe, et tout autre item existant)
+
+nouveau chapitre cible (1→12)
+
+décision: KEEP + RENAME, MERGE, REMOVE
+
+justification courte basée uniquement sur le document
+
+Liste finale des 12 items de menu (dans l’ordre), avec:
+
+id
+
+title (exact du document)
+
+source = “Section X du document”
+
+Exemple complet d’une section convertie en structure data (au format JSON ou pseudo-JSON), pour vérification.
+
+⚠️ Tant que ce fichier Markdown n’est pas livré, aucune injection dans les fichiers de prod/staging.
+
+5) Après validation seulement
+
+Une fois PROGRAMME_MAPPING_VALIDATION.md validé, alors tu feras:
+
+mise à jour du fichier data (ex: client/src/data/index.ts ou équivalent)
+
+adaptation des menus + routes + pages pour refléter exactement ces 12 sections
+
+vérification UI: navigation, page détail, retours en haut de page au changement de route (si déjà dans le scope)
+
+6) Critère de réussite
+
+Le site doit refléter mot pour mot le programme du fichier fourni 
+
+2-PROGRAMME_REFONTE_2026
+
+12 sections, même ordre, mêmes titres, mêmes contenus
+
+Propositions en bullet points structurés
+
+Aucun thème/menu hors-document
