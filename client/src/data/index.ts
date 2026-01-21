@@ -748,10 +748,42 @@ export const measures: Measure[] = [
 export const videos: Video[] = [
   {
     "id": "video-1",
-    "title": "Le projet UTILES pour Strasbourg",
-    "description": "Découvrez notre vision pour une ville plus juste, plus verte et plus démocratique.",
-    "youtubeId": "dQw4w9WgXcQ",
-    "priorityId": "democratie"
+    "title": "UTILES : l'administration proche des habitants",
+    "description": "Déployer un bus municipal équipé pour l’orientation et les démarches simples, présent régulièrement dans les quartiers.",
+    "youtubeId": "_LI9toOcs40"
+  },
+  {
+    "id": "video-vision",
+    "title": "UTILES pour Strasbourg : notre vision",
+    "description": "Un programme né du terrain, co-construit avec les habitants.",
+    "youtubeId": "pKJJ_dLjMB0"
+  },
+  {
+    "id": "video-2",
+    "title": "Le Cahier de doléances citoyen",
+    "description": "Comment nous avons recueilli la parole des Strasbourgeois.",
+    "youtubeId": "kXExpEcDLeI"
+  },
+  {
+    "id": "video-3",
+    "title": "Yannick : Engagé avec UTILES 67",
+    "description": "Nos solutions pour un logement social plus juste.",
+    "youtubeId": "rptP-rn386Q",
+    "priorityId": "logement"
+  },
+  {
+    "id": "video-4",
+    "title": "Tentatives d'intimidations ",
+    "description": "Bus-Mairie, Voisins-Relais : rapprocher les services publics.",
+    "youtubeId": "D-bVV2DoGyM",
+    "priorityId": "services_publics"
+  },
+  {
+    "id": "video-5",
+    "title": "Au marché de Haute Pierre : un quartier qui vit",
+    "description": "A la rencontre des habitants de Haute Pierre",
+    "youtubeId": "UvvbPBr9UkE",
+    "priorityId": "Marché"
   }
 ];
 
