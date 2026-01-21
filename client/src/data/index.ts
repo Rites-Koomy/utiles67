@@ -752,27 +752,6 @@ export const videos: Video[] = [
     "description": "Découvrez notre vision pour une ville plus juste, plus verte et plus démocratique.",
     "youtubeId": "dQw4w9WgXcQ",
     "priorityId": "democratie"
-  },
-  {
-    "id": "video-2",
-    "title": "Rencontre avec les habitants",
-    "description": "Écoute et dialogue au cœur des quartiers strasbourgeois.",
-    "youtubeId": "dQw4w9WgXcQ", 
-    "priorityId": "democratie"
-  },
-  {
-    "id": "video-3",
-    "title": "Notre engagement pour l'environnement",
-    "description": "Des solutions concrètes pour une écologie du quotidien.",
-    "youtubeId": "dQw4w9WgXcQ",
-    "priorityId": "ecologie_sante"
-  },
-  {
-    "id": "video-4",
-    "title": "Jeunesse : notre priorité",
-    "description": "Construire l'avenir avec et pour les jeunes.",
-    "youtubeId": "dQw4w9WgXcQ",
-    "priorityId": "jeunesse"
   }
 ];
 
