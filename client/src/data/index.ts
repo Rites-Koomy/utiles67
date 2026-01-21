@@ -312,7 +312,7 @@ export const measures: Measure[] = [
     "tag": "Emploi",
     "impact": "Soutenir l'emploi local",
     "isKeyMeasure": true,
-    "coverImage": "/measures/solutions-jeunes.jpeg",
+    "coverImage": "/measures/emploi-strasimpact.jpg",
     "coverAlt": "Emploi local"
   },
   {
@@ -740,7 +740,7 @@ export const measures: Measure[] = [
     "tag": "Europe",
     "impact": "Une capitale européenne concrète",
     "isKeyMeasure": true,
-    "coverImage": "/measures/00-21.jpg",
+    "coverImage": "/measures/hero-new.jpg",
     "coverAlt": "Strasbourg européenne"
   }
 ];
@@ -752,6 +752,27 @@ export const videos: Video[] = [
     "description": "Découvrez notre vision pour une ville plus juste, plus verte et plus démocratique.",
     "youtubeId": "dQw4w9WgXcQ",
     "priorityId": "democratie"
+  },
+  {
+    "id": "video-2",
+    "title": "Rencontre avec les habitants",
+    "description": "Écoute et dialogue au cœur des quartiers strasbourgeois.",
+    "youtubeId": "dQw4w9WgXcQ", 
+    "priorityId": "democratie"
+  },
+  {
+    "id": "video-3",
+    "title": "Notre engagement pour l'environnement",
+    "description": "Des solutions concrètes pour une écologie du quotidien.",
+    "youtubeId": "dQw4w9WgXcQ",
+    "priorityId": "ecologie_sante"
+  },
+  {
+    "id": "video-4",
+    "title": "Jeunesse : notre priorité",
+    "description": "Construire l'avenir avec et pour les jeunes.",
+    "youtubeId": "dQw4w9WgXcQ",
+    "priorityId": "jeunesse"
   }
 ];
 
@@ -766,7 +787,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Président Bas Rhin",
     "quote": "Je m’engage avec Utiles67 parce que je crois en une action citoyenne utile, concrète et proche des habitants. Ce mouvement porte des valeurs de solidarité, de justice et de respect qui correspondent à ma vision d’une société plus humaine et plus équitable à Strasbourg et dans le Bas-Rhin.",
     "bio": "citoyen engagé pour la paix, la justice et le vivre-ensemble à Strasbourg. Je crois en une ville plus humaine, fondée sur l’égalité, le respect et la solidarité. Mon engagement est guidé par l’écoute des citoyens, la défense de la dignité de chacun et la volonté d’agir concrètement pour une société plus juste et apaisée.",
-    "photo": "/Team/MohamedSylla.png",
+    "photo": "/Team/Sans titre-1.png",
     "tags": [
       "Logement",
       "Familles"
@@ -780,7 +801,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Conseiller",
     "quote": "Je m’inscris pleinement dans les valeurs de solidarité, d’écologie et de justice sociale, convaincu que ces piliers sont essentiels pour construire une société plus équitable, durable et humaine.",
     "bio": "Militante engagée, je place l’action collective et la transformation sociale au cœur de mon combat. Convaincue que la politique doit être un levier de justice, d’égalité.",
-    "photo": "/Team/claudine.png",
+    "photo": "/Team/Sans titre-2.png",
     "tags": [
       "Services publics",
       "Seniors"
@@ -795,7 +816,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Militant",
     "quote": "Je milite au sein d’UTiles parce que ce parti incarne l’humanisme en action : un engagement sans compromis pour la justice sociale, l’écologie et la démocratie, sans tomber dans les pièges des extrêmes. ",
     "bio": "Installé à Strasbourg depuis de nombreuses années, je connais les réalités de notre ville : ses forces, ses inégalités, et surtout le potentiel immense de ses habitant·e·s. Mon engagement politique est né ici, dans les quartiers, les associations et les luttes qui font vivre notre territoire..",
-    "photo": "/Team/Fred.png",
+    "photo": "/Team/Sans titre-5.png",
     "tags": [
       "Services publics",
       "Numérique"
@@ -809,7 +830,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Militante",
     "quote": "J'ai trouvé chez UTILES, un mouvement qui me ressemble, un espace où chacun a sa place, sans jugement ni étiquette. Aujourd’hui, je m’engage pour porter la voix des habitants de mon quartier, pour défendre ce qui compte vraiment pour eux et pour contribuer à un projet collectif fondé sur l’humain, la proximité et le respect.",
     "bio": "Mon engagement est né autrement, dans le quotidien, dans l’observation, dans les échanges simples avec les habitants autour de moi. J’ai compris que l’utile se construit sur le terrain, par l’écoute et l’action concrète.C’est pour cela que je me suis engagée avec Utiles. J’y ai trouvé un mouvement qui me ressemble, un espace où chacun a sa place, sans jugement ni étiquette. Aujourd’hui, je m’engage pour porter la voix des habitants de mon quartier, pour défendre ce qui compte vraiment pour eux et pour contribuer à un projet collectif fondé sur l’humain, la proximité et le respect.",
-    "photo": "/Team/hinda-bouchrite.png",
+    "photo": "/Team/Sans titre-3.png",
     "tags": [
       "Quartiers",
       "Jeunesse"
@@ -824,7 +845,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Militante",
     "quote": "Avec UTILES, j’ai découvert une politique qui écoute avant d’agir. Pas de grandes promesses, mais des solutions concrètes pour nos quartiers.",
     "bio": "Mère de famille et engagée dans mon quartier depuis 15 ans, je vois les besoins quotidiens des familles. Je veux porter leur voix.",
-    "photo": "/Team/Mina.png",
+    "photo": "/Team/Sans titre-4.png",
     "tags": [
       "Familles",
       "Éducation"
@@ -839,7 +860,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Référent quartier",
     "quote": "Je veux montrer qu’on peut réussir et s’investir pour sa ville, peu importe d’où l’on vient. Strasbourg a besoin de toutes ses énergies.",
     "bio": "Entrepreneur dans le bâtiment, je connais la valeur du travail et de l'effort. Je veux aider les jeunes à trouver leur voie.",
-    "photo": "/Team/hayat-nurdogan.png",
+    "photo": "/Team/Sans titre.png",
     "tags": [
       "Emploi",
       "Entrepreneuriat"
@@ -854,7 +875,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Militant",
     "quote": "L'éducation et la culture sont les armes les plus puissantes pour changer le monde. À Strasbourg, nous devons les rendre accessibles à tous.",
     "bio": "Professeur d'histoire-géo, je vois chaque jour le potentiel de notre jeunesse. Il faut leur donner les moyens de rêver.",
-    "photo": "/Team/yannick.png",
+    "photo": "/Team/Sans titre-6.png",
     "tags": [
       "Éducation",
       "Culture"
