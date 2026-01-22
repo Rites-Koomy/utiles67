@@ -1,0 +1,128 @@
+# Replit Prompt — Lockdown post-fix AUTH Firebase (sandbox + prod safety)
+**Date:** 2026-01-22  
+**Context:** Google Sign-In + admin register now works in sandbox after DB fixes (users.password nullable + user_community_memberships.section_scope added).  
+**Goal:** Lock the invariants to prevent regressions and hidden tech debt.
+
+---
+
+## Objectives (must be true after this change)
+1) **No code path assumes `users.password` is non-null** (Firebase users can exist without local password).
+2) `/api/admin/register` is **explicitly Firebase-auth only** (reject if not authenticated).
+3) **User identity contract**: Firebase UID is the stable link to DB user.
+4) **DB schema alignment**: `section_scope` is treated as official schema (migration tracked).
+5) Add a short **doctrine note** in technical state docs.
+
+---
+
+## Step 0 — Search & inventory (no changes yet)
+Run repo-wide searches and list results (file + line):
+- `password!`
+- `.password.length`
+- `hash(password`
+- `bcrypt`
+- `argon`
+- `firebaseUid`
+- `firebase_uid`
+- `sectionScope`
+- `section_scope`
+
+Output this inventory in the report.
+
+---
+
+## Step 1 — Remove implicit assumptions about password
+Wherever the code:
+- reads `user.password` directly
+- compares it without checking null
+- hashes `password` without checking presence
+
+**Fix rule:**
+- If `auth_provider = 'firebase'` OR if user has `firebase_uid` (or provider mapping in your code), then password can be null.
+- Only enforce password presence for **local email/password auth flows**.
+
+Add safe guards like:
+- `if (!user.password) return invalid_credentials` ONLY in local password login route
+- never throw generic errors just because password is null
+
+---
+
+## Step 2 — Make Firebase requirement explicit for `/api/admin/register`
+In the route handler:
+- verify Firebase token (already exists)
+- if token missing/invalid => return 401 `AUTH_REQUIRED`
+
+Add explicit log:
+- `[Admin Register <traceId>] AUTH_REQUIRED firebase token missing/invalid`
+
+This route should **never** accept a password-based registration silently.
+
+---
+
+## Step 3 — Identity contract: stable Firebase UID mapping
+Where the "find or create user" happens in admin register:
+- ensure we never create duplicates
+
+**Invariant rules:**
+- If Firebase token verified with `uid`, always:
+  - search existing DB user by firebase UID mapping (current code uses provider_id/auth_provider OR firebase_uid depending on final schema)
+  - if found, reuse
+  - if not found, create new user and store the mapping
+- Never create a second user just because email differs in case/format.
+
+Add normalization:
+- store email lowercased
+- compare lowercased for lookup
+
+Add a small inline comment near the logic:
+- `// Invariant: firebase uid -> single DB user`
+
+---
+
+## Step 4 — Track membership schema officially
+We already added `section_scope` in DB.
+
+Now ensure the project has a migration file or equivalent tracking:
+- Create a SQL migration file (or drizzle migration depending on project conventions) that adds:
+  - `section_scope` to `user_community_memberships` (text, nullable)
+  - optionally `section_ids` if referenced anywhere (jsonb, nullable)
+
+Use "IF NOT EXISTS" to be safe.
+
+Also ensure Drizzle schema matches DB:
+- membership table includes `sectionScope` mapped to `section_scope`
+- type is text nullable
+
+---
+
+## Step 5 — Doc lock (1 paragraph only)
+Update:
+- `koomy_technical_state.md`
+
+Add a short note under AUTH section:
+- "Firebase (Google Sign-In) is the primary identity proof. DB stores business user. Firebase users may have `password = NULL`."
+
+Keep it short.
+
+---
+
+## Step 6 — Minimal regression checks
+Provide a checklist (with expected status codes):
+1) Google sign-in -> `/api/auth/me` returns 200
+2) POST `/api/admin/register` with valid Firebase token returns 200
+3) POST `/api/admin/register` without token returns 401 `AUTH_REQUIRED`
+4) Local email/password login still works (if implemented) OR returns clear "not supported" but not 500
+5) Membership insert works (no missing columns)
+
+---
+
+## Deliverables
+1) Code changes committed.
+2) Report file created:
+`docs/rapports/SANDBOX_AUTH_LOCKDOWN_POST_FIX_2026_01.md`
+
+Report must include:
+- inventory results (Step 0)
+- what was changed (files touched)
+- invariants implemented
+- regression checklist results
+- notes about any remaining known risks (if any)
