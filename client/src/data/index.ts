@@ -901,7 +901,7 @@ export const team: TeamMember[] = [
     "utilesRole": "Militante",
     "quote": "Je m’engage aux côtés d’Utiles pour Strasbourg avec une conviction profonde : l’humain est au cœur des solutions. Malgré tout ce que la vie peut nous confronter, je crois en l’humanité, en la responsabilité individuelle et collective, et en la force du vivre ensemble.Loyale, transparente et attachée à des valeurs simples mais solides, je défends une vision guidée par mon crédo : Liberté, Équité, Adelphité. La liberté comme moteur, l’équité pour offrir à chacune et chacun les mêmes chances, et l’adelphité pour construire une société plus juste, inclusive et solidaire Strasbourg.",
     "bio": "Strasbourgeoise d’adoption depuis plus de 25 ans, amoureuse de ma ville, je souhaite m’investir pleinement pour contribuer à un avenir où la parole citoyenne compte, où l’écoute, l’empathie et le respect ne sont pas des principes abstraits mais des pratiques quotidiennes. Avec l’équipe d’Utiles67, je fais le choix de l’engagement sincère et du collectif.",
-    "photo": "/Team/Aurelie.jpeg",
+    "photo": "/Team/aurelie.jpeg",
     "tags": [
       "Éducation",
       "Culture"
