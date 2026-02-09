@@ -1,6 +1,11 @@
 export const config = {
   phoneNumber: "06 52 81 71 34",
   phoneHours: "Lun-Ven 9h-18h",
+
+  // URLs de réception (optionnel). Si vide, on stocke uniquement en localStorage.
+  formJoinUrl: "",
+  formQuestionUrl: "",
+  formEngagementUrl: "",
   
   adminCode: "utiles2026",
   

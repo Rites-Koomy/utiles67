@@ -746,14 +746,20 @@ export const measures: Measure[] = [
 ];
 
 export const videos: Video[] = [
+  
   {
     "id": "video-1",
+    "title": "UTILES 67: Entretien Pooka",
+    "description": "Utiles 67 :Nos propositions pour améliorer la mobilité des strasbourgeois. Entretien Pooka.",
+    "youtubeId": "K5UcJ2xGRhE"
+  },{
+    "id": "video-2",
     "title": "UTILES 67: Entretien Pooka",
     "description": "Utiles 67 :Nos propositions pour améliorer le pouvoir d'achat des strasbourgeois. Entretien Pooka.",
     "youtubeId": "ksZEdOQVZXM"
   },
   {
-    "id": "video-1",
+    "id": "video-3",
     "title": "UTILES : l'administration proche des habitants",
     "description": "Déployer un bus municipal équipé pour l’orientation et les démarches simples, présent régulièrement dans les quartiers.",
     "youtubeId": "_LI9toOcs40"
@@ -765,27 +771,27 @@ export const videos: Video[] = [
     "youtubeId": "pKJJ_dLjMB0"
   },
   {
-    "id": "video-2",
+    "id": "video-4",
     "title": "Le Cahier de doléances citoyen",
     "description": "Comment nous avons recueilli la parole des Strasbourgeois.",
     "youtubeId": "kXExpEcDLeI"
   },
   {
-    "id": "video-3",
+    "id": "video-5",
     "title": "Yannick : Engagé avec UTILES 67",
     "description": "Nos solutions pour un logement social plus juste.",
     "youtubeId": "rptP-rn386Q",
     "priorityId": "logement"
   },
   {
-    "id": "video-4",
+    "id": "video-6",
     "title": "Tentatives d'intimidations ",
     "description": "Bus-Mairie, Voisins-Relais : rapprocher les services publics.",
     "youtubeId": "D-bVV2DoGyM",
     "priorityId": "services_publics"
   },
   {
-    "id": "video-5",
+    "id": "video-7",
     "title": "Au marché de Haute Pierre : un quartier qui vit",
     "description": "A la rencontre des habitants de Haute Pierre",
     "youtubeId": "UvvbPBr9UkE",
@@ -793,7 +799,143 @@ export const videos: Video[] = [
   }
 ];
 
-export const events: Event[] = [];
+export const events: Event[] = [
+  {
+    "id": "event-2026-02-05-marche-meinau",
+    "title": "Marché de la Meinau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-05",
+    "time": "09:30",
+    "location": "Marché de la Meinau",
+    "address": "Marché de la Meinau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-05-marche-robertsau",
+    "title": "Marché de la Robertsau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-05",
+    "time": "09:30",
+    "location": "Marché de la Robertsau",
+    "address": "Marché de la Robertsau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-07-marche-hautepierre",
+    "title": "Marché de Hautepierre",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-07",
+    "time": "09:30",
+    "location": "Marché de Hautepierre",
+    "address": "Marché de Hautepierre, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-10-marche-boulevard-marne",
+    "title": "Marché du Boulevard de la Marne",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-10",
+    "time": "09:30",
+    "location": "Marché du Boulevard de la Marne",
+    "address": "Marché du Boulevard de la Marne, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-11-marche-cronenbourg",
+    "title": "Marché de Cronenbourg",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-11",
+    "time": "09:30",
+    "location": "Marché de Cronenbourg",
+    "address": "Marché de Cronenbourg, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-12-marche-meinau",
+    "title": "Marché de la Meinau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-12",
+    "time": "09:30",
+    "location": "Marché de la Meinau",
+    "address": "Marché de la Meinau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-12-marche-robertsau",
+    "title": "Marché de la Robertsau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-12",
+    "time": "09:30",
+    "location": "Marché de la Robertsau",
+    "address": "Marché de la Robertsau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-17-marche-boulevard-marne",
+    "title": "Marché du Boulevard de la Marne",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-17",
+    "time": "09:30",
+    "location": "Marché du Boulevard de la Marne",
+    "address": "Marché du Boulevard de la Marne, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-19-marche-meinau",
+    "title": "Marché de la Meinau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-19",
+    "time": "09:30",
+    "location": "Marché de la Meinau",
+    "address": "Marché de la Meinau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-19-marche-robertsau",
+    "title": "Marché de la Robertsau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-19",
+    "time": "09:30",
+    "location": "Marché de la Robertsau",
+    "address": "Marché de la Robertsau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-21-marche-robertsau",
+    "title": "Marché de la Robertsau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-21",
+    "time": "09:30",
+    "location": "Marché de la Robertsau",
+    "address": "Marché de la Robertsau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-25-marche-cronenbourg",
+    "title": "Marché de Cronenbourg",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-25",
+    "time": "09:30",
+    "location": "Marché de Cronenbourg",
+    "address": "Marché de Cronenbourg, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-26-marche-meinau",
+    "title": "Marché de la Meinau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-26",
+    "time": "09:30",
+    "location": "Marché de la Meinau",
+    "address": "Marché de la Meinau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-26-marche-robertsau",
+    "title": "Marché de la Robertsau",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-26",
+    "time": "09:30",
+    "location": "Marché de la Robertsau",
+    "address": "Marché de la Robertsau, Strasbourg"
+  },
+  {
+    "id": "event-2026-02-28-marche-hautepierre",
+    "title": "Marché de Hautepierre",
+    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "date": "2026-02-28",
+    "time": "09:30",
+    "location": "Marché de Hautepierre",
+    "address": "Marché de Hautepierre, Strasbourg"
+  }
+];
 
 export const team: TeamMember[] = [
   {
