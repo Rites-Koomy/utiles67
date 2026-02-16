@@ -202,7 +202,7 @@ Ces étapes s’exécutent automatiquement sur Cloudflare Pages grâce au hook `
 
 ## 📸 Photos de campagne
 
-La section « Photos de campagne » sur la home affiche un diaporama responsive et un lien vers `/photos` qui ouvre la galerie complète.
+La section « Photos de campagne » sur la home affiche un diaporama responsive (1 photo à la fois) et un lien vers `/photos` qui déroule la galerie complète, mobile-first.
 
 ### Ajouter une photo
 
@@ -216,10 +216,10 @@ La section « Photos de campagne » sur la home affiche un diaporama responsive 
 }
 ```
 
-2. Les photos doivent pointer vers `https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/Image-campagne/` : le fichier `campaignPhotos.ts` construit l’URL complète, encode les caractères spéciaux et expose `campaignPhotos`.
-3. **Ne jamais** placer les images dans le repo. Après éditeur le JSON, relancer `npm run dev:client` (ou `npm run build` en prod).
+2. Les photos doivent pointer vers `https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/Image-campagne/` : `campaignPhotos.ts` construit l’URL complète et encode les caractères spéciaux.
+3. **Ne jamais** placer les images dans le repo. Après avoir édité le JSON, relancer `npm run dev:client` (ou `npm run build` en prod) et `npm run validate:photos` pour détecter les fichiers manquants.
 
-Le slideshow utilise Swiper/local autoplay, et la page `/photos` propose la grille complète avec des liens vers chaque fichier (ouverture dans un nouvel onglet).
+Le slideshow utilise Swiper/local autoplay ; la page `/photos` affiche désormais un feed diaporama (1 photo à la fois, caption + compteur + bouton “Ouvrir l’image”) et mentionne si certaines images ont disparu (`campaign.photos.invalid.json` est mis à jour par `npm run validate:photos`).
 
 ---
 
