@@ -1,7 +1,7 @@
 import photosJson from "@/content/campaign.photos.json";
 
 export const CDN_BASE_URL = "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev";
-export const CAMPAIGN_FOLDER = "utiles67/Image-campagne";
+export const CAMPAIGN_FOLDER = "Image-campagne";
 
 export interface CampaignPhotoEntry {
   file: string;
@@ -14,8 +14,11 @@ export interface CampaignPhoto extends CampaignPhotoEntry {
 }
 
 export function buildCampaignPhotoUrl(entry: CampaignPhotoEntry) {
-  const encodedFile = encodeURIComponent(entry.file);
-  return `${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/${encodedFile}`;
+  const encodedFile = encodeURI(entry.file);
+  const prefix = CAMPAIGN_FOLDER.startsWith("/")
+    ? CAMPAIGN_FOLDER
+    : `/${CAMPAIGN_FOLDER}`;
+  return `${CDN_BASE_URL}${prefix}/${encodedFile}`;
 }
 
 export const campaignPhotos: CampaignPhoto[] = (

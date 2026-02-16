@@ -210,14 +210,14 @@ La section « Photos de campagne » sur la home affiche un diaporama responsive 
 
 ```json
 {
-  "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-01.jpg",
+  "file": "WhatsApp Image 2026-01-10 at 13.08.22.jpeg",
   "alt": "Description courte de la photo",
   "caption": "Titre ou contexte"
 }
 ```
 
-2. Les images doivent toujours pointer vers le CDN R2 (`https://pub-...r2.dev/...`). **Ne jamais** committer d’images dans le repo.
-3. Recharger le site (`npm run dev:client`) ou regénérer la build (`npm run build`) pour voir les mises à jour.
+2. Les photos doivent pointer vers `https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/Image-campagne/` : le fichier `campaignPhotos.ts` construit l’URL complète, encode les caractères spéciaux et expose `campaignPhotos`.
+3. **Ne jamais** placer les images dans le repo. Après éditeur le JSON, relancer `npm run dev:client` (ou `npm run build` en prod).
 
 Le slideshow utilise Swiper/local autoplay, et la page `/photos` propose la grille complète avec des liens vers chaque fichier (ouverture dans un nouvel onglet).
 
