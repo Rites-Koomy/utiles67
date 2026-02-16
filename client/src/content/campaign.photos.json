@@ -1,31 +1,31 @@
 [
   {
-    "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-01.jpg",
+    "file": "photo-01.jpg",
     "alt": "Tractage au marché",
     "caption": "Tractage au marché"
   },
   {
-    "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-02.jpg",
+    "file": "photo-02.jpg",
     "alt": "Rencontre citoyenne en salle communale",
     "caption": "Rencontre citoyenne"
   },
   {
-    "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-03.jpg",
+    "file": "photo-03.jpg",
     "alt": "Balade de proximité dans le quartier Neudorf",
     "caption": "Parcours Neudorf"
   },
   {
-    "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-04.jpg",
+    "file": "photo-04.jpg",
     "alt": "Atelier participatif Place Kléber",
     "caption": "Atelier participatif"
   },
   {
-    "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-05.jpg",
+    "file": "photo-05.jpg",
     "alt": "Visite d’une résidence intergénérationnelle",
     "caption": "Résidence intergénérationnelle"
   },
   {
-    "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-06.jpg",
+    "file": "photo-06.jpg",
     "alt": "Ambiance collective autour d’un café citoyen",
     "caption": "Café citoyen"
   }

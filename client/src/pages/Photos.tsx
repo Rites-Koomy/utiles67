@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import photosJson from "@/content/campaign.photos.json";
-import { CampaignPhoto } from "@/components/CampaignSlideshow";
+import { campaignPhotos } from "@/lib/campaignPhotos";
 import { Link } from "wouter";
 
-const photos = photosJson as CampaignPhoto[];
-
+const photos = campaignPhotos;
 export default function Photos() {
   const [failed, setFailed] = useState<Record<string, boolean>>({});
 

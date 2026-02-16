@@ -1,19 +1,10 @@
 import { useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { cn } from "@/lib/utils";
-import photosJson from "@/content/campaign.photos.json";
+import { campaignPhotos } from "@/lib/campaignPhotos";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-export interface CampaignPhoto {
-  src: string;
-  alt: string;
-  caption: string;
-}
-
-const photos = photosJson as CampaignPhoto[];
 
 export function CampaignSlideshow() {
   const [failed, setFailed] = useState<Record<string, boolean>>({});
@@ -23,21 +14,21 @@ export function CampaignSlideshow() {
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1}
-        spaceBetween={14}
+        spaceBetween={16}
         loop
         autoplay={{ delay: 3500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         breakpoints={{
-          640: { slidesPerView: 2, spaceBetween: 16 },
-          1024: { slidesPerView: 3, spaceBetween: 20 },
+          640: { slidesPerView: 2, spaceBetween: 14 },
+          1024: { slidesPerView: 3, spaceBetween: 16 },
         }}
         className="rounded-3xl"
       >
-        {photos.map((photo) => {
+        {campaignPhotos.map((photo) => {
           const isFailed = failed[photo.src];
           return (
             <SwiperSlide key={photo.src}>
-              <div className="relative h-56 w-full overflow-hidden rounded-2xl bg-neutral-100">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-neutral-100">
                 {isFailed ? (
                   <div className="flex h-full flex-col items-center justify-center gap-2 bg-neutral-200 text-center text-sm font-semibold text-muted-foreground">
                     <span>Image indisponible</span>
@@ -50,9 +41,12 @@ export function CampaignSlideshow() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                    onError={() =>
-                      setFailed((prev) => ({ ...prev, [photo.src]: true }))
-                    }
+                    onError={(event) => {
+                      setFailed((prev) => ({ ...prev, [photo.src]: true }));
+                      if (process.env.NODE_ENV !== "production") {
+                        console.warn("Campaign photo failed to load:", photo.src, event);
+                      }
+                    }}
                   />
                 )}
                 <div className="pointer-events-none absolute inset-x-4 bottom-4 rounded-2xl bg-gradient-to-t from-background/90 to-transparent p-3 text-sm text-muted-foreground">
