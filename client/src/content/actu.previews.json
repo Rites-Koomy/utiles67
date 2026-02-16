@@ -1,0 +1,58 @@
+[
+  {
+    "id": "dna-strasbourg",
+    "url": "https://www.dna.fr/strasbourg",
+    "domain": "www.dna.fr",
+    "sourceLabel": "DNA",
+    "publishedAt": "2026-02-14",
+    "pinned": true,
+    "fetchedAt": "2026-02-16T06:36:58.202Z",
+    "title": "DNA",
+    "description": null,
+    "image": null,
+    "siteName": "DNA",
+    "fallback": true,
+    "error": "HTTP 404"
+  },
+  {
+    "id": "france3-grand-est",
+    "url": "https://france3-regions.francetvinfo.fr/grand-est",
+    "domain": "france3-regions.francetvinfo.fr",
+    "sourceLabel": "France 3 Grand Est",
+    "publishedAt": "2026-02-12",
+    "pinned": false,
+    "fetchedAt": "2026-02-16T06:36:58.437Z",
+    "title": "Grand Est : actualités et infos en direct - France 3 Grand Est",
+    "description": "Suivez en direct toute l&#039;actualité du Grand Est, les infos en temps réel des régions Alsace, Champagne-Ardenne et Lorraine, les reportages, les émissions, la météo, le sport, les faits-divers et bien plus encore avec France 3 Grand Est !",
+    "image": "https://france3-regions.francetvinfo.fr/assets/img/logos/france-3-black.svg",
+    "siteName": "France 3 Grand Est"
+  },
+  {
+    "id": "francebleu-citoyens",
+    "url": "https://www.francebleu.fr/regions/grand-est",
+    "domain": "www.francebleu.fr",
+    "sourceLabel": "France Bleu Grand Est",
+    "publishedAt": "2026-02-10",
+    "pinned": false,
+    "fetchedAt": "2026-02-16T06:36:58.712Z",
+    "title": "France Bleu Grand Est",
+    "description": null,
+    "image": null,
+    "siteName": "France Bleu Grand Est",
+    "fallback": true,
+    "error": "HTTP 404"
+  },
+  {
+    "id": "lemonde-democratie",
+    "url": "https://www.lemonde.fr/politique/",
+    "domain": "www.lemonde.fr",
+    "sourceLabel": "Le Monde",
+    "publishedAt": "2026-02-08",
+    "pinned": false,
+    "fetchedAt": "2026-02-16T06:36:01.431Z",
+    "title": "Politique - Actualités, vidéos et infos en direct ",
+    "description": "Toute l’actualité sur le sujet Politique. Consultez l’ensemble des articles, reportages, directs, photos et vidéos de la rubrique Politique publiés par Le Monde.",
+    "image": "https://asset.lemde.fr/medias/img/social-network/default.png",
+    "siteName": "Le Monde.fr"
+  }
+]

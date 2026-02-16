@@ -11,6 +11,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { priorities, measures, getMeasuresByPriorityId } from "@/data";
 
 import { ExpandableInfoBox } from "@/components/ExpandableInfoBox";
+import { LinkPreviewCard, type ActuPreview } from "@/components/LinkPreviewCard";
+import previewsJson from "@/content/actu.previews.json";
+import { Link } from "wouter";
+
+const actuHighlights = (previewsJson as ActuPreview[]).slice(0, 3);
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
@@ -203,6 +208,34 @@ UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un 
               Aucune mesure trouvée
             </div>
           )}
+        </section>
+
+        <section className="py-8">
+          <div className="mb-4 flex items-end justify-between gap-2">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+                Actu
+              </p>
+              <h2 className="text-2xl font-semibold text-foreground">
+                Dernières retombées
+              </h2>
+            </div>
+            <Link
+              href="/actu"
+              className="text-sm font-semibold uppercase tracking-[0.3em] text-primary transition hover:text-primary/80"
+            >
+              Voir toute l’actu
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {actuHighlights.map((preview) => (
+              <LinkPreviewCard
+                key={preview.id}
+                preview={preview}
+                className="min-h-[280px]"
+              />
+            ))}
+          </div>
         </section>
 
         <YouthSection />

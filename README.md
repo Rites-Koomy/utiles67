@@ -168,6 +168,38 @@ Utiliser [Squoosh.app](https://squoosh.app) pour optimiser.
 
 ---
 
+## 📰 Revue de presse « Actu »
+
+La rubrique « Actu » regroupe les liens externes sélectionnés par l’équipe, accessible via la page `/actu`, la navigation principale et le bloc « Dernières retombées » sur la home.
+
+### Ajouter un lien
+
+1. Ajouter un objet dans `client/src/content/actu.links.json` (voir l’exemple ci-dessous).
+2. Lancer `npm run prebuild`. Le script `script/build-link-previews.ts` valide l’URL, récupère les métadonnées Open Graph/Twitter, met à jour `client/src/content/actu.previews.json` et conserve un cache `.cache/link-previews/*.json`.
+3. Committer `client/src/content/actu.links.json` et, si besoin, `client/src/content/actu.previews.json`.
+
+Exemple d’entrée :
+
+```json
+{
+  "id": "dna-strasbourg",
+  "url": "https://www.dna.fr/strasbourg",
+  "publishedAt": "2026-02-14",
+  "sourceLabel": "DNA",
+  "pinned": true
+}
+```
+
+### Préviews contrôlées
+
+- Le script applique les gardes SSRF : seules les URLs `http/https` sont autorisées, les IPs privées/localhost sont bloquées et une allowlist peut être activée via `ALLOWED_PREVIEW_DOMAINS` (séparée par des virgules).
+- Le TTL est de 24 h minimum (`LINK_PREVIEW_TTL_HOURS`), et la requête est interrompue après 8000 ms (`LINK_PREVIEW_TIMEOUT_MS`).
+- Les cartes adaptent leur affichage : si aucune preview n’est récupérée, la carte affiche l’URL, le domaine et un bouton « Lire l’article ».
+
+Ces étapes s’exécutent automatiquement sur Cloudflare Pages grâce au hook `prebuild` (il précède `npm run build`).
+
+---
+
 ## 🔒 Sécurité anti-spam
 
 Tous les formulaires incluent :
