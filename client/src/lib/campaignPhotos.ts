@@ -21,9 +21,11 @@ export function buildCampaignPhotoUrl(entry: CampaignPhotoEntry) {
   return `${CDN_BASE_URL}${prefix}/${encodedFile}`;
 }
 
-export const campaignPhotos: CampaignPhoto[] = (
-  photosJson as CampaignPhotoEntry[]
-).map((entry) => ({
+const validEntries = (photosJson as CampaignPhotoEntry[]).filter(
+  (entry): entry is CampaignPhotoEntry => Boolean(entry.file && entry.file.trim()),
+);
+
+export const campaignPhotos: CampaignPhoto[] = validEntries.map((entry) => ({
   ...entry,
   src: buildCampaignPhotoUrl(entry),
 }));
