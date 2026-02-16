@@ -14,6 +14,7 @@ import { ExpandableInfoBox } from "@/components/ExpandableInfoBox";
 import { LinkPreviewCard, type ActuPreview } from "@/components/LinkPreviewCard";
 import previewsJson from "@/content/actu.previews.json";
 import { Link } from "wouter";
+import { CampaignSlideshow } from "@/components/CampaignSlideshow";
 
 const actuHighlights = (previewsJson as ActuPreview[]).slice(0, 3);
 
@@ -235,6 +236,37 @@ UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un 
                 className="min-h-[280px]"
               />
             ))}
+          </div>
+        </section>
+
+        <section className="py-8">
+          <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+                Photos
+              </p>
+              <h2 className="text-2xl font-semibold text-foreground">
+                Photos de campagne
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Un aperçu des rencontres et moments forts du mouvement, mis en valeur depuis notre CDN.
+              </p>
+            </div>
+            <Link
+              href="/photos"
+              className="text-sm font-semibold uppercase tracking-[0.3em] text-primary transition hover:text-primary/80"
+            >
+              Voir toutes les photos
+            </Link>
+          </div>
+          <CampaignSlideshow />
+          <div className="mt-4 flex justify-end">
+            <Link
+              href="/photos"
+              className="rounded-full border border-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary transition hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              Plus de photos
+            </Link>
           </div>
         </section>
 

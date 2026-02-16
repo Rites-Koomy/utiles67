@@ -200,6 +200,29 @@ Ces étapes s’exécutent automatiquement sur Cloudflare Pages grâce au hook `
 
 ---
 
+## 📸 Photos de campagne
+
+La section « Photos de campagne » sur la home affiche un diaporama responsive et un lien vers `/photos` qui ouvre la galerie complète.
+
+### Ajouter une photo
+
+1. Ajouter une entrée dans `client/src/content/campaign.photos.json` en respectant la structure :
+
+```json
+{
+  "src": "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/campagne/2026-02-16/photo-01.jpg",
+  "alt": "Description courte de la photo",
+  "caption": "Titre ou contexte"
+}
+```
+
+2. Les images doivent toujours pointer vers le CDN R2 (`https://pub-...r2.dev/...`). **Ne jamais** committer d’images dans le repo.
+3. Recharger le site (`npm run dev:client`) ou regénérer la build (`npm run build`) pour voir les mises à jour.
+
+Le slideshow utilise Swiper/local autoplay, et la page `/photos` propose la grille complète avec des liens vers chaque fichier (ouverture dans un nouvel onglet).
+
+---
+
 ## 🔒 Sécurité anti-spam
 
 Tous les formulaires incluent :

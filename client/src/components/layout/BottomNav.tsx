@@ -1,11 +1,12 @@
 import { Link, useLocation } from "wouter";
-import { LayoutGrid, Play, Calendar, UserPlus, Newspaper } from "lucide-react";
+import { LayoutGrid, Play, Calendar, UserPlus, Newspaper, Image } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Mesures", icon: LayoutGrid },
   { href: "/videos", label: "Vidéos", icon: Play },
   { href: "/agenda", label: "Agenda", icon: Calendar },
   { href: "/actu", label: "Actu", icon: Newspaper },
+  { href: "/photos", label: "Photos", icon: Image },
   { href: "/rejoindre", label: "Rejoindre", icon: UserPlus },
 ];
 

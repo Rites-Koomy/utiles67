@@ -12,6 +12,7 @@ export function Header() {
     { href: "/videos", label: "Vidéos" },
     { href: "/agenda", label: "Agenda" },
     { href: "/actu", label: "Actu" },
+    { href: "/photos", label: "Photos" },
   ];
 
   return (
