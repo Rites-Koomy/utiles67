@@ -1161,7 +1161,7 @@ export const team: TeamMember[] = [
   {
     "id": "member-8",
     "name": "Aurélie Royer",
-    "quartier": "Koenigshoffen",
+    "quartier": "Contades",
     "role": " Infirmière",
     "utilesRole": "Militante",
     "quote": "Je m’engage aux côtés d’Utiles pour Strasbourg avec une conviction profonde : l’humain est au cœur des solutions. Malgré tout ce que la vie peut nous confronter, je crois en l’humanité, en la responsabilité individuelle et collective, et en la force du vivre ensemble.Loyale, transparente et attachée à des valeurs simples mais solides, je défends une vision guidée par mon crédo : Liberté, Équité, Adelphité. La liberté comme moteur, l’équité pour offrir à chacune et chacun les mêmes chances, et l’adelphité pour construire une société plus juste, inclusive et solidaire Strasbourg.",
