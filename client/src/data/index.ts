@@ -803,263 +803,254 @@ export const events: Event[] = [
   {
     "id": "event-2026-03-03-marche-neudorf",
     "title": "Marché de Neudorf",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-03",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Neudorf",
     "address": "Marché de Neudorf, Strasbourg"
   },
   {
     "id": "event-2026-03-03-marche-boulevard-marne",
     "title": "Marché du Boulevard de la Marne",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-03",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché du Boulevard de la Marne",
-    "address": "Marché du Boulevard de la Marne, Strasbourg"
+    "address": "Boulevard de la Marne, Strasbourg"
   },
   {
     "id": "event-2026-03-03-marche-bordeaux",
     "title": "Marché de la Place de Bordeaux",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-03",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Place de Bordeaux",
-    "address": "Place de Bordeaux, Strasbourg"
+    "address": "Place de Bordeaux, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-04-marche-cronenbourg",
     "title": "Marché de Cronenbourg",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-04",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Cronenbourg",
-    "address": "Marché de Cronenbourg, Strasbourg"
+    "address": "Place de Haldenbourg, 67200 Strasbourg"
   },
   {
     "id": "event-2026-03-04-marche-krutenau",
     "title": "Marché de la Krutenau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-04",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Krutenau",
-    "address": "Marché de la Krutenau, Strasbourg"
+    "address": "Place de Zurich, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-04-marche-broglie",
     "title": "Marché de Broglie",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-04",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Broglie",
-    "address": "Place Broglie, Strasbourg"
+    "address": "Place Broglie, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-05-marche-robertsau",
     "title": "Marché de la Robertsau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-05",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Robertsau",
-    "address": "Marché de la Robertsau, Strasbourg"
+    "address": "Place du Corps de Garde, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-05-marche-meinau",
     "title": "Marché de la Meinau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-05",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Meinau",
-    "address": "Marché de la Meinau, Strasbourg"
+    "address": "Place de l'Ile de France, 67100 Strasbourg"
   },
   {
     "id": "event-2026-03-06-marche-broglie",
     "title": "Marché de Broglie",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-06",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Broglie",
-    "address": "Place Broglie, Strasbourg"
+    "address": "Place Broglie, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-06-marche-cronenbourg",
     "title": "Marché de Cronenbourg",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-06",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Cronenbourg",
-    "address": "Marché de Cronenbourg, Strasbourg"
+    "address": "Place de Haldenbourg, 67200 Strasbourg"
   },
   {
     "id": "event-2026-03-07-marche-hautepierre",
     "title": "Marché de Hautepierre",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-07",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Hautepierre",
-    "address": "Marché de Hautepierre, Strasbourg"
+    "address": "Place du Maillon, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-07-marche-robertsau",
     "title": "Marché de la Robertsau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-07",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Robertsau",
-    "address": "Marché de la Robertsau, Strasbourg"
+    "address": "Place du Corps de Garde, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-07-marche-neudorf",
     "title": "Marché de Neudorf",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-07",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Neudorf",
     "address": "Marché de Neudorf, Strasbourg"
   },
   {
     "id": "event-2026-03-07-marche-producteurs-douane",
     "title": "Marché des Producteurs",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-07",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché des Producteurs (rue de la Douane)",
-    "address": "Rue de la Douane, Strasbourg"
+    "address": "Rue de la Douane, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-10-marche-neudorf",
     "title": "Marché de Neudorf",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-10",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Neudorf",
     "address": "Marché de Neudorf, Strasbourg"
   },
   {
     "id": "event-2026-03-10-marche-boulevard-marne",
     "title": "Marché du Boulevard de la Marne",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-10",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché du Boulevard de la Marne",
-    "address": "Marché du Boulevard de la Marne, Strasbourg"
+    "address": "Boulevard de la Marne, Strasbourg"
   },
   {
     "id": "event-2026-03-10-marche-bordeaux",
     "title": "Marché de la Place de Bordeaux",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-10",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Place de Bordeaux",
-    "address": "Place de Bordeaux, Strasbourg"
+    "address": "Place de Bordeaux, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-10-marche-cronenbourg-semaine2",
     "title": "Marché de Cronenbourg",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-10",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Cronenbourg",
-    "address": "Marché de Cronenbourg, Strasbourg"
+    "address": "Place de Haldenbourg, 67200 Strasbourg"
   },
   {
     "id": "event-2026-03-10-marche-krutenau-semaine2",
     "title": "Marché de la Krutenau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-10",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Krutenau",
-    "address": "Marché de la Krutenau, Strasbourg"
+    "address": "Place de Zurich, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-10-marche-broglie-semaine2",
     "title": "Marché de Broglie",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-10",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Broglie",
-    "address": "Place Broglie, Strasbourg"
-  },
-  {
-    "id": "event-2026-03-10-reunion-publique-centre-ville",
-    "title": "Réunion publique UTILES",
-    "description": "Réunion publique au centre-ville de Strasbourg.",
-    "date": "2026-03-10",
-    "time": "19:00",
-    "location": "Centre-ville de Strasbourg",
-    "address": "Centre-ville, Strasbourg"
+    "address": "Place Broglie, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-11-marche-robertsau",
     "title": "Marché de la Robertsau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-11",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Robertsau",
-    "address": "Marché de la Robertsau, Strasbourg"
+    "address": "Place du Corps de Garde, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-11-marche-meinau",
     "title": "Marché de la Meinau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-11",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Meinau",
-    "address": "Marché de la Meinau, Strasbourg"
+    "address": "Place de l'Ile de France, 67100 Strasbourg"
   },
   {
     "id": "event-2026-03-12-marche-broglie",
     "title": "Marché de Broglie",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-12",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Broglie",
-    "address": "Place Broglie, Strasbourg"
+    "address": "Place Broglie, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-12-marche-cronenbourg",
     "title": "Marché de Cronenbourg",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-12",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Cronenbourg",
-    "address": "Marché de Cronenbourg, Strasbourg"
+    "address": "Place de Haldenbourg, 67200 Strasbourg"
   },
   {
     "id": "event-2026-03-13-marche-robertsau",
     "title": "Marché de la Robertsau",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-13",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de la Robertsau",
-    "address": "Marché de la Robertsau, Strasbourg"
+    "address": "Place du Corps de Garde, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-13-marche-hautepierre",
     "title": "Marché de Hautepierre",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-13",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Hautepierre",
-    "address": "Marché de Hautepierre, Strasbourg"
+    "address": "Place du Maillon, 67000 Strasbourg"
   },
   {
     "id": "event-2026-03-13-marche-neudorf",
     "title": "Marché de Neudorf",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-13",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché de Neudorf",
     "address": "Marché de Neudorf, Strasbourg"
   },
   {
     "id": "event-2026-03-13-marche-producteurs",
     "title": "Marché des Producteurs",
-    "description": "Retrouvez-nous au marché (09h30–11h30) pour échanger et poser vos questions.",
+    "description": "Retrouvez-nous au marché (09h00–11h30) pour échanger et poser vos questions.",
     "date": "2026-03-13",
-    "time": "09:30",
+    "time": "09:00",
     "location": "Marché des Producteurs (rue de la Douane)",
-    "address": "Rue de la Douane, Strasbourg"
+    "address": "Rue de la Douane, 67000 Strasbourg"
   }
 ];
 
