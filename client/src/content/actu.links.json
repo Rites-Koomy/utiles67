@@ -1,5 +1,19 @@
 [
   {
+    "id": "Strasbourg en Vrai",
+    "url": "https://strasinfo.fr/2026/03/05/mohamed-sylla-descend-dans-la-rue-une-campagne-au-coeur-des-quartiers-strasbourgeois/",
+    "publishedAt": "2026-03-05",
+    "sourceLabel": "strasinfo",
+    "pinned": true
+  },
+  {
+    "id": "Sylla présente son équipe",
+    "url": "https://www.dna.fr/elections/2026/02/28/a-strasbourg-mohamed-sylla-presente-son-equipe?at_content=link&at_term=DNAstrasbourg&at_campaign=Facebook&at_medium=Social&at_source=nonli",
+    "publishedAt": "2026-02-28",
+    "sourceLabel": "DNA",
+    "pinned": true
+  },
+  {
     "id": "Un deuxième candidat se retire",
     "url": "https://actu.fr/grand-est/strasbourg_67482/exclusif-municipales-a-strasbourg-un-deuxieme-candidat-se-retire-au-profit-de-mohamed-sylla_63839876.html",
     "publishedAt": "2026-02-14",

@@ -1,5 +1,31 @@
 [
   {
+    "id": "Strasbourg en Vrai",
+    "url": "https://strasinfo.fr/2026/03/05/mohamed-sylla-descend-dans-la-rue-une-campagne-au-coeur-des-quartiers-strasbourgeois/",
+    "domain": "strasinfo.fr",
+    "sourceLabel": "strasinfo",
+    "publishedAt": "2026-03-05",
+    "pinned": true,
+    "fetchedAt": "2026-03-07T00:00:00.000Z",
+    "title": "Mohamed Sylla descend dans la rue : Une campagne au cœur des quartiers strasbourgeois",
+    "description": "Du 4 au 13 mars 2026, Mohamed Sylla, candidat aux municipales de Strasbourg à la tête de la liste Utiles pour Strasbourg, lance une séquence de campagne baptisée « Strasbourg, en Vrai ».",
+    "image": "https://i0.wp.com/strasinfo.fr/wp-content/uploads/2026/03/fb_img_1772704752621.jpg?fit=1200%2C900&ssl=1",
+    "siteName": "StrasInfo.fr"
+  },
+  {
+    "id": "Sylla présente son équipe",
+    "url": "https://www.dna.fr/elections/2026/02/28/a-strasbourg-mohamed-sylla-presente-son-equipe?at_content=link&at_term=DNAstrasbourg&at_campaign=Facebook&at_medium=Social&at_source=nonli",
+    "domain": "www.dna.fr",
+    "sourceLabel": "DNA",
+    "publishedAt": "2026-02-28",
+    "pinned": true,
+    "fetchedAt": "2026-03-07T00:00:00.000Z",
+    "title": "Municipales 2026. À Strasbourg, Mohamed Sylla présente son équipe, portée par l'envie d'être utile à la ville",
+    "description": "Mohamed Sylla, tête de liste d’Utiles pour Strasbourg, dévoile les membres de son équipe de 65 colistiers.",
+    "image": "https://cdn-s-www.dna.fr/images/70257414-7528-4CAB-A285-D5A1E5DC4932/FB1200/photo-1772204736.jpg",
+    "siteName": "www.dna.fr"
+  },
+  {
     "id": "Un deuxième candidat se retire",
     "url": "https://actu.fr/grand-est/strasbourg_67482/exclusif-municipales-a-strasbourg-un-deuxieme-candidat-se-retire-au-profit-de-mohamed-sylla_63839876.html",
     "domain": "actu.fr",
