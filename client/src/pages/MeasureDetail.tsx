@@ -5,6 +5,7 @@ import { QuestionsModal } from "@/components/QuestionsModal";
 import { EngagementBlock } from "@/components/EngagementBlock";
 import { getMeasureById, getPriorityById, MeasureProposition } from "@/data";
 import { ArrowLeft, Play, MessageCircle, UserPlus, CheckCircle2, Target, Wrench, BarChart3 } from "lucide-react";
+import { SeoMeta } from "@/components/SeoMeta";
 
 export default function MeasureDetail() {
   const { id } = useParams<{ id: string }>();
@@ -20,6 +21,12 @@ export default function MeasureDetail() {
   if (!measure) {
     return (
       <Layout>
+        <SeoMeta
+          title="Mesure introuvable | UTILES Strasbourg"
+          description="La mesure demandée est introuvable."
+          path={`/mesure/${id ?? ""}`}
+          noindex
+        />
         <div className="max-w-lg mx-auto px-4 py-12 text-center">
           <h1 className="text-xl font-semibold mb-4">Mesure introuvable</h1>
           <Link href="/">
@@ -82,6 +89,13 @@ export default function MeasureDetail() {
 
   return (
     <Layout>
+      <SeoMeta
+        title={`${measure.title} | Programme municipal Strasbourg`}
+        description={measure.impact}
+        path={`/mesure/${measure.id}`}
+        image={measure.coverImage || "/opengraph.jpg"}
+        type="article"
+      />
       <div className="max-w-lg mx-auto px-4 py-6">
         <Link href="/">
           <span

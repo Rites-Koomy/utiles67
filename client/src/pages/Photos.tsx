@@ -4,6 +4,7 @@ import { fetchCampaignPhotos, type CampaignPhoto } from "@/lib/campaignPhotos";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "wouter";
+import { SeoMeta } from "@/components/SeoMeta";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -60,6 +61,11 @@ export default function Photos() {
 
   return (
     <Layout>
+      <SeoMeta
+        title="Les images de campagne | UTILES Strasbourg"
+        description="Galerie photos de la campagne municipale UTILES Strasbourg : marchés, rencontres et actions de terrain."
+        path="/photos"
+      />
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="mb-6 space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">

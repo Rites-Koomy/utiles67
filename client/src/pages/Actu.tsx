@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { LinkPreviewCard, type ActuPreview } from "@/components/LinkPreviewCard";
 import previewsJson from "@/content/actu.previews.json";
+import { SeoMeta } from "@/components/SeoMeta";
 
 const initialPreviews = previewsJson as ActuPreview[];
 
@@ -14,6 +15,12 @@ export default function Actu() {
 
   return (
     <Layout>
+      <SeoMeta
+        title="Actualités Municipales Strasbourg | UTILES Strasbourg"
+        description="Retrouvez les articles et retombées presse sur la campagne municipale UTILES Strasbourg."
+        path="/actu"
+        type="article"
+      />
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6 space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">

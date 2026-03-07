@@ -6,6 +6,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { IllustrationBlock } from "@/components/IllustrationBlock";
 import { getPriorityById, getMeasuresByPriorityId } from "@/data";
 import { ArrowLeft, Play, Bike, Home, Leaf, Heart, Users, LucideIcon } from "lucide-react";
+import { SeoMeta } from "@/components/SeoMeta";
 
 const iconMap: Record<string, LucideIcon> = {
   Bike,
@@ -28,6 +29,12 @@ export default function Priority() {
   if (!priority) {
     return (
       <Layout>
+        <SeoMeta
+          title="Priorité introuvable | UTILES Strasbourg"
+          description="La priorité demandée est introuvable."
+          path={`/priorite/${id ?? ""}`}
+          noindex
+        />
         <div className="max-w-lg mx-auto px-4 py-12 text-center">
           <h1 className="text-xl font-semibold mb-4">Priorité introuvable</h1>
           <Link href="/">
@@ -43,6 +50,12 @@ export default function Priority() {
 
   return (
     <Layout>
+      <SeoMeta
+        title={`${priority.title} | Programme municipal Strasbourg`}
+        description={priority.description}
+        path={`/priorite/${priority.id}`}
+        type="article"
+      />
       <div className="max-w-lg mx-auto px-4 py-6">
         <Link href="/">
           <span

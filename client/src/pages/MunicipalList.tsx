@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
+import { SeoMeta } from "@/components/SeoMeta";
 
 const municipalCandidates = [
   "Mohamed Sylla, 45 ans – Responsable syndical",
@@ -79,6 +80,23 @@ export default function MunicipalList() {
 
   return (
     <Layout>
+      <SeoMeta
+        title="Liste UTILES Strasbourg | Municipales Strasbourg 2026"
+        description="Découvrez la liste officielle UTILES Strasbourg pour les élections municipales 2026, classée dans l’ordre complet."
+        path="/liste-utiles-strasbourg"
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Liste UTILES pour Strasbourg",
+          numberOfItems: municipalCandidates.length,
+          itemListElement: municipalCandidates.map((candidate, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: candidate,
+          })),
+        }}
+      />
       <div className="max-w-lg mx-auto px-4 py-6">
         <Link href="/">
           <span className="mb-6 inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">

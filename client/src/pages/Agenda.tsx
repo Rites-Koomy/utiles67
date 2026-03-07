@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { EventCard } from "@/components/EventCard";
 import { events } from "@/data";
+import { SeoMeta } from "@/components/SeoMeta";
 
 export default function Agenda() {
   const sortedEvents = [...events].sort(
@@ -9,6 +10,11 @@ export default function Agenda() {
 
   return (
     <Layout>
+      <SeoMeta
+        title="Agenda Campagne Municipale Strasbourg | UTILES"
+        description="Dates de terrain, marchés et rencontres de la campagne municipale UTILES Strasbourg."
+        path="/agenda"
+      />
       <div className="max-w-lg mx-auto px-4">
         <section className="py-6">
           <h1 className="font-display font-bold text-2xl sm:text-3xl text-foreground mb-2 animate-fade-up">

@@ -15,6 +15,7 @@ import { LinkPreviewCard, type ActuPreview } from "@/components/LinkPreviewCard"
 import previewsJson from "@/content/actu.previews.json";
 import { Link } from "wouter";
 import { CampaignSlideshow } from "@/components/CampaignSlideshow";
+import { SeoMeta } from "@/components/SeoMeta";
 
 const actuHighlights = (previewsJson as ActuPreview[]).slice(0, 3);
 
@@ -153,6 +154,29 @@ Candidat UTILES pour Strasbourg-Municipales 2026`;
 
   return (
     <Layout>
+      <SeoMeta
+        title="Municipales Strasbourg 2026 | UTILES Strasbourg"
+        description="Campagne municipale à Strasbourg : programme, actualités, agenda, vidéos et liste UTILES Strasbourg pour les élections municipales 2026."
+        path="/"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "PoliticalParty",
+            name: "UTILES Strasbourg",
+            url: "https://utiles67.fr",
+            areaServed: "Strasbourg",
+            description:
+              "Mouvement citoyen engagé pour Strasbourg et les élections municipales 2026.",
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "UTILES Strasbourg",
+            url: "https://utiles67.fr",
+            inLanguage: "fr-FR",
+          },
+        ]}
+      />
       <div className="max-w-lg mx-auto px-4">
         <HeroSection />
 

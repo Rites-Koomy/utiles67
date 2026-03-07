@@ -1,10 +1,16 @@
 import { Layout } from "@/components/layout/Layout";
 import { Heart, Phone } from "lucide-react";
 import { config } from "@/config";
+import { SeoMeta } from "@/components/SeoMeta";
 
 export default function Rejoindre() {
   return (
     <Layout>
+      <SeoMeta
+        title="Rejoindre UTILES Strasbourg | Municipales 2026"
+        description="Rejoignez l’équipe UTILES Strasbourg pour la campagne municipale 2026 : bénévolat, terrain et mobilisation."
+        path="/rejoindre"
+      />
       <div className="max-w-lg mx-auto px-4 py-6">
         <section className="mb-6 animate-fade-up">
           <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
