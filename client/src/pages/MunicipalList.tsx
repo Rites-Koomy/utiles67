@@ -2,7 +2,75 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { team } from "@/data";
+
+const municipalCandidates = [
+  "Mohamed Sylla, 45 ans – Responsable syndical",
+  "Françoise Werckmann, 77 ans – Juriste, spécialiste de la participation citoyenne",
+  "Thibaut Vinci, 39 ans – Fonctionnaire de police",
+  "Colette Vallé, 94 ans – Retraitée",
+  "Frédéric Cadiot, 69 ans – Retraité",
+  "Mina Bezzari, 57 ans – Militante associative",
+  "Ismaïl Becherirat, 37 ans – Conducteur de tramway",
+  "Samira Kardouz-Talbi, 49 ans – Cadre bancaire",
+  "Benyahia Meziane, 56 ans – Président d’association",
+  "Khadija Arratbi, 50 ans – Cheffe d’entreprise",
+  "Amar Meferedj, 49 ans – Logisticien",
+  "Aurélie Royer, 46 ans – Infirmière",
+  "Julien Martin, 44 ans – Avocat",
+  "Jennifer Alexer, 33 ans – Esthéticienne",
+  "Léo Serfati, 37 ans – Juriste",
+  "Evaelle El Haïk, 22 ans – Étudiante",
+  "Kevin Schott, 40 ans – Cadre du secteur digital",
+  "Aminata Gueye, 51 ans – Assistante administrative",
+  "Pascal Ackermann, 58 ans – Professeur des écoles",
+  "Sarah Bouchair, 28 ans – Infirmière libérale",
+  "Abou Diakité, 52 ans – Ancien sportif international",
+  "Imane Boudahra, 24 ans – Étudiante",
+  "Ouissam Fallah, 31 ans – Chef d’entreprise",
+  "Hayate Taibi, 45 ans – Infirmière libérale",
+  "Guillaume Devaux, 39 ans – Cadre",
+  "Karen Esther El Haïk, 49 ans – Assistante administrative",
+  "Habib Bentaieb, 69 ans – Artisan couturier",
+  "Aziza Zouhair, 57 ans – Employée",
+  "Mohamed Ouraïs, 47 ans – Commerçant",
+  "Marie-Kaline Grondin, 45 ans – Employée",
+  "Nabil Nachba, 41 ans – Employé",
+  "Hélène Joséphine, 70 ans – Présidente d’association",
+  "Nurdogan Hayta, 26 ans – Chef d’entreprise",
+  "Donia Bekkouch, 27 ans – Étudiante",
+  "Maxence El Haïk, 21 ans – Étudiant",
+  "Marie Mbarga Ateba, 50 ans – Aide-soignante",
+  "Benjamin Dominé, 29 ans – Agent de maîtrise",
+  "Tugce Agdere, 25 ans – Assistante administrative",
+  "Ben-Ali Mustapha, 33 ans – Ambulancier",
+  "Valérie Cebokli, 57 ans – Puéricultrice",
+  "Srdan Pozarac, 37 ans – Responsable d’équipe logistique",
+  "Haby Badiane, 34 ans – Aide-soignante",
+  "Mounir Boudra, 44 ans – Ingénieur informaticien",
+  "Rania Bezzari, 23 ans – Employée",
+  "Rachid Boumahdi, 39 ans – Responsable d’équipe logistique",
+  "Sabine Zielonka, 47 ans – Professeure des écoles",
+  "Moustafa Lkhiati, 34 ans – Employé",
+  "Dounya Dinari, 32 ans – Conseillère bancaire",
+  "Lenny N’Dinga, 23 ans – Étudiant",
+  "Marie-Claire Naas, 67 ans – Retraitée",
+  "Youssef El Arbaouin, 45 ans – Chef d’entreprise",
+  "Léa Caceres Albarran, 29 ans – Étudiante",
+  "Rites Massamba, 43 ans – Chef d’entreprise",
+  "Marie Wagemann, 72 ans – Retraitée",
+  "Jean-Marie Rubine, 74 ans – Retraité",
+  "Fatima Namli, 63 ans – Assistante de direction",
+  "Yao N’Guessan, 71 ans – Retraité",
+  "Khadija Semhi, 61 ans – Travailleuse sociale",
+  "Yassine Zouhair, 24 ans – Étudiant",
+  "Makbule Agdere, 28 ans – Artisane",
+  "Karim El Moussaoui, 42 ans – Opérateur",
+  "Nathalie Many, 47 ans – Assistante de direction",
+  "Hamidou Sissoko, 47 ans – Assistant administratif (secteur bancaire)",
+  "Nora Haag, 28 ans – Coiffeuse",
+  "Adil Talbaoui, 40 ans – Chef d’entreprise",
+  "Danielle Stegwalt, 68 ans – Retraitée",
+];
 
 export default function MunicipalList() {
   useEffect(() => {
@@ -27,26 +95,22 @@ export default function MunicipalList() {
             La liste UTILES Strasbourg
           </h1>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Composition complète de la liste, présentée dans l'ordre numéroté.
+            Liste UTILES pour Strasbourg, présentée dans l'ordre officiel.
           </p>
         </header>
 
         <section className="rounded-2xl border border-card-border bg-card p-4 opacity-0 animate-fade-up stagger-1">
           <ol className="space-y-3">
-            {team.map((member, index) => (
+            {municipalCandidates.map((candidate, index) => (
               <li
-                key={member.id}
+                key={`${index + 1}-${candidate}`}
                 className="flex items-start gap-3 rounded-xl border border-border/70 bg-background/60 p-3"
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                   {index + 1}
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">{member.name.trim()}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {member.utilesRole || "Membre de la liste"}
-                    {member.quartier ? ` - ${member.quartier}` : ""}
-                  </p>
+                  <p className="text-sm font-semibold text-foreground">{candidate}</p>
                 </div>
               </li>
             ))}
