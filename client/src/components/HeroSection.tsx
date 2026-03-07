@@ -18,7 +18,7 @@ export function HeroSection() {
             className="font-display font-black text-base sm:text-xl text-primary uppercase tracking-tight leading-none" 
             style={{ wordBreak: 'break-word', overflowWrap: 'anywhere' }}
           >
-            STRASBOUR EN VRAI. Votez la Liste UTILES Strasbourg
+            STRASBOURG EN VRAI. Votez la Liste UTILES Strasbourg
           </h1>
           
           <div className="h-px w-8 bg-primary/20 mx-auto rounded-full my-0.5"></div>
