@@ -1,5 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 type CampaignPhoto = {
   file: string;
@@ -8,9 +10,20 @@ type CampaignPhoto = {
   caption: string;
 };
 
+type ManifestImage = {
+  name?: string;
+  url?: string;
+};
+
+type CampaignManifest = {
+  prefix?: string;
+  images?: ManifestImage[];
+};
+
 const CDN_BASE_URL = "https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev";
 const CAMPAIGN_FOLDER = "Image-campagne";
-const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"];
+const MANIFEST_URL = `${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/manifest.json`;
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
 
 function isImageFile(value: string) {
   const lower = value.toLowerCase();
@@ -25,135 +38,110 @@ function cleanName(value: string) {
     .trim();
 }
 
-function buildLabel(file: string) {
-  const cleaned = cleanName(file);
-  return cleaned.length > 0 ? cleaned : "Photo de campagne";
+function toPhotoEntry(name: string, url?: string): CampaignPhoto {
+  const normalizedName = decodeURIComponent(name).trim();
+  const safeName = normalizedName.split("/").pop() ?? normalizedName;
+  const src =
+    url && url.startsWith("http")
+      ? url
+      : `${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/${encodeURIComponent(safeName)}`;
+  const label = cleanName(safeName) || "Photo de campagne";
+  return {
+    file: safeName,
+    src,
+    alt: label,
+    caption: label,
+  };
 }
 
-function parseHtmlAnchors(html: string, listingUrl: URL) {
-  const anchors = Array.from(html.matchAll(/href=["']([^"']+)["']/gi))
-    .map((match) => match[1])
-    .filter(Boolean);
+function normalizeManifest(manifest: CampaignManifest): CampaignPhoto[] {
+  const images = Array.isArray(manifest.images) ? manifest.images : [];
+  const dedupe = new Map<string, CampaignPhoto>();
 
-  const files = anchors
-    .map((href) => {
-      try {
-        const resolved = new URL(href, listingUrl);
-        const pathname = decodeURIComponent(resolved.pathname);
-        return pathname.split("/").pop() ?? "";
-      } catch {
-        return "";
-      }
-    })
-    .filter((file) => isImageFile(file));
-
-  return Array.from(new Set(files));
-}
-
-function parseXmlKeys(xml: string, folder: string) {
-  const prefix = `${folder}/`;
-  const files = Array.from(xml.matchAll(/<Key>([^<]+)<\/Key>/g))
-    .map((match) => decodeURIComponent(match[1]))
-    .filter((key) => key.startsWith(prefix))
-    .map((key) => key.slice(prefix.length))
-    .filter((file) => isImageFile(file));
-
-  return Array.from(new Set(files));
-}
-
-function buildPhotoSrc(file: string) {
-  return `${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/${encodeURIComponent(file)}`;
-}
-
-async function loadCampaignPhotosFromCdn() {
-  const folderPrefix = `${CAMPAIGN_FOLDER}/`;
-  const listingUrls = [
-    new URL(`${CDN_BASE_URL}/?list-type=2&prefix=${encodeURIComponent(folderPrefix)}`),
-    new URL(`${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/`),
-  ];
-  const errors: string[] = [];
-
-  for (const listingUrl of listingUrls) {
-    try {
-      const response = await fetch(listingUrl.href, {
-        headers: { Accept: "text/html,application/xml,text/xml,application/json" },
-      });
-
-      if (!response.ok) {
-        errors.push(`${listingUrl.href} -> HTTP ${response.status}`);
-        continue;
-      }
-
-      const raw = await response.text();
-      let files: string[] = [];
-
-      if (raw.trim().startsWith("<")) {
-        files = raw.includes("<Key>")
-          ? parseXmlKeys(raw, CAMPAIGN_FOLDER)
-          : parseHtmlAnchors(raw, listingUrl);
-      } else {
-        try {
-          const parsed = JSON.parse(raw);
-          if (Array.isArray(parsed)) {
-            files = parsed
-              .map((entry) => (typeof entry === "string" ? entry : entry?.file))
-              .filter((value): value is string => Boolean(value && isImageFile(value)));
-          }
-        } catch {
-          files = [];
-        }
-      }
-
-      if (files.length > 0) {
-        return files.map((file): CampaignPhoto => ({
-          file,
-          src: buildPhotoSrc(file),
-          alt: buildLabel(file),
-          caption: buildLabel(file),
-        }));
-      }
-
-      errors.push(`${listingUrl.href} -> empty listing`);
-    } catch (error) {
-      errors.push(
-        `${listingUrl.href} -> ${
-          error instanceof Error ? error.message : "unknown fetch error"
-        }`,
-      );
-    }
+  for (const image of images) {
+    const name = image?.name?.trim() ?? "";
+    const url = image?.url?.trim() ?? "";
+    if (!name || !isImageFile(name)) continue;
+    const entry = toPhotoEntry(name, url);
+    dedupe.set(entry.file.toLowerCase(), entry);
   }
 
-  throw new Error(`CDN listing unavailable (${errors.join(" | ")})`);
+  return Array.from(dedupe.values()).sort((a, b) =>
+    a.file.localeCompare(b.file, "fr", { sensitivity: "base" }),
+  );
 }
 
-function toCampaignPhotos(files: string[]) {
-  return files.map((file): CampaignPhoto => ({
-    file,
-    src: buildPhotoSrc(file),
-    alt: buildLabel(file),
-    caption: buildLabel(file),
-  }));
+type StaticCampaignEntry = {
+  file: string;
+  alt?: string;
+  caption?: string;
+};
+
+async function readStaticFallback(): Promise<CampaignPhoto[]> {
+  const filePath = path.resolve(process.cwd(), "client/src/content/campaign.photos.json");
+  const raw = await readFile(filePath, "utf-8");
+  const parsed = JSON.parse(raw) as StaticCampaignEntry[];
+  const dedupe = new Map<string, CampaignPhoto>();
+
+  for (const entry of parsed) {
+    const name = (entry.file ?? "").trim();
+    if (!name || !isImageFile(name)) continue;
+    const normalized = toPhotoEntry(name);
+    dedupe.set(normalized.file.toLowerCase(), {
+      ...normalized,
+      alt: entry.alt?.trim() || normalized.alt,
+      caption: entry.caption?.trim() || normalized.caption,
+    });
+  }
+
+  return Array.from(dedupe.values()).sort((a, b) =>
+    a.file.localeCompare(b.file, "fr", { sensitivity: "base" }),
+  );
+}
+
+async function loadCampaignPhotos(): Promise<{
+  photos: CampaignPhoto[];
+  source: "manifest" | "static-fallback";
+}> {
+  try {
+    const response = await fetch(MANIFEST_URL, {
+      headers: { Accept: "application/json" },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const manifest = (await response.json()) as CampaignManifest;
+    const photos = normalizeManifest(manifest);
+
+    if (photos.length > 0) {
+      return { photos, source: "manifest" };
+    }
+    throw new Error("manifest has no valid image entries");
+  } catch {
+    const photos = await readStaticFallback();
+    return { photos, source: "static-fallback" };
+  }
 }
 
 export async function registerRoutes(
   httpServer: Server,
-  app: Express
+  app: Express,
 ): Promise<Server> {
-  // put application routes here
-  // prefix all routes with /api
-
   app.get("/api/campaign-photos", async (_req, res) => {
     try {
-      const photos = await loadCampaignPhotosFromCdn();
+      const { photos, source } = await loadCampaignPhotos();
       res.json({
         photos,
         count: photos.length,
-        source: `${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/`,
+        source,
+        manifestUrl: MANIFEST_URL,
       });
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : "Unknown error while listing photos";
-      res.status(502).json({ photos: [], count: 0, message });
+        error instanceof Error ? error.message : "Unknown error while loading photos";
+      res.status(502).json({ photos: [], count: 0, message, manifestUrl: MANIFEST_URL });
     }
   });
 
