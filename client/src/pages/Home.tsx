@@ -25,15 +25,33 @@ export default function Home() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const presentationText = `UTILES 67 est un mouvement citoyen local implanté dans le Bas-Rhin et profondément ancrée dans les réalités de terrain, issu de l’émancipation locale de la dynamique portée au niveau national par le groupe parlementaire LIOT.
-
-UTILES 67 rassemble des citoyennes et des citoyens aux parcours, origines et sensibilités diverses, unis par l’envie de construire des solutions concrètes, utiles et applicables au quotidien.
-
-Notre démarche repose sur l’écoute, la méthode est la participation citoyenne : cahiers de doléances, rencontres de quartier, cafés citoyens et ateliers participatifs nourrissent nos propositions.
-
-Nous croyons en une écologie de solutions, une démocratie locale vivante, une solidarité active et une ville qui fait confiance à ses habitants.
-
-UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un collectif ouvert, indépendant et engagé, qui place l’intérêt général, la transparence et l’humain au cœur de l’action.`;
+  const presentationText = `Chères Strasbourgeoises, chers Strasbourgeois,
+On peut naître ailleurs, parfois très loin,et aimer profondément une ville au point d’apporter sa pierre à l’édifi ce.
+Strasbourg est de celles qui accueillent, qui transforment, qui donnent une place.
+Elle est de celles qui ne demandent pas d’où l’on vient, mais ce que l’on est prêt à construire.
+Depuis plus de vingt deux ans, je vis Strasbourg au quotidien. Je la parcours dans ses quartiers, ses rues, ses commerces, ses lieux de vie.
+Je l’ai surtout écoutée. Sans posture. Sans promesses faciles. En prenant le temps de comprendre ce que vous vivez réellement.
+Ces derniers mois, vous avez été nombreuses et nombreux à vous exprimer. 303 habitants ont écrit leurs attentes dans un cahier de doléances citoyen.
+1 235 autres ont partagé leurs réalités lors de cafés, d’ateliers, de rencontres de proximité.
+Ce programme est né là, sur le terrain, dans vos mots, vos expériences, vos espoirs.
+J’y ai entendu le besoin de justice, de respect, de solutions concrètes. Le désir d’une ville plus proche, plus humaine, plus attentive à celles et ceux qui la font vivre
+chaque jour : habitants, commerçants, familles, jeunes, seniors.Nous avons fait un choix simple mais exigeant : écouter avant de proposer, construire avant de
+promettre.
+Le projet UTILES pour Strasbourg est le fruit de ce travail collectif. Il renforce la démocratie locale, soutient le commerce de proximité, protège le logement, facilite
+« On peut naître ailleurs, parfois très l
+les mobilités et réconcilie écologie et quotidien. Ce programme est public, transparent et évolutif.
+et aimer profondément une ville au po
+Les premières mesures sont consultables en ligne : https://www.mohamed-sylla.com/programme- utiles-strasbourg-2026 Je ne viens pas d’un appareil politique.
+Je viens du réel. Et c’est ce regard-là, façonné par le terrain et par l’attachement sincère à cette ville, que je souhaite mettre au service de Strasbourg. Une ville
+d’accueil, de diversité et de possibles, où chacun doit pouvoir trouver sa place et contribuer au bien commun.
+Ma candidature n’est pas une ambition personnelle. C’est un engagement, nourri par le travail accompli ensemble et par une conviction forte : Strasbourg peut
+faire mieux, autrement,avec ses habitants. Je porterai ce projet avec constance, détermination et humilité. Et je continuerai à le construire avec vous. Parce qu’une
+ville ne se dirige pas d’en haut. Elle
+se bâtit ensemble.
+M
+Strasbourg, le 21 janvier 2026
+Mohamed Sylla
+Candidat UTILES pour Strasbourg-Municipales 2026`;
 
   const filteredMeasures = activeFilter
     ? getMeasuresByPriorityId(activeFilter)
@@ -197,6 +215,26 @@ UTILES 67 n’est ni un parti traditionnel ni un mouvement hors-sol, c’est un 
             title='LE MOUVEMENT "UTILES"'
             content={presentationText}
           />
+
+          <div className="mb-6 rounded-2xl border border-card-border bg-card p-5 opacity-0 animate-fade-up stagger-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground">
+              Élections Municipales 2026
+            </p>
+            <h2 className="mt-2 text-xl font-semibold text-foreground">
+              La liste UTILES Strasbourg
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Découvrez les membres de notre liste complète pour les élections municipales, présentée dans l'ordre numéroté.
+            </p>
+            <div className="mt-4">
+              <Link
+                href="/liste-utiles-strasbourg"
+                className="inline-flex items-center rounded-full border border-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition hover:bg-primary/5"
+              >
+                Voir la liste complète
+              </Link>
+            </div>
+          </div>
 
           <div className="grid gap-4">
             {filteredMeasures.map((measure, index) => (

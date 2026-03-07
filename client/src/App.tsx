@@ -12,6 +12,7 @@ import Rejoindre from "@/pages/Rejoindre";
 import AdminLocal from "@/pages/AdminLocal";
 import Actu from "@/pages/Actu";
 import Photos from "@/pages/Photos";
+import MunicipalList from "@/pages/MunicipalList";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/rejoindre" component={Rejoindre} />
       <Route path="/actu" component={Actu} />
       <Route path="/photos" component={Photos} />
+      <Route path="/liste-utiles-strasbourg" component={MunicipalList} />
       <Route path="/admin-local" component={AdminLocal} />
       <Route component={NotFound} />
     </Switch>
