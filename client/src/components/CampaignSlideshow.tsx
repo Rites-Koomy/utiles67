@@ -1,22 +1,23 @@
 import { useEffect, useMemo, useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { campaignPhotos } from "@/lib/campaignPhotos";
+import { fetchCampaignPhotos, type CampaignPhoto } from "@/lib/campaignPhotos";
 import { Link } from "wouter";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 export function CampaignSlideshow() {
+  const [photos, setPhotos] = useState<CampaignPhoto[]>([]);
   const [failed, setFailed] = useState<Record<string, boolean>>({});
   const [invalidFiles, setInvalidFiles] = useState<Set<string>>(new Set());
 
   const validPhotos = useMemo(
     () =>
-      campaignPhotos.filter(
+      photos.filter(
         (photo) => !invalidFiles.has(photo.file) && !failed[photo.src],
       ),
-    [invalidFiles, failed],
+    [photos, invalidFiles, failed],
   );
 
   useEffect(() => {
@@ -24,6 +25,29 @@ export function CampaignSlideshow() {
       console.log("Campaign slideshow sample URL:", validPhotos[0].src);
     }
   }, [validPhotos]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    fetchCampaignPhotos()
+      .then((entries) => {
+        if (!cancelled) {
+          setPhotos(entries);
+        }
+      })
+      .catch((error) => {
+        if (process.env.NODE_ENV !== "production") {
+          console.warn("Unable to load campaign photos from CDN folder:", error);
+        }
+        if (!cancelled) {
+          setPhotos([]);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const handleSlideClick = (src: string) => {
     if (typeof window !== "undefined") {

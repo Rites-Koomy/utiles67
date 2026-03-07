@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { campaignPhotos } from "@/lib/campaignPhotos";
+import { fetchCampaignPhotos, type CampaignPhoto } from "@/lib/campaignPhotos";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "wouter";
@@ -9,15 +9,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Photos() {
+  const [photos, setPhotos] = useState<CampaignPhoto[]>([]);
   const [invalidFiles, setInvalidFiles] = useState<Set<string>>(new Set());
   const [currentIndex, setCurrentIndex] = useState(1);
 
   const validPhotos = useMemo(
     () =>
-      campaignPhotos.filter(
+      photos.filter(
         (photo) => !invalidFiles.has(photo.file),
       ),
-    [invalidFiles],
+    [photos, invalidFiles],
   );
 
   const total = validPhotos.length;
@@ -34,6 +35,29 @@ export default function Photos() {
     }
   }, [total, currentIndex]);
 
+  useEffect(() => {
+    let cancelled = false;
+
+    fetchCampaignPhotos()
+      .then((entries) => {
+        if (!cancelled) {
+          setPhotos(entries);
+        }
+      })
+      .catch((error) => {
+        if (process.env.NODE_ENV !== "production") {
+          console.warn("Unable to load campaign photos from CDN folder:", error);
+        }
+        if (!cancelled) {
+          setPhotos([]);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <Layout>
       <div className="max-w-5xl mx-auto px-4 py-10">
@@ -41,7 +65,7 @@ export default function Photos() {
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">
             Photos
           </p>
-          <h1 className="text-3xl font-semibold text-foreground">Toutes les photos</h1>
+          <h1 className="text-3xl font-semibold text-foreground">Les images de campagne</h1>
           <p className="text-sm text-muted-foreground">
             Galerie complète des temps forts, organisée pour le web avec des images hébergées sur notre CDN R2.
           </p>

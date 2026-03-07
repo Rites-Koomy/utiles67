@@ -284,7 +284,7 @@ Candidat UTILES pour Strasbourg-Municipales 2026`;
                 Photos
               </p>
               <h2 className="text-2xl font-semibold text-foreground">
-                Photos de campagne
+                Les images de campagne
               </h2>
               <p className="text-sm text-muted-foreground">
                 Un aperçu des rencontres et moments forts du mouvement, mis en valeur depuis notre CDN.
