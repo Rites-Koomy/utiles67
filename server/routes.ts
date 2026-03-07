@@ -66,35 +66,67 @@ function buildPhotoSrc(file: string) {
 }
 
 async function loadCampaignPhotosFromCdn() {
-  const listingUrl = new URL(`${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/`);
-  const response = await fetch(listingUrl.href, {
-    headers: { Accept: "text/html,application/xml,text/xml,application/json" },
-  });
+  const folderPrefix = `${CAMPAIGN_FOLDER}/`;
+  const listingUrls = [
+    new URL(`${CDN_BASE_URL}/?list-type=2&prefix=${encodeURIComponent(folderPrefix)}`),
+    new URL(`${CDN_BASE_URL}/${CAMPAIGN_FOLDER}/`),
+  ];
+  const errors: string[] = [];
 
-  if (!response.ok) {
-    throw new Error(`CDN listing failed: HTTP ${response.status}`);
-  }
-
-  const raw = await response.text();
-  let files: string[] = [];
-
-  if (raw.trim().startsWith("<")) {
-    files = raw.includes("<Key>")
-      ? parseXmlKeys(raw, CAMPAIGN_FOLDER)
-      : parseHtmlAnchors(raw, listingUrl);
-  } else {
+  for (const listingUrl of listingUrls) {
     try {
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) {
-        files = parsed
-          .map((entry) => (typeof entry === "string" ? entry : entry?.file))
-          .filter((value): value is string => Boolean(value && isImageFile(value)));
+      const response = await fetch(listingUrl.href, {
+        headers: { Accept: "text/html,application/xml,text/xml,application/json" },
+      });
+
+      if (!response.ok) {
+        errors.push(`${listingUrl.href} -> HTTP ${response.status}`);
+        continue;
       }
-    } catch {
-      files = [];
+
+      const raw = await response.text();
+      let files: string[] = [];
+
+      if (raw.trim().startsWith("<")) {
+        files = raw.includes("<Key>")
+          ? parseXmlKeys(raw, CAMPAIGN_FOLDER)
+          : parseHtmlAnchors(raw, listingUrl);
+      } else {
+        try {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            files = parsed
+              .map((entry) => (typeof entry === "string" ? entry : entry?.file))
+              .filter((value): value is string => Boolean(value && isImageFile(value)));
+          }
+        } catch {
+          files = [];
+        }
+      }
+
+      if (files.length > 0) {
+        return files.map((file): CampaignPhoto => ({
+          file,
+          src: buildPhotoSrc(file),
+          alt: buildLabel(file),
+          caption: buildLabel(file),
+        }));
+      }
+
+      errors.push(`${listingUrl.href} -> empty listing`);
+    } catch (error) {
+      errors.push(
+        `${listingUrl.href} -> ${
+          error instanceof Error ? error.message : "unknown fetch error"
+        }`,
+      );
     }
   }
 
+  throw new Error(`CDN listing unavailable (${errors.join(" | ")})`);
+}
+
+function toCampaignPhotos(files: string[]) {
   return files.map((file): CampaignPhoto => ({
     file,
     src: buildPhotoSrc(file),
