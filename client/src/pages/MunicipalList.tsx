@@ -117,7 +117,26 @@ export default function MunicipalList() {
           </p>
         </header>
 
-        <section className="rounded-2xl border border-card-border bg-card p-4 opacity-0 animate-fade-up stagger-1">
+        <section className="mb-6 overflow-hidden rounded-3xl border border-card-border bg-card opacity-0 animate-fade-up stagger-1">
+          <div className="aspect-[16/10] w-full bg-muted">
+            <img
+              src="https://pub-b18faf7762044b018cdf29445a4ba5c7.r2.dev/Image-campagne/Liste-utiles-.jpeg"
+              alt="Photo de groupe des membres de la liste UTILES Strasbourg"
+              className="h-full w-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <div className="border-t border-border/60 px-4 py-3">
+            <p className="text-sm font-medium text-foreground">
+              Les membres de la liste UTILES Strasbourg
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Une photo de groupe pour accompagner la présentation complète de la liste.
+            </p>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-card-border bg-card p-4 opacity-0 animate-fade-up stagger-2">
           <ol className="space-y-3">
             {municipalCandidates.map((candidate, index) => (
               <li
